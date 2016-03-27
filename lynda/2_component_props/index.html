@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <title>React Components</title>
+    </head>
+    <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+        var MyComponent = React.createClass({
+            render: function() {
+                console.log('render',this);
+                return (
+                    <div>
+                        <h1>{this.props.text}</h1>
+                        <p>{this.props.children}</p>
+                    </div>
+                )
+            }
+        });
+
+        /*
+            ReactElement element : 무조건 하나로 감싸야 함
+         */
+        ReactDOM.render(
+                        <div id="sub-container">
+                            <MyComponent text="Hello React">I say Hello!</MyComponent>
+                            <MyComponent text="How are you">What??</MyComponent>
+                            <MyComponent text="Monolife Yw" />
+                        </div>
+            , document.getElementById('react-container'));
+    </script>
+    </body>
+</html>
