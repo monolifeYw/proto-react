@@ -22,11 +22,37 @@
         /*
             // transferPropsTo
          */
-            var App = React.createClass({
+        /*
+            props 전달
+            http://reactkr.github.io/react/docs/transferring-props-ko-KR.html
+            https://facebook.github.io/react/docs/transferring-props.html
 
+            react Merge classes
+            http://jamesknelson.com/structuring-react-applications-higher-order-components/
+            https://github.com/JedWatson/classnames
+            https://manofhustle.com/2015/01/19/dynamically-add-classes-react-classset/
+            https://gist.github.com/sebmarkbage/a6e220b7097eb3c79ab7
+
+            React.addon.classSet
+         */
+
+            // plugin 대용
+            function mixClasses(args1, args2) {
+              args1 += (typeof args2 === 'undefined') ? '':' '+args2;
+              return args1;
+            }
+
+            var App = React.createClass({
+                trace: function(){
+                  alert('trace');
+                },
                 render: function() {
                     return (
-                        <BButton className="btn-primary"><BHeart />React</BButton>
+                      <div>
+                        <BButton onClick={this.trace}><BHeart className="glyphicon-heart" />heart</BButton>
+                        <BButton className="btn-success"><BHeart className="glyphicon-pencil" />pencil</BButton>
+                        <BButton className="btn-danger"><BHeart className="glyphicon-inbox" />inbox</BButton>
+                      </div>
                     );
                 }
 
@@ -35,9 +61,16 @@
             var BButton = React.createClass({
 
                 render: function() {
+                  var {...other} = this.props;
+                  console.log('other', {...this.props})
+                  console.log('props', this.props)
+                  console.log('other2', other)
+
                     return (
                         // <button>{this.props.children}</button>
-                        this.transferPropsTo(<a className="btn">{this.props.children}</a>)
+                        // this.transferPropsTo(<a className="btn">{this.props.children}</a>)
+                        // <a {...this.props} className="btn">{this.props.children}</a>
+                        <a {...this.props} className={mixClasses("btn", this.props.className)}>{this.props.children}</a>
                     );
                 }
 
@@ -46,7 +79,7 @@
             var BHeart = React.createClass({
                 render: function() {
                     return (
-                        <span className="glyphicon"></span>
+                        <span className={mixClasses("glyphicon", this.props.className)}></span>
                     );
                 }
             });
