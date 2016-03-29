@@ -177,7 +177,7 @@ var Board = React.createClass({
     console.log('text',text);
 
     var nextId = this.nextId();
-    console.log('nextId', nextId);
+    // console.log('nextId', nextId);
     notes.push({
       title: text,
       idx: nextId
