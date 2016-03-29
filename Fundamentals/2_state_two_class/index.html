@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Fundamentals</title>
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+            // state 사용
+            // 2개의 class 사용
+
+            var App = React.createClass({
+
+                getInitialState: function() {
+                    return {
+                        txt: '',
+                        id: 0
+                    }
+                },
+
+                update: function(e) {
+                    // console.log(e, e.target.value);
+                    this.setState({
+                        txt: e.target.value
+                    })
+                },
+
+                render: function() {
+                    return (
+                        <div>
+                            /*
+                                # In App Class
+                                <Widget txt={this.state.txt} update={this.update} />
+
+                                this.state.txt : App Class내에서 선언된 state
+                                txt : Widget 안에서는 this.props.txt
+                                update : Widget 안에서는 this.props.update
+                             */
+                            <Widget txt={this.state.txt} update={this.update} />
+                        </div>
+                    );
+                }
+            });
+
+            var Widget = React.createClass({
+                render: function() {
+                    return (
+                        <div>
+                            <input type="text" onChange={this.props.update}></input>
+                            <p>{this.props.txt}</p>
+                        </div>
+                    );
+                }
+
+            });
+
+            ReactDOM.render(
+                <App txt="this is the txt prop" />,
+                document.getElementById('container')
+            )
+        </script>
+    </body>
+</html>

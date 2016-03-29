@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Fundamentals</title>
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+        /*
+            Render : <App count={10} cat={5} txt="base" />
+            - render와 같이 기본 값 설정 (in createClass), getDefaultProps
+                >  getDefaultProps: function() {
+                        return {
+                            txt: 'this is the props txt',
+                            cat: -1
+                        }
+                    },
+            - prop에 대한 체크 propTypes
+                > propTypes: {
+                        txt: React.PropTypes.string,
+                        cat: React.PropTypes.number.isRequired,
+                        count: function(props, prop) {
+                            console.log('count::', props, prop, props[prop]);
+                        }
+                    }
+
+         */
+
+            var App = React.createClass({
+                getDefaultProps: function() {
+                    return {
+                        txt: 'this is the props txt',
+                        cat: -1
+                    }
+                },
+                propTypes: {
+                    txt: React.PropTypes.string,
+                    cat: React.PropTypes.number.isRequired,
+                    count: function(props, prop) {
+                        console.log('count::', props, prop, props[prop]);
+                    }
+                },
+                render: function() {
+                    var txt = this.props.txt;
+                    return (
+                        <div>
+                            <b>Bold</b>
+                            <p>{txt}</p>
+                        </div>
+                    );
+                }
+            });
+
+            var App2 = React.createClass({
+                render: function() {
+                    return (
+                        React.createElement('h1', null, 'H1 Tag')
+                    );
+                }
+            })
+
+            ReactDOM.render(
+                <App count={10} cat={5} />,
+                // <div><App /><App2 /></div>,
+                // React.createElement(App2)
+                // <div>{React.createElement(App2)}</div>,
+                document.getElementById('container')
+            )
+        </script>
+    </body>
+</html>

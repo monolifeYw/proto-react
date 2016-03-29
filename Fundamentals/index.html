@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Fundamentals</title>
+        <!-- jQuery, jQuery.ui -->
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+        /*
+            // transferPropsTo
+         */
+            var App = React.createClass({
+
+                render: function() {
+                    return (
+                        <BButton className="btn-primary"><BHeart />React</BButton>
+                    );
+                }
+
+            });
+
+            var BButton = React.createClass({
+
+                render: function() {
+                    return (
+                        // <button>{this.props.children}</button>
+                        this.transferPropsTo(<a className="btn">{this.props.children}</a>)
+                    );
+                }
+
+            });
+
+            var BHeart = React.createClass({
+                render: function() {
+                    return (
+                        <span className="glyphicon"></span>
+                    );
+                }
+            });
+
+            ReactDOM.render(
+                <App />,
+                document.getElementById('container')
+            )
+        </script>
+    </body>
+</html>

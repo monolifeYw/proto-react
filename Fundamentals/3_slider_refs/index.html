@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Fundamentals</title>
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+            // state 사용
+            // 2개의 class 사용
+
+            var App = React.createClass({
+                getInitialState: function() {
+                    return {
+                        red: 0,
+                        green: 0,
+                        blue: 0
+                    }
+                },
+
+                update: function() {
+                    //console.log('this.refs.red', ReactDOM.findDOMNode(this.refs.red).value);
+                    console.log('this.refs.red', this.refs.red, ReactDOM.findDOMNode(this.refs.red));   // Slider의 최상위노드
+                    console.log('this.refs.red.refs', this.refs.red.refs)
+                    this.setState({
+                        red: ReactDOM.findDOMNode(this.refs.red.refs.inp).value,
+                        green: ReactDOM.findDOMNode(this.refs.green.refs.inp).value,
+                        blue: ReactDOM.findDOMNode(this.refs.blue.refs.inp).value
+                    })
+                },
+
+                render: function() {
+                    return (
+                        <div>
+                            <Slider ref="red" update={this.update} />
+                            <label>{this.state.red}</label>
+                            <Slider ref="green" update={this.update} />
+                            <label>{this.state.green}</label>
+                            <Slider ref="blue" update={this.update} />
+                            <label>{this.state.blue}</label>
+                        </div>
+                    );
+                }
+            });
+
+            /*
+                var Slider = React.createClass({})
+                - render 시 <input ref="lyw" type="range" min="0" max="255" onChange={this.props.update} />
+                - 해당 클래스내에서는 this.refs.lyw 로 잡힘
+
+                var App = React.createClass({})
+                - <Slider ref="red" update={this.update} />
+                - 선언되는 클래스(App)안에서 this.refs.red -> ex) ReactDOM.findDOMNode(this.refs.red).value
+
+                1) this.refs -> 현재 클래스내의 레퍼런스
+                2) this.refs.red.refs (해당 red가 속해있는 Class)
+                    ex ) App 안에서 <Slider ref="red" update={this.update} /> this.refs.red.refs -> Slider의 refs를 불러옴
+
+
+                var App = React.createClass({})
+                - <Slider ref="red" update={this.update} />
+
+                var Slider = React.createClass({})
+                - <div><input type="range" min="0" max="255" onChange={this.props.update} /></div>
+
+                App안에서 this.refs.red -> Slider의 div부터 잡힘 (Slider 자체)
+                        this.refs.red.refs --> 선택한 Slider의 refs
+
+             */
+
+            var Slider = React.createClass({
+                render: function() {
+                    return (
+                        <div>
+                            <input ref="inp" type="range" min="0" max="255" onChange={this.props.update} />
+                        </div>
+                        // <div>
+                        //     <input type="text" onChange={this.props.update}></input>
+                        //     <p>{this.props.txt}</p>
+                        // </div>
+                    );
+                }
+
+            });
+
+            ReactDOM.render(
+                <App txt="this is the txt prop" />,
+                document.getElementById('container')
+            )
+        </script>
+    </body>
+</html>
