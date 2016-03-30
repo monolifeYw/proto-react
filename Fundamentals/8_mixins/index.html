@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Fundamentals</title>
+        <!-- jQuery, jQuery.ui -->
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <!-- // <inputComponent txt="this is the input" /> -->
+        <script type="text/babel">
+        /*
+            input의 초기 value는 defaultValue 로 설정
+
+            Component 에 대한 이름 규정
+            - btnComponent, inputComponent --> rendering 안됨
+            - 무조건 대문자로 진행해야 하는 건지?
+
+            mixins
+            - 1) 하나의 공통된 이벤트 및 유틸을 만들고
+                ex )
+                var ReactMixin = {
+                    componentWillMount: function() {
+                        console.log('componentWillMount');
+                    }
+                }
+
+            - 2) 컴포넌트 만들시 같이 적용한다.
+                var BtnComponent = React.createClass({
+                    mixins:[ReactMixin],
+                    render:function(){}
+                });
+
+         */
+            var ReactMixin = {
+                getInitialState: function() {
+                    return {
+                        count: 0
+                    }
+                },
+
+                componentWillMount: function() {
+                    console.log('componentWillMount');
+                },
+
+                incrementCount: function() {
+                    this.setState({
+                        count: this.state.count + 1
+                    })
+                }
+            }
+
+            var App = React.createClass({
+                render: function() {
+                    return (
+                        <div>
+                            <BtnComponent txt="this is the btn" />
+                            <InputComponent txt="this is the input" />
+                        </div>
+                    );
+                }
+            });
+
+            var BtnComponent = React.createClass({
+                mixins:[ReactMixin],
+                render: function() {
+                    return (
+                        <button onClick={this.incrementCount}>{this.props.txt} : {this.state.count}</button>
+                    )
+                }
+            });
+
+            var InputComponent = React.createClass({
+                mixins:[ReactMixin],
+                componentWillMount: function() {
+                    setInterval(this.incrementCount, 1000);
+                },
+                componentWillUpdate:function() {
+                    ReactDOM.findDOMNode(this).value = this.props.txt + ':' + this.state.count;
+                },
+                render: function() {
+                    return (
+                        <input defaultValue={this.props.txt + ':' + this.state.count} />
+                    )
+                }
+            });
+
+            ReactDOM.render(
+                <App />,
+                document.getElementById('container')
+            )
+        </script>
+    </body>
+</html>

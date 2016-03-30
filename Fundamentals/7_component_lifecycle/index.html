@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Fundamentals</title>
+        <!-- jQuery, jQuery.ui -->
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    </head>
+    <body>
+        <button id="btn_render" type="button" name="button">Render</button>
+        <button id="btn_unmount" type="button" name="button">unmount</button>
+        <hr />
+        <div id="container"></div>
+        <hr />
+
+        <script type="text/babel">
+            /*
+                componentWillReceiveProps : prop이 변경되었을 때. (object)
+                componentWillReceiveProps: function(nextProps) {
+                    console.log('[componentWillReceiveProps] nextProps',nextProps);
+                    console.log('[componentWillReceiveProps] this.props',this.props);
+                    this.setState({
+                        increasing: nextProps.val > this.props.val
+                    })
+                }
+
+                shouldComponentUpdate: 화면 렌더링 직전의 체크 (false 라면 render 안함)
+                shouldComponentUpdate: function(nextProps, nextState)
+                - Make sure to return true or false ( 무조건 return은 Boolean )
+
+                componentWillUpdate: 업데이트가 이루어진 후 화면 렌더링 직전 (shouldComponentUpdate 이 true)
+                componentWillUpdate: function(nextProps, nextState)
+
+                componentDidUpdate: 랜더링 이후에 업데이트 상황알려줌(기존의 변경되기 전 설정값 - prevProps, prevState)
+                componentDidUpdate: function(prevProps, prevState)
+
+                * Component LifeCycle
+                1) componentWillReceiveProps
+                2) shouldComponentUpdate
+                3) componentWillUpdate
+                4) render
+                5) componentDidUpdate
+             */
+            var App = React.createClass({
+
+                getInitialState: function() {
+                    return {
+                        increasing: false
+                    }
+                },
+
+                update: function() {
+                    var newVal = this.props.val + 1;
+                    //this.setProps({val: newVal});
+                    renderComponent(newVal);
+                },
+
+                componentWillReceiveProps: function(nextProps) {
+                    console.log('========================');
+                    console.log('[componentWillReceiveProps] nextProps',nextProps);
+                    console.log('[componentWillReceiveProps] this.props',this.props);
+                    this.setState({
+                        increasing: nextProps.val > this.props.val
+                    })
+                },
+
+                // 무조건 return은 Boolean
+                // Make sure to return true or false
+                // 화면 렌더링 직전의 체크 (false 라면 render 안함)
+                shouldComponentUpdate: function(nextProps, nextState) {
+                    console.log('[shouldComponentUpdate]', nextProps, nextState);
+
+                    return nextProps.val % 5 === 0;
+                },
+
+                componentWillUpdate: function(nextProps, nextState) {
+                    console.log('[componentWillUpdate]', nextProps, nextState);
+                    console.log('[componentWillUpdate]', JSON.stringify(nextProps));
+                },
+
+                componentDidUpdate: function(prevProps, prevState) {
+                    console.log('[componentDidUpdate]', prevProps, prevState);
+                    console.log('[componentDidUpdate]', JSON.stringify(prevProps));
+                },
+
+                render: function() {
+                    console.log('========================');
+                    console.log('[render] App createClass Render');
+                    console.log('[render] increasing : ', this.state.increasing);
+                    return (
+                        <button onClick={this.update}>{this.props.val}</button>
+                    );
+                }
+
+            });
+
+            function unmount() {
+                ReactDOM.unmountComponentAtNode(document.getElementById('container'));
+            }
+
+            function renderComponent(n) {
+                ReactDOM.render(
+                    <App val={n} />,
+                    document.getElementById('container')
+                )
+            }
+
+            document.getElementById('btn_render').addEventListener('click', function(e) {
+                renderComponent(0);
+            });
+            document.getElementById('btn_unmount').addEventListener('click', function(e) {
+                unmount();
+            });
+            //renderComponent(3);
+
+
+        </script>
+    </body>
+</html>

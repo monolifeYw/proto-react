@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Fundamentals</title>
+        <!-- jQuery, jQuery.ui -->
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    </head>
+    <body>
+        <button id="btn_render" type="button" name="button">Render</button>
+        <button id="btn_unmount" type="button" name="button">unmount</button>
+        <hr />
+        <div id="container"></div>
+        <hr />
+
+        <script type="text/babel">
+            /*
+
+
+             */
+            var App = React.createClass({
+
+                update: function() {
+                    var newVal = this.props.val + 1;
+                    //this.setProps({val: newVal});
+                    renderComponent(newVal);
+                },
+
+                componentWillMount: function() {
+                    console.log('componentWillMount');
+
+                    this.setState({
+                        m: 2
+                    });
+
+                    if (this.props.val == 0) {
+                        this.btnStyle = {
+                            color: 'red'
+                        }
+                    }
+                },
+
+                componentDidMount: function(rootNode) {
+                    console.log('componentDidMount', rootNode);
+                    console.log('componentDidMount', ReactDOM.findDOMNode(this));
+
+                    this.inc = setInterval(this.update, 500);
+                },
+
+                componentWillUnmount: function() {
+                    console.log('componentWillUnmount');
+                    clearInterval(this.inc);
+                },
+
+                render: function() {
+                    console.log('App createClass Render');
+                    return (
+                        <button onClick={this.update} style={this.btnStyle}>{this.props.val * this.state.m}</button>
+                    );
+                }
+
+            });
+
+            function unmount() {
+                ReactDOM.unmountComponentAtNode(document.getElementById('container'));
+            }
+
+            function renderComponent(n) {
+                ReactDOM.render(
+                    <App val={n} />,
+                    document.getElementById('container')
+                )
+            }
+
+            document.getElementById('btn_render').addEventListener('click', function(e) {
+                renderComponent(0);
+            });
+            document.getElementById('btn_unmount').addEventListener('click', function(e) {
+                unmount();
+            });
+            //renderComponent(3);
+
+
+        </script>
+    </body>
+</html>

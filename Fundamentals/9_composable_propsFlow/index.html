@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Fundamentals</title>
+        <!-- jQuery, jQuery.ui -->
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+
+        <script type="text/babel">
+        /*
+            # Props Flow
+            1) getDefaultProps : 초기 prop 값을 정할 수 있음 (NumInput Class)
+            2) render(App Class) : <NumInput ref="red" min={0} max={55} step={1} val={this.state.red} update={this.update} label="Red Label" />
+            3) 2)과정에서 NumInput Class 내의 propTypes - props의 체크 (React.propTypes)
+            http://ricostacruz.com/cheatsheets/react.html
+
+            propTypes: {
+                min: React.PropTypes.number,
+                max: React.PropTypes.number,
+                step: React.PropTypes.number,
+                val: React.PropTypes.number,
+                label: React.PropTypes.string,
+                update: React.PropTypes.func.isRequired,            // 반드시 함수가 포함되어야 함
+                type: React.PropTypes.oneOf(['number', 'range'])
+
+                #Enumerables 열거할 수 있는.
+                // oneOf(type:array) - type안의 배열들중 하나, ex) oneOf(['number', 'range'])
+                // oneOfType - ex) oneOfType([React.PropTypes.number, React.PropTypes.string])
+
+                # Custom validation( Supply your own function. )
+                customProp: function(props, prop, componentName) {
+                    if (!/matchme/.test(props[propName])) {
+                      return new Error('Validation failed!');
+                    }
+                }
+            }
+         */
+
+
+
+        var App = React.createClass({
+            getInitialState: function() {
+                return {
+                    red: 0
+                }
+            },
+
+            update: function() {
+                this.setState({
+                    red: ReactDOM.findDOMNode(this.refs.red.refs.inp).value
+                });
+            },
+
+            render: function() {
+                return (
+                    <div>
+                        <NumInput ref="red" min={0} max={55} step={1} val={this.state.red} update={this.update} label="Red Label" />
+                    </div>
+                );
+            }
+        });
+
+
+        var NumInput = React.createClass({
+            propTypes: {
+                min: React.PropTypes.number,
+                max: React.PropTypes.number,
+                step: React.PropTypes.number,
+                val: React.PropTypes.number,
+                label: React.PropTypes.string,
+                update: React.PropTypes.func.isRequired,
+                type: React.PropTypes.oneOf(['number', 'range'])
+
+            },
+            getDefaultProps: function() {
+                return {
+                    min: null,
+                    max: null,
+                    val: 0,
+                    step: 1,
+                    label: '',
+                    type: 'range'
+                }
+            },
+            render: function() {
+                var label = this.props.label !== ''?<label>{this.props.label} : {this.props.val}</label>:'';
+                return (
+                    <div>
+                        <input ref="inp" type={this.props.type} min={this.props.min} max={this.props.max} step={this.props.step} onChange={this.props.update} defaultValue={this.props.val} /> {label}
+                    </div>
+                );
+            }
+
+        });
+
+        ReactDOM.render(
+            <App txt="this is the txt prop" />,
+            document.getElementById('container')
+        )
+        </script>
+    </body>
+</html>
