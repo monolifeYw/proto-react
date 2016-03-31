@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Tusplus</title>
+        <!-- jQuery, jQuery.ui -->
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://fb.me/react-with-addons-0.14.7.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+        // debugger : 각 지점의 break point 를 찍어줌
+        // componentWillReceiveProps : props이 변경되었을 때.
+
+            var DashBoard = React.createClass({
+
+                loadData: function(url) {
+                    // promise
+                    return $.get('https://gsr-demo.firebaseio-demo.com/' + url + '/.json');
+                },
+
+                componentWillMount: function() {
+                    console.log('componentWillMount');
+                    // debugger;
+                },
+
+                componentDidMount: function() {
+                    console.log('componentDidMount');
+                    // debugger;
+                    this.loadData(this.props.url).then(function(data) {
+                        this.setState({
+                            metric: data
+                        })
+                    }.bind(this));
+                },
+
+                componentWillReceiveProps: function(nextProps) {
+                    console.log('componentWillReceiveProps');
+                    var lastUrl = this.props.url;
+                    console.log('nextProps', nextProps);
+                    // debugger;
+                    this.loadData(nextProps.url).then(function(data) {
+                        this.setState({
+                            lastRoute: lastUrl,
+                            metric: data
+                        })
+                        $('#tip').tooltip();
+                    }.bind(this));
+
+                },
+
+                shouldComponentUpdate: function(nextProps, nextState) {
+                    return nextState.metric > 100;
+                },
+
+                componentWillUnmount: function(nextProps, nextState) {
+                    debugger;
+                    $('#tip').tooltip('destory');
+                },
+
+                changeProps: function() {
+                    console.log('changeProps');
+                    this.setProps({
+                        url: 'metric2'
+                    })
+                },
+
+                getInitialState: function() {
+                    return {
+                        metric: 0,
+                        lastRoute: ''
+                    };
+                },
+
+                render: function() {
+                    return (
+                        <div className="jumbotron">
+                            <a id="tip" href="#" data-toggle="tooltip" title="Hover">Hover over me</a>
+                            {this.state.lastRoute}
+
+                            <h2>{this.state.metric}</h2>
+                            <button type="button" name="button" onClick={this.changeProps}>button</button>
+                        </div>
+                    );
+                }
+
+            });
+
+            ReactDOM.render(
+                <DashBoard url="metric" />,
+                document.getElementById('container')
+            )
+
+        </script>
+    </body>
+</html>

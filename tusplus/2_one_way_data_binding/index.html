@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Tusplus</title>
+        <!-- jQuery, jQuery.ui -->
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+
+        <script type="text/babel">
+            var MessageBox = React.createClass({
+                deleteMessage: function(msg) {
+                    console.log('deleting : ', msg);
+                    var newMessages = _.without(this.state.messages, msg);  // 배열을 재정리
+                    this.setState({
+                        messages: newMessages
+                    })
+                },
+
+                getInitialState: function() {
+                    return {
+                        isVisible: true,
+                        titleMessage: 'React Proto Tusplus',
+                        messages: [
+                            'Refs to Components',
+                            'The ref returned from ReactDOM.render',
+                            'The ref Callback Attribute',
+                            'The ref String Attribute ',
+                            'A Complete Example'
+                        ]
+                    }
+                },
+
+                handleAdd: function(e) {
+                    var message = this.refs.newMessage.value;
+                    if (message == '') {
+                        return;
+                    }
+                    console.log('handleAdd : ',e, e.target);
+                    console.log('handleAdd this : ',this);
+
+                    var messages = this.state.messages.concat(message);
+                    this.refs.newMessage.value = '';
+
+                    this.setState({messages: messages});
+                },
+
+                render: function() {
+                    var inlineStyles = {
+                        display: (this.state.isVisible)?'block':'none'
+                    }
+
+                    var subMessage = 'Its not good';
+
+                    var message = this.state.messages.map(function(msg, i) {
+                        return <SubMessage message={msg} key={i} onDelete={this.deleteMessage} />
+                    }.bind(this));
+
+                    return (
+                        <div className="container jumbotron" style={inlineStyles}>
+                            <h2>{this.state.titleMessage}</h2>
+                            <input ref="newMessage" type="text" />
+                            <button className="btn btn-primary" onClick={this.handleAdd}>Add</button>
+                            {message}
+                        </div>
+                    );
+                }
+            });
+
+            var SubMessage = React.createClass({
+                propTypes: {
+                    message: React.PropTypes.string.isRequired,
+                    onDelete: React.PropTypes.func.isRequired
+                },
+
+                handleDelete: function(e) {
+                    // console.log('handleDelete : ', this.props.message);
+                    this.props.onDelete(this.props.message);
+
+                },
+
+                getDefaultProps: function() {
+                    return {
+                        message: 'Its good to see you'
+                    }
+                },
+                render: function() {
+                    return (
+                        <div>
+                            {this.props.message}
+                            <button onClick={this.handleDelete} className="btn btn-danger">x</button>
+                        </div>
+                    )
+                }
+            })
+
+
+            ReactDOM.render(
+                <MessageBox />,
+                document.getElementById('container'),
+                function () {
+                    console.log('after render');
+                }
+            )
+
+            console.log('MessageBox',MessageBox);
+        </script>
+    </body>
+</html>
