@@ -1,0 +1,23 @@
+{
+  "name": "7_gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browserify -t reactify src/app.js > build/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^3.2.2",
+    "gulp-open": "^1.0.0",
+    "gulp-react": "^3.1.0",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-tools": "^0.13.3",
+    "reactify": "^1.1.1"
+  }
+}
