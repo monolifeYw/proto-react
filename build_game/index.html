@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proto Tusplus</title>
+        <!-- jQuery, jQuery.ui -->
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script src="https://fb.me/react-with-addons-0.14.7.js"></script>
+        <script src="https://fb.me/react-0.14.7.js"></script>
+        <script src="https://fb.me/react-dom-0.14.7.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+        // API : https://api.github.com/users/monolifeyw
+        // #Git limit 설정
+        // monolifeYw
+        // petehunt
+        // foundy
+        // dalgos
+        // https://developer.github.com/v3/#rate-limiting
+        //
+        // ex)
+        // http://222.231.15.198/api_auto_search?os=pc&api_version=1.0&per_page=12&q=%EA%B0%95%EB%82%A8
+        // http://222.231.15.198/api_auto_search/topdeals?ver=1.0&keyword=%EA%B0%95%EB%82%A8
+        // http://suggest2.wemakeprice.com/api_auto_search
+        // http://suggest2.wemakeprice.com/api_auto_search/topdeals?ver=1.0&keyword=%EA%B0%95%EB%82%A8
+        //
+        /*
+            #include list
+            <script src="https://fb.me/react-with-addons-0.14.7.js>
+            <script src="https://fb.me/react-0.14.7.js">
+            <script src="https://fb.me/react-dom-0.14.7.js">
+
+            addons가 react보다 후에 include 되었을시, 문제 생김(ex : ref)
+
+         */
+
+            var url = 'http://suggest2.wemakeprice.com';
+            // var url = 'http://222.231.15.198';
+
+            var Card = React.createClass({
+                getInitialState: function() {
+                    return {
+
+                    };
+                },
+                /*
+                {
+                    "code": 1,
+                    "message": "success",
+                    "result_set": {
+                    "deals": [
+                      {
+                        "img_url": "http://image.web.vm.wemakeprice.com/dealimg/201601/836395/a825c4ec3767ccf5b455d023e4f1a1bd5a9a9a9c.jpg?modify\u003dD_1452222272",
+                        "free_ship_type": 0,
+                        "price_expose": 15900,
+                        "price_text": "원",
+                        "deal_id": 836395,
+                        "deal_text": "뉴(NEW) 연어파티!^무한리필로 즐기세요~!!"
+                      }
+                    ]
+                    }
+                    }
+                 */
+                componentDidMount: function() {
+                    // $.get('https://api.github.com/users/'+this.props.login, function(data) {
+                    $.get(url+'/api_auto_search/topdeals?ver=1.0&keyword='+this.props.keyword, function(data) {
+                        console.log(data);
+                        if (data.code) {
+                            this.setState(data.result_set.deals[0]);
+                        }
+                    }.bind(this));
+                },
+
+                render: function() {
+                    return (
+                        <div>
+                            <img src={this.state.img_url} width="140" />
+                            <h3>{this.state.deal_text}</h3>
+                            <hr />
+                        </div>
+                    );
+                }
+
+            });
+
+
+            var SearchArea = React.createClass({
+                handleSubmit: function(evt) {
+                    evt.preventDefault();
+                    var value = this.refs.searchInput.value;
+                    this.props.onUpdate(value);
+                    this.refs.searchInput.value = '';
+                },
+
+                render: function() {
+                    return (
+                        <form onSubmit={this.handleSubmit}>
+                            <input ref="searchInput" placeholder="search deals" />
+                            <button> Add </button>
+                        </form>
+                    );
+                }
+
+            });
+
+            var App = React.createClass({
+                searchUpdate: function(value) {
+                    if (value != '') {
+                        this.setState({
+                            keywords: this.state.keywords.concat(value)
+                        })
+                    }
+                },
+
+                getInitialState: function() {
+                    return {
+                        keywords:[]
+                    }
+                },
+                render: function() {
+                    var cards = this.state.keywords.map(function(keyword, i) {
+                        return <Card key={i} keyword={keyword} />
+                    });
+                    return (
+                        <div>
+                            <SearchArea onUpdate={this.searchUpdate} />
+                            {cards}
+                        </div>
+                    );
+                }
+            });
+            ReactDOM.render(
+                <App />,
+                document.getElementById('container')
+            )
+
+        </script>
+    </body>
+</html>
