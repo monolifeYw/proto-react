@@ -1,0 +1,3238 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'http-server' ]
+2 info using npm@2.1.12
+3 info using node@v0.10.29
+4 silly cache add args [ 'http-server', null ]
+5 verbose cache add spec http-server
+6 silly cache add parsed spec { raw: 'http-server',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'http-server',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed http-server@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'http-server', range: '*', hasData: false }
+11 silly mapToRegistry name http-server
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/http-server
+15 verbose addNameRange registry:https://registry.npmjs.org/http-server not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/http-server
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 21:58:03
+19 verbose request id 86a48735e368e18e
+20 http request GET https://registry.npmjs.org/http-server
+21 http 200 https://registry.npmjs.org/http-server
+22 silly get cb [ 200,
+22 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly get     etag: '"3FLWKMP6ULD6WBGVGQ1VC4BSN"',
+22 silly get     'content-type': 'application/json',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     'content-length': '58316',
+22 silly get     'accept-ranges': 'bytes',
+22 silly get     date: 'Wed, 06 Apr 2016 12:58:05 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     age: '285',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-itm7423-ITM',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '1',
+22 silly get     'x-timer': 'S1459947485.328755,VS0,VE0',
+22 silly get     vary: 'Accept-Encoding' } ]
+23 silly addNameRange number 2 { name: 'http-server', range: '*', hasData: true }
+24 silly addNameRange versions [ 'http-server',
+24 silly addNameRange   [ '0.1.0',
+24 silly addNameRange     '0.1.1',
+24 silly addNameRange     '0.1.3',
+24 silly addNameRange     '0.2.1',
+24 silly addNameRange     '0.2.2',
+24 silly addNameRange     '0.2.3',
+24 silly addNameRange     '0.2.4',
+24 silly addNameRange     '0.2.5',
+24 silly addNameRange     '0.2.6',
+24 silly addNameRange     '0.2.9',
+24 silly addNameRange     '0.3.0',
+24 silly addNameRange     '0.4.0',
+24 silly addNameRange     '0.4.1',
+24 silly addNameRange     '0.5.0',
+24 silly addNameRange     '0.5.1',
+24 silly addNameRange     '0.5.2',
+24 silly addNameRange     '0.5.3',
+24 silly addNameRange     '0.5.5',
+24 silly addNameRange     '0.6.0',
+24 silly addNameRange     '0.6.1',
+24 silly addNameRange     '0.7.0',
+24 silly addNameRange     '0.7.1',
+24 silly addNameRange     '0.7.2',
+24 silly addNameRange     '0.7.3',
+24 silly addNameRange     '0.7.4',
+24 silly addNameRange     '0.7.5',
+24 silly addNameRange     '0.8.0',
+24 silly addNameRange     '0.8.1',
+24 silly addNameRange     '0.8.2',
+24 silly addNameRange     '0.8.3',
+24 silly addNameRange     '0.8.4',
+24 silly addNameRange     '0.8.5',
+24 silly addNameRange     '0.9.0' ] ]
+25 verbose addNamed http-server@0.9.0
+26 silly addNamed semver.valid 0.9.0
+27 silly addNamed semver.validRange 0.9.0
+28 silly mapToRegistry name http-server
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry uri https://registry.npmjs.org/http-server
+32 verbose addRemoteTarball https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz not in flight; adding
+33 verbose addRemoteTarball [ 'https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz',
+33 verbose addRemoteTarball   '8f1b06bdc733618d4dc42831c7ba1aff4e06001a' ]
+34 info retry fetch attempt 1 at 21:58:04
+35 info attempt registry request try #1 at 21:58:04
+36 http fetch GET https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz
+37 http fetch 200 https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz
+38 silly fetchAndShaCheck shasum 8f1b06bdc733618d4dc42831c7ba1aff4e06001a
+39 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/http-server/-/http-server-0.9.0.tgz not in flight; adding
+40 verbose addTmpTarball already have metadata; skipping unpack for http-server@0.9.0
+41 silly cache afterAdd http-server@0.9.0
+42 verbose afterAdd /Users/we/.npm/http-server/0.9.0/package/package.json not in flight; writing
+43 verbose afterAdd /Users/we/.npm/http-server/0.9.0/package/package.json written
+44 silly install resolved [ { name: 'http-server',
+44 silly install resolved     version: '0.9.0',
+44 silly install resolved     description: 'A simple zero-configuration command-line http server',
+44 silly install resolved     main: './lib/http-server',
+44 silly install resolved     repository:
+44 silly install resolved      { type: 'git',
+44 silly install resolved        url: 'git://github.com/indexzero/http-server.git' },
+44 silly install resolved     keywords: [ 'cli', 'command' ],
+44 silly install resolved     scripts:
+44 silly install resolved      { start: 'node ./bin/http-server',
+44 silly install resolved        pretest: 'common bin/http-server lib/ test',
+44 silly install resolved        test: 'vows --spec --isolate' },
+44 silly install resolved     contributors:
+44 silly install resolved      [ [Object],
+44 silly install resolved        [Object],
+44 silly install resolved        [Object],
+44 silly install resolved        [Object],
+44 silly install resolved        [Object],
+44 silly install resolved        [Object],
+44 silly install resolved        [Object],
+44 silly install resolved        [Object],
+44 silly install resolved        [Object],
+44 silly install resolved        [Object] ],
+44 silly install resolved     dependencies:
+44 silly install resolved      { colors: '1.0.3',
+44 silly install resolved        corser: '~2.0.0',
+44 silly install resolved        ecstatic: '^1.4.0',
+44 silly install resolved        'http-proxy': '^1.8.1',
+44 silly install resolved        opener: '~1.4.0',
+44 silly install resolved        optimist: '0.6.x',
+44 silly install resolved        portfinder: '0.4.x',
+44 silly install resolved        union: '~0.4.3' },
+44 silly install resolved     devDependencies: { 'common-style': '^3.0.0', request: '2.49.x', vows: '0.7.x' },
+44 silly install resolved     bugs: { url: 'https://github.com/nodeapps/http-server/issues' },
+44 silly install resolved     license: 'MIT',
+44 silly install resolved     preferGlobal: 'true',
+44 silly install resolved     bin: { 'http-server': './bin/http-server', hs: './bin/http-server' },
+44 silly install resolved     gitHead: '1a8552c5e028bd5500027ee940111133927a4e94',
+44 silly install resolved     homepage: 'https://github.com/indexzero/http-server#readme',
+44 silly install resolved     _id: 'http-server@0.9.0',
+44 silly install resolved     _shasum: '8f1b06bdc733618d4dc42831c7ba1aff4e06001a',
+44 silly install resolved     _from: 'http-server@*',
+44 silly install resolved     _npmVersion: '3.7.1',
+44 silly install resolved     _nodeVersion: '4.2.2',
+44 silly install resolved     _npmUser: { name: 'indexzero', email: 'charlie.robbins@gmail.com' },
+44 silly install resolved     maintainers: [ [Object] ],
+44 silly install resolved     dist:
+44 silly install resolved      { shasum: '8f1b06bdc733618d4dc42831c7ba1aff4e06001a',
+44 silly install resolved        tarball: 'https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz' },
+44 silly install resolved     _npmOperationalInternal:
+44 silly install resolved      { host: 'packages-6-west.internal.npmjs.com',
+44 silly install resolved        tmp: 'tmp/http-server-0.9.0.tgz_1455864708425_0.19514421350322664' },
+44 silly install resolved     directories: {},
+44 silly install resolved     _resolved: 'https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz' } ]
+45 info install http-server@0.9.0 into /usr/local/lib
+46 info installOne http-server@0.9.0
+47 verbose installOne of http-server to /usr/local/lib not in flight; installing
+48 verbose lock using /Users/we/.npm/_locks/http-server-ae30c9ae1f4c5eaa.lock for /usr/local/lib/node_modules/http-server
+49 silly install write writing http-server 0.9.0 to /usr/local/lib/node_modules/http-server
+50 silly cache addNamed cb http-server@0.9.0
+51 verbose unbuild lib/node_modules/http-server
+52 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server
+53 verbose tar unpack /Users/we/.npm/http-server/0.9.0/package.tgz
+54 verbose tar unpacking to /usr/local/lib/node_modules/http-server
+55 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server
+56 silly gunzTarPerm modes [ '755', '644' ]
+57 silly gunzTarPerm extractEntry package.json
+58 silly gunzTarPerm extractEntry .npmignore
+59 silly gunzTarPerm extractEntry README.md
+60 silly gunzTarPerm extractEntry LICENSE
+61 silly gunzTarPerm extractEntry lib/http-server.js
+62 silly gunzTarPerm extractEntry bin/http-server
+63 silly gunzTarPerm extractEntry screenshots/directory.png
+64 silly gunzTarPerm extractEntry screenshots/public.png
+65 silly gunzTarPerm extractEntry screenshots/start.png
+66 silly gunzTarPerm extractEntry .travis.yml
+67 silly gunzTarPerm extractEntry public/404.html
+68 silly gunzTarPerm extractEntry public/img/turtle.png
+69 silly gunzTarPerm extractEntry public/index.html
+70 silly gunzTarPerm extractEntry test/http-server-test.js
+71 silly gunzTarPerm extractEntry test/fixtures/root/canYouSeeMe
+72 silly gunzTarPerm extractEntry test/fixtures/root/file
+73 info preinstall http-server@0.9.0
+74 silly prepareForInstallMany adding colors@1.0.3 from http-server dependencies
+75 silly prepareForInstallMany adding corser@~2.0.0 from http-server dependencies
+76 silly prepareForInstallMany adding ecstatic@^1.4.0 from http-server dependencies
+77 silly prepareForInstallMany adding http-proxy@^1.8.1 from http-server dependencies
+78 silly prepareForInstallMany adding opener@~1.4.0 from http-server dependencies
+79 silly prepareForInstallMany adding optimist@0.6.x from http-server dependencies
+80 silly prepareForInstallMany adding portfinder@0.4.x from http-server dependencies
+81 silly prepareForInstallMany adding union@~0.4.3 from http-server dependencies
+82 silly cache add args [ 'colors@1.0.3', null ]
+83 verbose cache add spec colors@1.0.3
+84 silly cache add args [ 'corser@~2.0.0', null ]
+85 verbose cache add spec corser@~2.0.0
+86 silly cache add parsed spec { raw: 'colors@1.0.3',
+86 silly cache add   scope: null,
+86 silly cache add   name: 'colors',
+86 silly cache add   rawSpec: '1.0.3',
+86 silly cache add   spec: '1.0.3',
+86 silly cache add   type: 'version' }
+87 verbose addNamed colors@1.0.3
+88 silly addNamed semver.valid 1.0.3
+89 silly addNamed semver.validRange 1.0.3
+90 silly mapToRegistry name colors
+91 silly mapToRegistry using default registry
+92 silly mapToRegistry registry https://registry.npmjs.org/
+93 silly mapToRegistry uri https://registry.npmjs.org/colors
+94 verbose addNameVersion registry:https://registry.npmjs.org/colors not in flight; fetching
+95 silly cache add parsed spec { raw: 'corser@~2.0.0',
+95 silly cache add   scope: null,
+95 silly cache add   name: 'corser',
+95 silly cache add   rawSpec: '~2.0.0',
+95 silly cache add   spec: '>=2.0.0 <2.1.0',
+95 silly cache add   type: 'range' }
+96 verbose addNamed corser@>=2.0.0 <2.1.0
+97 silly addNamed semver.valid null
+98 silly addNamed semver.validRange >=2.0.0 <2.1.0
+99 silly addNameRange { name: 'corser', range: '>=2.0.0 <2.1.0', hasData: false }
+100 silly mapToRegistry name corser
+101 silly mapToRegistry using default registry
+102 silly mapToRegistry registry https://registry.npmjs.org/
+103 silly mapToRegistry uri https://registry.npmjs.org/corser
+104 verbose addNameRange registry:https://registry.npmjs.org/corser not in flight; fetching
+105 silly cache add args [ 'http-proxy@^1.8.1', null ]
+106 verbose cache add spec http-proxy@^1.8.1
+107 silly cache add parsed spec { raw: 'http-proxy@^1.8.1',
+107 silly cache add   scope: null,
+107 silly cache add   name: 'http-proxy',
+107 silly cache add   rawSpec: '^1.8.1',
+107 silly cache add   spec: '>=1.8.1 <2.0.0',
+107 silly cache add   type: 'range' }
+108 verbose addNamed http-proxy@>=1.8.1 <2.0.0
+109 silly addNamed semver.valid null
+110 silly addNamed semver.validRange >=1.8.1 <2.0.0
+111 silly addNameRange { name: 'http-proxy', range: '>=1.8.1 <2.0.0', hasData: false }
+112 silly mapToRegistry name http-proxy
+113 silly mapToRegistry using default registry
+114 silly mapToRegistry registry https://registry.npmjs.org/
+115 silly mapToRegistry uri https://registry.npmjs.org/http-proxy
+116 verbose addNameRange registry:https://registry.npmjs.org/http-proxy not in flight; fetching
+117 silly cache add args [ 'ecstatic@^1.4.0', null ]
+118 verbose cache add spec ecstatic@^1.4.0
+119 silly cache add parsed spec { raw: 'ecstatic@^1.4.0',
+119 silly cache add   scope: null,
+119 silly cache add   name: 'ecstatic',
+119 silly cache add   rawSpec: '^1.4.0',
+119 silly cache add   spec: '>=1.4.0 <2.0.0',
+119 silly cache add   type: 'range' }
+120 verbose addNamed ecstatic@>=1.4.0 <2.0.0
+121 silly addNamed semver.valid null
+122 silly addNamed semver.validRange >=1.4.0 <2.0.0
+123 silly addNameRange { name: 'ecstatic', range: '>=1.4.0 <2.0.0', hasData: false }
+124 silly mapToRegistry name ecstatic
+125 silly mapToRegistry using default registry
+126 silly mapToRegistry registry https://registry.npmjs.org/
+127 silly mapToRegistry uri https://registry.npmjs.org/ecstatic
+128 verbose addNameRange registry:https://registry.npmjs.org/ecstatic not in flight; fetching
+129 silly cache add args [ 'opener@~1.4.0', null ]
+130 verbose cache add spec opener@~1.4.0
+131 silly cache add parsed spec { raw: 'opener@~1.4.0',
+131 silly cache add   scope: null,
+131 silly cache add   name: 'opener',
+131 silly cache add   rawSpec: '~1.4.0',
+131 silly cache add   spec: '>=1.4.0 <1.5.0',
+131 silly cache add   type: 'range' }
+132 verbose addNamed opener@>=1.4.0 <1.5.0
+133 silly addNamed semver.valid null
+134 silly addNamed semver.validRange >=1.4.0 <1.5.0
+135 silly addNameRange { name: 'opener', range: '>=1.4.0 <1.5.0', hasData: false }
+136 silly mapToRegistry name opener
+137 silly mapToRegistry using default registry
+138 silly mapToRegistry registry https://registry.npmjs.org/
+139 silly mapToRegistry uri https://registry.npmjs.org/opener
+140 verbose addNameRange registry:https://registry.npmjs.org/opener not in flight; fetching
+141 verbose request uri https://registry.npmjs.org/corser
+142 verbose request no auth needed
+143 info attempt registry request try #1 at 21:58:06
+144 http request GET https://registry.npmjs.org/corser
+145 verbose request uri https://registry.npmjs.org/ecstatic
+146 verbose request no auth needed
+147 info attempt registry request try #1 at 21:58:06
+148 http request GET https://registry.npmjs.org/ecstatic
+149 silly cache add args [ 'optimist@0.6.x', null ]
+150 verbose cache add spec optimist@0.6.x
+151 silly cache add parsed spec { raw: 'optimist@0.6.x',
+151 silly cache add   scope: null,
+151 silly cache add   name: 'optimist',
+151 silly cache add   rawSpec: '0.6.x',
+151 silly cache add   spec: '>=0.6.0 <0.7.0',
+151 silly cache add   type: 'range' }
+152 verbose addNamed optimist@>=0.6.0 <0.7.0
+153 silly addNamed semver.valid null
+154 silly addNamed semver.validRange >=0.6.0 <0.7.0
+155 silly addNameRange { name: 'optimist', range: '>=0.6.0 <0.7.0', hasData: false }
+156 silly mapToRegistry name optimist
+157 silly mapToRegistry using default registry
+158 silly mapToRegistry registry https://registry.npmjs.org/
+159 silly mapToRegistry uri https://registry.npmjs.org/optimist
+160 verbose addNameRange registry:https://registry.npmjs.org/optimist not in flight; fetching
+161 silly cache add args [ 'portfinder@0.4.x', null ]
+162 verbose cache add spec portfinder@0.4.x
+163 silly cache add parsed spec { raw: 'portfinder@0.4.x',
+163 silly cache add   scope: null,
+163 silly cache add   name: 'portfinder',
+163 silly cache add   rawSpec: '0.4.x',
+163 silly cache add   spec: '>=0.4.0 <0.5.0',
+163 silly cache add   type: 'range' }
+164 verbose addNamed portfinder@>=0.4.0 <0.5.0
+165 silly addNamed semver.valid null
+166 silly addNamed semver.validRange >=0.4.0 <0.5.0
+167 silly addNameRange { name: 'portfinder', range: '>=0.4.0 <0.5.0', hasData: false }
+168 silly mapToRegistry name portfinder
+169 silly mapToRegistry using default registry
+170 silly mapToRegistry registry https://registry.npmjs.org/
+171 silly mapToRegistry uri https://registry.npmjs.org/portfinder
+172 verbose addNameRange registry:https://registry.npmjs.org/portfinder not in flight; fetching
+173 silly cache add args [ 'union@~0.4.3', null ]
+174 verbose cache add spec union@~0.4.3
+175 silly cache add parsed spec { raw: 'union@~0.4.3',
+175 silly cache add   scope: null,
+175 silly cache add   name: 'union',
+175 silly cache add   rawSpec: '~0.4.3',
+175 silly cache add   spec: '>=0.4.3 <0.5.0',
+175 silly cache add   type: 'range' }
+176 verbose addNamed union@>=0.4.3 <0.5.0
+177 silly addNamed semver.valid null
+178 silly addNamed semver.validRange >=0.4.3 <0.5.0
+179 silly addNameRange { name: 'union', range: '>=0.4.3 <0.5.0', hasData: false }
+180 silly mapToRegistry name union
+181 silly mapToRegistry using default registry
+182 silly mapToRegistry registry https://registry.npmjs.org/
+183 silly mapToRegistry uri https://registry.npmjs.org/union
+184 verbose addNameRange registry:https://registry.npmjs.org/union not in flight; fetching
+185 verbose request uri https://registry.npmjs.org/opener
+186 verbose request no auth needed
+187 info attempt registry request try #1 at 21:58:06
+188 http request GET https://registry.npmjs.org/opener
+189 verbose request uri https://registry.npmjs.org/portfinder
+190 verbose request no auth needed
+191 info attempt registry request try #1 at 21:58:06
+192 http request GET https://registry.npmjs.org/portfinder
+193 verbose request uri https://registry.npmjs.org/union
+194 verbose request no auth needed
+195 info attempt registry request try #1 at 21:58:06
+196 http request GET https://registry.npmjs.org/union
+197 verbose request uri https://registry.npmjs.org/colors
+198 verbose request no auth needed
+199 info attempt registry request try #1 at 21:58:06
+200 verbose etag "DWNS0RPLXNO85EGJYEGXFDTSN"
+201 http request GET https://registry.npmjs.org/colors
+202 verbose request uri https://registry.npmjs.org/http-proxy
+203 verbose request no auth needed
+204 info attempt registry request try #1 at 21:58:06
+205 verbose etag "3Y1XONSRPMFPFOH817BFIYZDD"
+206 http request GET https://registry.npmjs.org/http-proxy
+207 verbose request uri https://registry.npmjs.org/optimist
+208 verbose request no auth needed
+209 info attempt registry request try #1 at 21:58:06
+210 verbose etag "5I5IO08W4UUUWO4ISZBRVLSRO"
+211 http request GET https://registry.npmjs.org/optimist
+212 http 200 https://registry.npmjs.org/opener
+213 silly get cb [ 200,
+213 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+213 silly get     etag: '"7HZCI075X75UH5FXW7TR2BIL1"',
+213 silly get     'content-type': 'application/json',
+213 silly get     'content-encoding': 'gzip',
+213 silly get     'cache-control': 'max-age=300',
+213 silly get     'content-length': '2255',
+213 silly get     'accept-ranges': 'bytes',
+213 silly get     date: 'Wed, 06 Apr 2016 12:58:06 GMT',
+213 silly get     via: '1.1 varnish',
+213 silly get     age: '261',
+213 silly get     connection: 'keep-alive',
+213 silly get     'x-served-by': 'cache-itm7423-ITM',
+213 silly get     'x-cache': 'HIT',
+213 silly get     'x-cache-hits': '5',
+213 silly get     'x-timer': 'S1459947486.834877,VS0,VE0',
+213 silly get     vary: 'Accept-Encoding' } ]
+214 http 200 https://registry.npmjs.org/portfinder
+215 silly get cb [ 200,
+215 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+215 silly get     etag: '"E3XRK6W2WWE5SDQ5W1U2XAVNR"',
+215 silly get     'content-type': 'application/json',
+215 silly get     'content-encoding': 'gzip',
+215 silly get     'cache-control': 'max-age=300',
+215 silly get     'content-length': '2541',
+215 silly get     'accept-ranges': 'bytes',
+215 silly get     date: 'Wed, 06 Apr 2016 12:58:06 GMT',
+215 silly get     via: '1.1 varnish',
+215 silly get     age: '270',
+215 silly get     connection: 'keep-alive',
+215 silly get     'x-served-by': 'cache-itm7424-ITM',
+215 silly get     'x-cache': 'HIT',
+215 silly get     'x-cache-hits': '1',
+215 silly get     'x-timer': 'S1459947486.837741,VS0,VE0',
+215 silly get     vary: 'Accept-Encoding' } ]
+216 http 200 https://registry.npmjs.org/ecstatic
+217 silly get cb [ 200,
+217 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+217 silly get     etag: '"BG9I4SVRVEVU0K725UKEKK0J3"',
+217 silly get     'content-type': 'application/json',
+217 silly get     'content-encoding': 'gzip',
+217 silly get     'cache-control': 'max-age=300',
+217 silly get     'content-length': '10803',
+217 silly get     'accept-ranges': 'bytes',
+217 silly get     date: 'Wed, 06 Apr 2016 12:58:06 GMT',
+217 silly get     via: '1.1 varnish',
+217 silly get     age: '270',
+217 silly get     connection: 'keep-alive',
+217 silly get     'x-served-by': 'cache-itm7425-ITM',
+217 silly get     'x-cache': 'HIT',
+217 silly get     'x-cache-hits': '1',
+217 silly get     'x-timer': 'S1459947486.833171,VS0,VE0',
+217 silly get     vary: 'Accept-Encoding' } ]
+218 http 200 https://registry.npmjs.org/union
+219 silly get cb [ 200,
+219 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+219 silly get     etag: '"CVJ4YJREGBVZEPY9WXDMRP5PL"',
+219 silly get     'content-type': 'application/json',
+219 silly get     'content-encoding': 'gzip',
+219 silly get     'cache-control': 'max-age=300',
+219 silly get     'content-length': '6724',
+219 silly get     'accept-ranges': 'bytes',
+219 silly get     date: 'Wed, 06 Apr 2016 12:58:06 GMT',
+219 silly get     via: '1.1 varnish',
+219 silly get     age: '270',
+219 silly get     connection: 'keep-alive',
+219 silly get     'x-served-by': 'cache-itm7427-ITM',
+219 silly get     'x-cache': 'HIT',
+219 silly get     'x-cache-hits': '1',
+219 silly get     'x-timer': 'S1459947486.832794,VS0,VE0',
+219 silly get     vary: 'Accept-Encoding' } ]
+220 silly addNameRange number 2 { name: 'portfinder', range: '>=0.4.0 <0.5.0', hasData: true }
+221 silly addNameRange versions [ 'portfinder',
+221 silly addNameRange   [ '0.1.0',
+221 silly addNameRange     '0.2.0',
+221 silly addNameRange     '0.2.1',
+221 silly addNameRange     '0.3.0',
+221 silly addNameRange     '0.4.0',
+221 silly addNameRange     '1.0.0',
+221 silly addNameRange     '1.0.1',
+221 silly addNameRange     '1.0.2',
+221 silly addNameRange     '1.0.3' ] ]
+222 verbose addNamed portfinder@0.4.0
+223 silly addNamed semver.valid 0.4.0
+224 silly addNamed semver.validRange 0.4.0
+225 silly addNameRange number 2 { name: 'opener', range: '>=1.4.0 <1.5.0', hasData: true }
+226 silly addNameRange versions [ 'opener',
+226 silly addNameRange   [ '1.0.0', '1.0.1', '1.1.0', '1.2.0', '1.3.0', '1.4.0', '1.4.1' ] ]
+227 verbose addNamed opener@1.4.1
+228 silly addNamed semver.valid 1.4.1
+229 silly addNamed semver.validRange 1.4.1
+230 silly mapToRegistry name portfinder
+231 silly mapToRegistry using default registry
+232 silly mapToRegistry registry https://registry.npmjs.org/
+233 silly mapToRegistry uri https://registry.npmjs.org/portfinder
+234 verbose addRemoteTarball https://registry.npmjs.org/portfinder/-/portfinder-0.4.0.tgz not in flight; adding
+235 verbose addRemoteTarball [ 'https://registry.npmjs.org/portfinder/-/portfinder-0.4.0.tgz',
+235 verbose addRemoteTarball   'a3ffadffafe4fb98e0601a85eda27c27ce84ca1e' ]
+236 silly mapToRegistry name opener
+237 silly mapToRegistry using default registry
+238 silly mapToRegistry registry https://registry.npmjs.org/
+239 silly mapToRegistry uri https://registry.npmjs.org/opener
+240 verbose addRemoteTarball https://registry.npmjs.org/opener/-/opener-1.4.1.tgz not in flight; adding
+241 verbose addRemoteTarball [ 'https://registry.npmjs.org/opener/-/opener-1.4.1.tgz',
+241 verbose addRemoteTarball   '897590acd1aed3311b703b58bccb4d43f56f2895' ]
+242 info retry fetch attempt 1 at 21:58:06
+243 info attempt registry request try #1 at 21:58:06
+244 http fetch GET https://registry.npmjs.org/portfinder/-/portfinder-0.4.0.tgz
+245 info retry fetch attempt 1 at 21:58:06
+246 info attempt registry request try #1 at 21:58:06
+247 http fetch GET https://registry.npmjs.org/opener/-/opener-1.4.1.tgz
+248 silly addNameRange number 2 { name: 'ecstatic', range: '>=1.4.0 <2.0.0', hasData: true }
+249 silly addNameRange versions [ 'ecstatic',
+249 silly addNameRange   [ '0.0.0',
+249 silly addNameRange     '0.0.1',
+249 silly addNameRange     '0.1.0',
+249 silly addNameRange     '0.1.1',
+249 silly addNameRange     '0.1.1-1',
+249 silly addNameRange     '0.1.2',
+249 silly addNameRange     '0.1.2-1',
+249 silly addNameRange     '0.1.4',
+249 silly addNameRange     '0.1.5',
+249 silly addNameRange     '0.1.6',
+249 silly addNameRange     '0.1.7',
+249 silly addNameRange     '0.3.0',
+249 silly addNameRange     '0.3.1',
+249 silly addNameRange     '0.3.2',
+249 silly addNameRange     '0.4.0',
+249 silly addNameRange     '0.4.1',
+249 silly addNameRange     '0.4.2',
+249 silly addNameRange     '0.4.3',
+249 silly addNameRange     '0.4.4',
+249 silly addNameRange     '0.4.5',
+249 silly addNameRange     '0.4.6',
+249 silly addNameRange     '0.4.7',
+249 silly addNameRange     '0.4.8',
+249 silly addNameRange     '0.4.9',
+249 silly addNameRange     '0.4.10',
+249 silly addNameRange     '0.4.11',
+249 silly addNameRange     '0.4.12',
+249 silly addNameRange     '0.4.13',
+249 silly addNameRange     '0.5.0',
+249 silly addNameRange     '0.5.1',
+249 silly addNameRange     '0.5.2',
+249 silly addNameRange     '0.5.3',
+249 silly addNameRange     '0.5.4',
+249 silly addNameRange     '0.5.5',
+249 silly addNameRange     '0.5.6',
+249 silly addNameRange     '0.5.7',
+249 silly addNameRange     '0.5.8',
+249 silly addNameRange     '0.6.0',
+249 silly addNameRange     '0.6.1',
+249 silly addNameRange     '0.7.0',
+249 silly addNameRange     '0.7.1',
+249 silly addNameRange     '0.7.2',
+249 silly addNameRange     '0.7.3',
+249 silly addNameRange     '0.7.4',
+249 silly addNameRange     '0.7.5',
+249 silly addNameRange     '0.7.6',
+249 silly addNameRange     '0.8.0',
+249 silly addNameRange     '1.0.0',
+249 silly addNameRange     '1.0.1',
+249 silly addNameRange     '1.1.0',
+249 silly addNameRange     '1.1.1',
+249 silly addNameRange     '1.1.2',
+249 silly addNameRange     '1.1.3',
+249 silly addNameRange     '1.2.0',
+249 silly addNameRange     '1.3.0',
+249 silly addNameRange     '1.3.1',
+249 silly addNameRange     '1.4.0' ] ]
+250 verbose addNamed ecstatic@1.4.0
+251 silly addNamed semver.valid 1.4.0
+252 silly addNamed semver.validRange 1.4.0
+253 silly mapToRegistry name ecstatic
+254 silly mapToRegistry using default registry
+255 silly mapToRegistry registry https://registry.npmjs.org/
+256 silly mapToRegistry uri https://registry.npmjs.org/ecstatic
+257 verbose addRemoteTarball https://registry.npmjs.org/ecstatic/-/ecstatic-1.4.0.tgz not in flight; adding
+258 verbose addRemoteTarball [ 'https://registry.npmjs.org/ecstatic/-/ecstatic-1.4.0.tgz',
+258 verbose addRemoteTarball   '84a395ff80a919e68bc07a81fb2cd1328878f94d' ]
+259 silly addNameRange number 2 { name: 'union', range: '>=0.4.3 <0.5.0', hasData: true }
+260 silly addNameRange versions [ 'union',
+260 silly addNameRange   [ '0.1.0',
+260 silly addNameRange     '0.1.2',
+260 silly addNameRange     '0.1.3',
+260 silly addNameRange     '0.1.4',
+260 silly addNameRange     '0.1.5',
+260 silly addNameRange     '0.1.6',
+260 silly addNameRange     '0.1.7',
+260 silly addNameRange     '0.1.8',
+260 silly addNameRange     '0.2.0',
+260 silly addNameRange     '0.2.1',
+260 silly addNameRange     '0.3.0',
+260 silly addNameRange     '0.3.2',
+260 silly addNameRange     '0.3.3',
+260 silly addNameRange     '0.3.4',
+260 silly addNameRange     '0.3.5',
+260 silly addNameRange     '0.3.6',
+260 silly addNameRange     '0.3.7',
+260 silly addNameRange     '0.3.8',
+260 silly addNameRange     '0.4.0',
+260 silly addNameRange     '0.4.1',
+260 silly addNameRange     '0.4.2',
+260 silly addNameRange     '0.4.3',
+260 silly addNameRange     '0.4.4' ] ]
+261 verbose addNamed union@0.4.4
+262 silly addNamed semver.valid 0.4.4
+263 silly addNamed semver.validRange 0.4.4
+264 silly mapToRegistry name union
+265 silly mapToRegistry using default registry
+266 silly mapToRegistry registry https://registry.npmjs.org/
+267 silly mapToRegistry uri https://registry.npmjs.org/union
+268 verbose addRemoteTarball https://registry.npmjs.org/union/-/union-0.4.4.tgz not in flight; adding
+269 verbose addRemoteTarball [ 'https://registry.npmjs.org/union/-/union-0.4.4.tgz',
+269 verbose addRemoteTarball   'd73f49321d6ffb721a4c69ff5b0a6c31a98ff3e0' ]
+270 info retry fetch attempt 1 at 21:58:06
+271 info attempt registry request try #1 at 21:58:06
+272 http fetch GET https://registry.npmjs.org/ecstatic/-/ecstatic-1.4.0.tgz
+273 info retry fetch attempt 1 at 21:58:06
+274 info attempt registry request try #1 at 21:58:06
+275 http fetch GET https://registry.npmjs.org/union/-/union-0.4.4.tgz
+276 http 304 https://registry.npmjs.org/optimist
+277 silly get cb [ 304,
+277 silly get   { date: 'Wed, 06 Apr 2016 12:58:06 GMT',
+277 silly get     via: '1.1 varnish',
+277 silly get     'cache-control': 'max-age=300',
+277 silly get     etag: '"5I5IO08W4UUUWO4ISZBRVLSRO"',
+277 silly get     age: '48',
+277 silly get     connection: 'keep-alive',
+277 silly get     'x-served-by': 'cache-itm7424-ITM',
+277 silly get     'x-cache': 'HIT',
+277 silly get     'x-cache-hits': '2',
+277 silly get     'x-timer': 'S1459947486.911350,VS0,VE0',
+277 silly get     vary: 'Accept-Encoding' } ]
+278 verbose etag https://registry.npmjs.org/optimist from cache
+279 http 200 https://registry.npmjs.org/colors
+280 silly get cb [ 200,
+280 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+280 silly get     etag: '"9K7DX6BZDCVAHI4Z8YJR3KWOL"',
+280 silly get     'content-type': 'application/json',
+280 silly get     'content-encoding': 'gzip',
+280 silly get     'cache-control': 'max-age=300',
+280 silly get     'content-length': '5785',
+280 silly get     'accept-ranges': 'bytes',
+280 silly get     date: 'Wed, 06 Apr 2016 12:58:06 GMT',
+280 silly get     via: '1.1 varnish',
+280 silly get     age: '59',
+280 silly get     connection: 'keep-alive',
+280 silly get     'x-served-by': 'cache-itm7425-ITM',
+280 silly get     'x-cache': 'HIT',
+280 silly get     'x-cache-hits': '2',
+280 silly get     'x-timer': 'S1459947486.908118,VS0,VE0',
+280 silly get     vary: 'Accept-Encoding' } ]
+281 silly mapToRegistry name colors
+282 silly mapToRegistry using default registry
+283 silly mapToRegistry registry https://registry.npmjs.org/
+284 silly mapToRegistry uri https://registry.npmjs.org/colors
+285 verbose addRemoteTarball https://registry.npmjs.org/colors/-/colors-1.0.3.tgz not in flight; adding
+286 verbose addRemoteTarball [ 'https://registry.npmjs.org/colors/-/colors-1.0.3.tgz',
+286 verbose addRemoteTarball   '0433f44d809680fdeb60ed260f1b0c262e82a40b' ]
+287 silly addNameRange number 2 { name: 'optimist', range: '>=0.6.0 <0.7.0', hasData: true }
+288 silly addNameRange versions [ 'optimist',
+288 silly addNameRange   [ '0.0.1',
+288 silly addNameRange     '0.0.2',
+288 silly addNameRange     '0.0.4',
+288 silly addNameRange     '0.0.5',
+288 silly addNameRange     '0.0.6',
+288 silly addNameRange     '0.0.7',
+288 silly addNameRange     '0.1.0',
+288 silly addNameRange     '0.1.1',
+288 silly addNameRange     '0.1.2',
+288 silly addNameRange     '0.1.3',
+288 silly addNameRange     '0.1.4',
+288 silly addNameRange     '0.1.5',
+288 silly addNameRange     '0.1.6',
+288 silly addNameRange     '0.1.7',
+288 silly addNameRange     '0.1.8',
+288 silly addNameRange     '0.1.9',
+288 silly addNameRange     '0.0.3',
+288 silly addNameRange     '0.2.0',
+288 silly addNameRange     '0.2.1',
+288 silly addNameRange     '0.2.2',
+288 silly addNameRange     '0.2.3',
+288 silly addNameRange     '0.2.4',
+288 silly addNameRange     '0.2.5',
+288 silly addNameRange     '0.2.6',
+288 silly addNameRange     '0.2.7',
+288 silly addNameRange     '0.2.8',
+288 silly addNameRange     '0.3.0',
+288 silly addNameRange     '0.3.1',
+288 silly addNameRange     '0.3.3',
+288 silly addNameRange     '0.3.4',
+288 silly addNameRange     '0.3.5',
+288 silly addNameRange     '0.3.6',
+288 silly addNameRange     '0.3.7',
+288 silly addNameRange     '0.4.0',
+288 silly addNameRange     '0.5.0',
+288 silly addNameRange     '0.5.1',
+288 silly addNameRange     '0.5.2',
+288 silly addNameRange     '0.6.0',
+288 silly addNameRange     '0.6.1' ] ]
+289 verbose addNamed optimist@0.6.1
+290 silly addNamed semver.valid 0.6.1
+291 silly addNamed semver.validRange 0.6.1
+292 info retry fetch attempt 1 at 21:58:06
+293 info attempt registry request try #1 at 21:58:06
+294 http fetch GET https://registry.npmjs.org/colors/-/colors-1.0.3.tgz
+295 silly cache afterAdd optimist@0.6.1
+296 verbose afterAdd /Users/we/.npm/optimist/0.6.1/package/package.json not in flight; writing
+297 verbose afterAdd /Users/we/.npm/optimist/0.6.1/package/package.json written
+298 http fetch 200 https://registry.npmjs.org/opener/-/opener-1.4.1.tgz
+299 silly fetchAndShaCheck shasum 897590acd1aed3311b703b58bccb4d43f56f2895
+300 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/opener/-/opener-1.4.1.tgz not in flight; adding
+301 verbose addTmpTarball already have metadata; skipping unpack for opener@1.4.1
+302 silly cache afterAdd opener@1.4.1
+303 verbose afterAdd /Users/we/.npm/opener/1.4.1/package/package.json not in flight; writing
+304 verbose afterAdd /Users/we/.npm/opener/1.4.1/package/package.json written
+305 http fetch 200 https://registry.npmjs.org/union/-/union-0.4.4.tgz
+306 http fetch 200 https://registry.npmjs.org/ecstatic/-/ecstatic-1.4.0.tgz
+307 http 200 https://registry.npmjs.org/http-proxy
+308 silly get cb [ 200,
+308 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+308 silly get     etag: '"96G2C3J4EGOCJ886I0KBKBS0X"',
+308 silly get     'content-type': 'application/json',
+308 silly get     'cache-control': 'max-age=300',
+308 silly get     'content-length': '131056',
+308 silly get     'accept-ranges': 'bytes',
+308 silly get     date: 'Wed, 06 Apr 2016 12:58:06 GMT',
+308 silly get     via: '1.1 varnish',
+308 silly get     age: '30',
+308 silly get     connection: 'keep-alive',
+308 silly get     'x-served-by': 'cache-itm7423-ITM',
+308 silly get     'x-cache': 'HIT',
+308 silly get     'x-cache-hits': '1',
+308 silly get     'x-timer': 'S1459947486.908514,VS0,VE0',
+308 silly get     vary: 'Accept-Encoding' } ]
+309 silly fetchAndShaCheck shasum d73f49321d6ffb721a4c69ff5b0a6c31a98ff3e0
+310 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/union/-/union-0.4.4.tgz not in flight; adding
+311 verbose addTmpTarball already have metadata; skipping unpack for union@0.4.4
+312 silly addNameRange number 2 { name: 'http-proxy', range: '>=1.8.1 <2.0.0', hasData: true }
+313 silly addNameRange versions [ 'http-proxy',
+313 silly addNameRange   [ '0.5.9',
+313 silly addNameRange     '0.5.10',
+313 silly addNameRange     '0.5.11',
+313 silly addNameRange     '0.6.0',
+313 silly addNameRange     '0.6.1',
+313 silly addNameRange     '0.6.2',
+313 silly addNameRange     '0.6.4',
+313 silly addNameRange     '0.6.5',
+313 silly addNameRange     '0.6.6',
+313 silly addNameRange     '0.7.0',
+313 silly addNameRange     '0.7.2',
+313 silly addNameRange     '0.7.3',
+313 silly addNameRange     '0.7.4',
+313 silly addNameRange     '0.7.5',
+313 silly addNameRange     '0.7.6',
+313 silly addNameRange     '0.8.0',
+313 silly addNameRange     '0.8.1',
+313 silly addNameRange     '0.8.2',
+313 silly addNameRange     '0.8.3',
+313 silly addNameRange     '0.8.4',
+313 silly addNameRange     '0.8.5',
+313 silly addNameRange     '0.8.6',
+313 silly addNameRange     '0.8.7',
+313 silly addNameRange     '0.9.0',
+313 silly addNameRange     '0.9.1',
+313 silly addNameRange     '0.10.0',
+313 silly addNameRange     '0.10.1',
+313 silly addNameRange     '0.10.2',
+313 silly addNameRange     '0.10.3',
+313 silly addNameRange     '0.10.4',
+313 silly addNameRange     '1.0.0',
+313 silly addNameRange     '1.0.1',
+313 silly addNameRange     '1.0.2',
+313 silly addNameRange     '1.0.3',
+313 silly addNameRange     '1.1.0',
+313 silly addNameRange     '1.1.1',
+313 silly addNameRange     '1.1.2',
+313 silly addNameRange     '1.1.3',
+313 silly addNameRange     '1.1.4',
+313 silly addNameRange     '1.1.5',
+313 silly addNameRange     '1.1.6',
+313 silly addNameRange     '1.2.0',
+313 silly addNameRange     '1.2.1',
+313 silly addNameRange     '1.3.0',
+313 silly addNameRange     '1.4.0',
+313 silly addNameRange     '1.4.1',
+313 silly addNameRange     '1.4.2',
+313 silly addNameRange     '1.4.3',
+313 silly addNameRange     '1.5.0',
+313 silly addNameRange     '1.5.1',
+313 silly addNameRange     '1.5.2',
+313 silly addNameRange     '1.5.3',
+313 silly addNameRange     '1.6.0',
+313 silly addNameRange     '1.6.1',
+313 silly addNameRange     '1.6.2',
+313 silly addNameRange     '1.7.0',
+313 silly addNameRange     '1.7.1',
+313 silly addNameRange     '1.7.2',
+313 silly addNameRange     '1.7.3',
+313 silly addNameRange     '1.8.0',
+313 silly addNameRange     '1.8.1',
+313 silly addNameRange     '1.9.0',
+313 silly addNameRange     '1.9.1',
+313 silly addNameRange     '1.10.0',
+313 silly addNameRange     '1.10.1',
+313 silly addNameRange     '1.11.0',
+313 silly addNameRange     '1.11.1',
+313 silly addNameRange     '1.11.2',
+313 silly addNameRange     '1.11.3',
+313 silly addNameRange     '1.12.0',
+313 silly addNameRange     '1.12.1',
+313 silly addNameRange     '1.13.0',
+313 silly addNameRange     '1.13.1',
+313 silly addNameRange     '1.13.2' ] ]
+314 verbose addNamed http-proxy@1.13.2
+315 silly addNamed semver.valid 1.13.2
+316 silly addNamed semver.validRange 1.13.2
+317 silly mapToRegistry name http-proxy
+318 silly mapToRegistry using default registry
+319 silly mapToRegistry registry https://registry.npmjs.org/
+320 silly mapToRegistry uri https://registry.npmjs.org/http-proxy
+321 verbose addRemoteTarball https://registry.npmjs.org/http-proxy/-/http-proxy-1.13.2.tgz not in flight; adding
+322 verbose addRemoteTarball [ 'https://registry.npmjs.org/http-proxy/-/http-proxy-1.13.2.tgz',
+322 verbose addRemoteTarball   '636bcd09f3e7045377a5e919e92d16d29fdbff09' ]
+323 http fetch 200 https://registry.npmjs.org/portfinder/-/portfinder-0.4.0.tgz
+324 info retry fetch attempt 1 at 21:58:06
+325 info attempt registry request try #1 at 21:58:06
+326 http fetch GET https://registry.npmjs.org/http-proxy/-/http-proxy-1.13.2.tgz
+327 silly fetchAndShaCheck shasum a3ffadffafe4fb98e0601a85eda27c27ce84ca1e
+328 silly cache afterAdd union@0.4.4
+329 verbose afterAdd /Users/we/.npm/union/0.4.4/package/package.json not in flight; writing
+330 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/portfinder/-/portfinder-0.4.0.tgz not in flight; adding
+331 verbose addTmpTarball already have metadata; skipping unpack for portfinder@0.4.0
+332 verbose afterAdd /Users/we/.npm/union/0.4.4/package/package.json written
+333 silly cache afterAdd portfinder@0.4.0
+334 verbose afterAdd /Users/we/.npm/portfinder/0.4.0/package/package.json not in flight; writing
+335 verbose afterAdd /Users/we/.npm/portfinder/0.4.0/package/package.json written
+336 http fetch 200 https://registry.npmjs.org/colors/-/colors-1.0.3.tgz
+337 silly fetchAndShaCheck shasum 0433f44d809680fdeb60ed260f1b0c262e82a40b
+338 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/colors/-/colors-1.0.3.tgz not in flight; adding
+339 verbose addTmpTarball already have metadata; skipping unpack for colors@1.0.3
+340 silly cache afterAdd colors@1.0.3
+341 verbose afterAdd /Users/we/.npm/colors/1.0.3/package/package.json not in flight; writing
+342 verbose afterAdd /Users/we/.npm/colors/1.0.3/package/package.json written
+343 silly fetchAndShaCheck shasum 84a395ff80a919e68bc07a81fb2cd1328878f94d
+344 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/ecstatic/-/ecstatic-1.4.0.tgz not in flight; adding
+345 verbose addTmpTarball already have metadata; skipping unpack for ecstatic@1.4.0
+346 silly cache afterAdd ecstatic@1.4.0
+347 verbose afterAdd /Users/we/.npm/ecstatic/1.4.0/package/package.json not in flight; writing
+348 verbose afterAdd /Users/we/.npm/ecstatic/1.4.0/package/package.json written
+349 http 200 https://registry.npmjs.org/corser
+350 silly get cb [ 200,
+350 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+350 silly get     etag: '"2RH28UBMJ5ERZ21YHHJR99K08"',
+350 silly get     'content-type': 'application/json',
+350 silly get     'content-encoding': 'gzip',
+350 silly get     'cache-control': 'max-age=300',
+350 silly get     'content-length': '4441',
+350 silly get     'accept-ranges': 'bytes',
+350 silly get     date: 'Wed, 06 Apr 2016 12:58:07 GMT',
+350 silly get     via: '1.1 varnish',
+350 silly get     age: '0',
+350 silly get     connection: 'keep-alive',
+350 silly get     'x-served-by': 'cache-itm7425-ITM',
+350 silly get     'x-cache': 'HIT',
+350 silly get     'x-cache-hits': '1',
+350 silly get     'x-timer': 'S1459947486.831524,VS0,VE615',
+350 silly get     vary: 'Accept-Encoding' } ]
+351 silly addNameRange number 2 { name: 'corser', range: '>=2.0.0 <2.1.0', hasData: true }
+352 silly addNameRange versions [ 'corser',
+352 silly addNameRange   [ '0.1.0',
+352 silly addNameRange     '0.2.0',
+352 silly addNameRange     '1.0.0',
+352 silly addNameRange     '1.0.1',
+352 silly addNameRange     '1.0.2',
+352 silly addNameRange     '1.1.0',
+352 silly addNameRange     '1.1.1',
+352 silly addNameRange     '1.1.2',
+352 silly addNameRange     '1.2.0',
+352 silly addNameRange     '2.0.0' ] ]
+353 verbose addNamed corser@2.0.0
+354 silly addNamed semver.valid 2.0.0
+355 silly addNamed semver.validRange 2.0.0
+356 silly mapToRegistry name corser
+357 silly mapToRegistry using default registry
+358 silly mapToRegistry registry https://registry.npmjs.org/
+359 silly mapToRegistry uri https://registry.npmjs.org/corser
+360 verbose addRemoteTarball https://registry.npmjs.org/corser/-/corser-2.0.0.tgz not in flight; adding
+361 verbose addRemoteTarball [ 'https://registry.npmjs.org/corser/-/corser-2.0.0.tgz',
+361 verbose addRemoteTarball   'aea3c5186d0dbb99d23abab15d08514eb87e3840' ]
+362 info retry fetch attempt 1 at 21:58:06
+363 info attempt registry request try #1 at 21:58:06
+364 http fetch GET https://registry.npmjs.org/corser/-/corser-2.0.0.tgz
+365 http fetch 200 https://registry.npmjs.org/http-proxy/-/http-proxy-1.13.2.tgz
+366 silly fetchAndShaCheck shasum 636bcd09f3e7045377a5e919e92d16d29fdbff09
+367 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/http-proxy/-/http-proxy-1.13.2.tgz not in flight; adding
+368 verbose addTmpTarball already have metadata; skipping unpack for http-proxy@1.13.2
+369 silly cache afterAdd http-proxy@1.13.2
+370 verbose afterAdd /Users/we/.npm/http-proxy/1.13.2/package/package.json not in flight; writing
+371 verbose afterAdd /Users/we/.npm/http-proxy/1.13.2/package/package.json written
+372 http fetch 200 https://registry.npmjs.org/corser/-/corser-2.0.0.tgz
+373 silly fetchAndShaCheck shasum aea3c5186d0dbb99d23abab15d08514eb87e3840
+374 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/corser/-/corser-2.0.0.tgz not in flight; adding
+375 verbose addTmpTarball already have metadata; skipping unpack for corser@2.0.0
+376 silly cache afterAdd corser@2.0.0
+377 verbose afterAdd /Users/we/.npm/corser/2.0.0/package/package.json not in flight; writing
+378 verbose afterAdd /Users/we/.npm/corser/2.0.0/package/package.json written
+379 silly install resolved [ { name: 'optimist',
+379 silly install resolved     version: '0.6.1',
+379 silly install resolved     description: 'Light-weight option parsing with an argv hash. No optstrings attached.',
+379 silly install resolved     main: './index.js',
+379 silly install resolved     dependencies: { wordwrap: '~0.0.2', minimist: '~0.0.1' },
+379 silly install resolved     devDependencies: { hashish: '~0.0.4', tap: '~0.4.0' },
+379 silly install resolved     scripts: { test: 'tap ./test/*.js' },
+379 silly install resolved     repository:
+379 silly install resolved      { type: 'git',
+379 silly install resolved        url: 'http://github.com/substack/node-optimist.git' },
+379 silly install resolved     keywords:
+379 silly install resolved      [ 'argument',
+379 silly install resolved        'args',
+379 silly install resolved        'option',
+379 silly install resolved        'parser',
+379 silly install resolved        'parsing',
+379 silly install resolved        'cli',
+379 silly install resolved        'command' ],
+379 silly install resolved     author:
+379 silly install resolved      { name: 'James Halliday',
+379 silly install resolved        email: 'mail@substack.net',
+379 silly install resolved        url: 'http://substack.net' },
+379 silly install resolved     license: 'MIT/X11',
+379 silly install resolved     engine: { node: '>=0.4' },
+379 silly install resolved     bugs: { url: 'https://github.com/substack/node-optimist/issues' },
+379 silly install resolved     homepage: 'https://github.com/substack/node-optimist',
+379 silly install resolved     _id: 'optimist@0.6.1',
+379 silly install resolved     dist:
+379 silly install resolved      { shasum: 'da3ea74686fa21a19a111c326e90eb15a0196686',
+379 silly install resolved        tarball: 'http://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz' },
+379 silly install resolved     _from: 'optimist@>=0.6.0 <0.7.0',
+379 silly install resolved     _npmVersion: '1.3.21',
+379 silly install resolved     _npmUser: { name: 'substack', email: 'mail@substack.net' },
+379 silly install resolved     maintainers: [ [Object] ],
+379 silly install resolved     directories: {},
+379 silly install resolved     _shasum: 'da3ea74686fa21a19a111c326e90eb15a0196686',
+379 silly install resolved     _resolved: 'https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz',
+379 silly install resolved     readme: 'ERROR: No README data found!' },
+379 silly install resolved   { name: 'opener',
+379 silly install resolved     description: 'Opens stuff, like webpages and files and executables, cross-platform',
+379 silly install resolved     version: '1.4.1',
+379 silly install resolved     author:
+379 silly install resolved      { name: 'Domenic Denicola',
+379 silly install resolved        email: 'd@domenic.me',
+379 silly install resolved        url: 'https://domenic.me/' },
+379 silly install resolved     license: 'WTFPL',
+379 silly install resolved     repository: { type: 'git', url: 'https://github.com/domenic/opener' },
+379 silly install resolved     main: 'opener.js',
+379 silly install resolved     bin: { opener: 'opener.js' },
+379 silly install resolved     files: [ 'opener.js' ],
+379 silly install resolved     scripts: { lint: 'jshint opener.js' },
+379 silly install resolved     devDependencies: { jshint: '^2.6.3' },
+379 silly install resolved     gitHead: 'd0ee95b19951703462fa593baa16e81fdff7827c',
+379 silly install resolved     bugs: { url: 'https://github.com/domenic/opener/issues' },
+379 silly install resolved     homepage: 'https://github.com/domenic/opener',
+379 silly install resolved     _id: 'opener@1.4.1',
+379 silly install resolved     _shasum: '897590acd1aed3311b703b58bccb4d43f56f2895',
+379 silly install resolved     _from: 'opener@>=1.4.0 <1.5.0',
+379 silly install resolved     _npmVersion: '2.7.0',
+379 silly install resolved     _nodeVersion: '1.5.1',
+379 silly install resolved     _npmUser: { name: 'domenic', email: 'd@domenic.me' },
+379 silly install resolved     maintainers: [ [Object] ],
+379 silly install resolved     dist:
+379 silly install resolved      { shasum: '897590acd1aed3311b703b58bccb4d43f56f2895',
+379 silly install resolved        tarball: 'https://registry.npmjs.org/opener/-/opener-1.4.1.tgz' },
+379 silly install resolved     directories: {},
+379 silly install resolved     _resolved: 'https://registry.npmjs.org/opener/-/opener-1.4.1.tgz' },
+379 silly install resolved   { name: 'union',
+379 silly install resolved     description: 'A hybrid buffered / streaming middleware kernel backwards compatible with connect.',
+379 silly install resolved     version: '0.4.4',
+379 silly install resolved     author: { name: 'Charlie Robbins', email: 'charlie.robbins@gmail.com' },
+379 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+379 silly install resolved     repository: { type: 'git', url: 'http://github.com/flatiron/union.git' },
+379 silly install resolved     dependencies: { qs: '~2.3.3' },
+379 silly install resolved     devDependencies:
+379 silly install resolved      { ecstatic: '0.5.x',
+379 silly install resolved        director: '1.x.x',
+379 silly install resolved        request: '2.29.x',
+379 silly install resolved        vows: '0.8.x',
+379 silly install resolved        connect: '2.22.x' },
+379 silly install resolved     scripts: { test: 'vows test/*-test.js --spec -i' },
+379 silly install resolved     main: './lib',
+379 silly install resolved     engines: { node: '>= 0.8.0' },
+379 silly install resolved     gitHead: '091b39a84f2f9a972ea1e15cf5922c99450c325d',
+379 silly install resolved     bugs: { url: 'https://github.com/flatiron/union/issues' },
+379 silly install resolved     homepage: 'https://github.com/flatiron/union',
+379 silly install resolved     _id: 'union@0.4.4',
+379 silly install resolved     _shasum: 'd73f49321d6ffb721a4c69ff5b0a6c31a98ff3e0',
+379 silly install resolved     _from: 'union@>=0.4.3 <0.5.0',
+379 silly install resolved     _npmVersion: '2.1.9',
+379 silly install resolved     _nodeVersion: '0.10.33',
+379 silly install resolved     _npmUser: { name: 'indexzero', email: 'charlie.robbins@gmail.com' },
+379 silly install resolved     dist:
+379 silly install resolved      { shasum: 'd73f49321d6ffb721a4c69ff5b0a6c31a98ff3e0',
+379 silly install resolved        tarball: 'https://registry.npmjs.org/union/-/union-0.4.4.tgz' },
+379 silly install resolved     directories: {},
+379 silly install resolved     _resolved: 'https://registry.npmjs.org/union/-/union-0.4.4.tgz' },
+379 silly install resolved   { name: 'portfinder',
+379 silly install resolved     version: '0.4.0',
+379 silly install resolved     description: 'A simple tool to find an open port on the current machine',
+379 silly install resolved     author: { name: 'Charlie Robbins', email: 'charlie.robbins@gmail.com' },
+379 silly install resolved     repository:
+379 silly install resolved      { type: 'git',
+379 silly install resolved        url: 'git@github.com:indexzero/node-portfinder.git' },
+379 silly install resolved     keywords: [ 'http', 'ports', 'utilities' ],
+379 silly install resolved     dependencies: { async: '0.9.0', mkdirp: '0.5.x' },
+379 silly install resolved     devDependencies: { vows: '0.8.0' },
+379 silly install resolved     main: './lib/portfinder',
+379 silly install resolved     scripts: { test: 'vows test/*-test.js --spec' },
+379 silly install resolved     engines: { node: '>= 0.8.0' },
+379 silly install resolved     license: 'MIT/X11',
+379 silly install resolved     gitHead: '8c3f20bf1d5ec399262c592f61129a65727004a9',
+379 silly install resolved     bugs: { url: 'https://github.com/indexzero/node-portfinder/issues' },
+379 silly install resolved     homepage: 'https://github.com/indexzero/node-portfinder',
+379 silly install resolved     _id: 'portfinder@0.4.0',
+379 silly install resolved     _shasum: 'a3ffadffafe4fb98e0601a85eda27c27ce84ca1e',
+379 silly install resolved     _from: 'portfinder@>=0.4.0 <0.5.0',
+379 silly install resolved     _npmVersion: '2.2.0',
+379 silly install resolved     _nodeVersion: '0.10.33',
+379 silly install resolved     _npmUser: { name: 'indexzero', email: 'charlie.robbins@gmail.com' },
+379 silly install resolved     maintainers: [ [Object] ],
+379 silly install resolved     dist:
+379 silly install resolved      { shasum: 'a3ffadffafe4fb98e0601a85eda27c27ce84ca1e',
+379 silly install resolved        tarball: 'https://registry.npmjs.org/portfinder/-/portfinder-0.4.0.tgz' },
+379 silly install resolved     directories: {},
+379 silly install resolved     _resolved: 'https://registry.npmjs.org/portfinder/-/portfinder-0.4.0.tgz' },
+379 silly install resolved   { name: 'colors',
+379 silly install resolved     description: 'get colors in your node.js console',
+379 silly install resolved     version: '1.0.3',
+379 silly install resolved     author: { name: 'Marak Squires' },
+379 silly install resolved     homepage: 'https://github.com/Marak/colors.js',
+379 silly install resolved     bugs: { url: 'https://github.com/Marak/colors.js/issues' },
+379 silly install resolved     keywords: [ 'ansi', 'terminal', 'colors' ],
+379 silly install resolved     repository: { type: 'git', url: 'http://github.com/Marak/colors.js.git' },
+379 silly install resolved     license: 'MIT',
+379 silly install resolved     scripts: { test: 'node tests/basic-test.js && node tests/safe-test.js' },
+379 silly install resolved     engines: { node: '>=0.1.90' },
+379 silly install resolved     main: './lib/index',
+379 silly install resolved     gitHead: 'e9e6557cc0fa26dba1a20b0d45e92de982f4047c',
+379 silly install resolved     _id: 'colors@1.0.3',
+379 silly install resolved     _shasum: '0433f44d809680fdeb60ed260f1b0c262e82a40b',
+379 silly install resolved     _from: 'colors@1.0.3',
+379 silly install resolved     _npmVersion: '2.0.2',
+379 silly install resolved     _nodeVersion: '0.11.13',
+379 silly install resolved     _npmUser: { name: 'marak', email: 'marak.squires@gmail.com' },
+379 silly install resolved     maintainers: [ [Object] ],
+379 silly install resolved     dist:
+379 silly install resolved      { shasum: '0433f44d809680fdeb60ed260f1b0c262e82a40b',
+379 silly install resolved        tarball: 'https://registry.npmjs.org/colors/-/colors-1.0.3.tgz' },
+379 silly install resolved     directories: {},
+379 silly install resolved     _resolved: 'https://registry.npmjs.org/colors/-/colors-1.0.3.tgz' },
+379 silly install resolved   { author:
+379 silly install resolved      { name: 'Joshua Holbrook',
+379 silly install resolved        email: 'josh@nodejitsu.com',
+379 silly install resolved        url: 'http://jesusabdullah.net' },
+379 silly install resolved     name: 'ecstatic',
+379 silly install resolved     description: 'A simple static file server middleware that works with both Express and Flatiron',
+379 silly install resolved     version: '1.4.0',
+379 silly install resolved     homepage: 'https://github.com/jfhbrook/node-ecstatic',
+379 silly install resolved     repository:
+379 silly install resolved      { type: 'git',
+379 silly install resolved        url: 'git+ssh://git@github.com/jfhbrook/node-ecstatic.git' },
+379 silly install resolved     main: './lib/ecstatic.js',
+379 silly install resolved     scripts: { test: 'tap test/*.js' },
+379 silly install resolved     bin: { ecstatic: './lib/ecstatic.js' },
+379 silly install resolved     keywords: [ 'static', 'web', 'server', 'files', 'mime', 'middleware' ],
+379 silly install resolved     dependencies:
+379 silly install resolved      { he: '^0.5.0',
+379 silly install resolved        mime: '^1.2.11',
+379 silly install resolved        minimist: '^1.1.0',
+379 silly install resolved        'url-join': '0.0.1' },
+379 silly install resolved     devDependencies:
+379 silly install resolved      { eol: '^0.2.0',
+379 silly install resolved        express: '^4.12.3',
+379 silly install resolved        mkdirp: '^0.5.0',
+379 silly install resolved        request: '^2.49.0',
+379 silly install resolved        tap: '^2.3.1',
+379 silly install resolved        union: '^0.4.4' },
+379 silly install resolved     license: 'MIT',
+379 silly install resolved     gitHead: '39f21cdf1998e6169f127874f97fd9dc9efcfacc',
+379 silly install resolved     bugs: { url: 'https://github.com/jfhbrook/node-ecstatic/issues' },
+379 silly install resolved     _id: 'ecstatic@1.4.0',
+379 silly install resolved     _shasum: '84a395ff80a919e68bc07a81fb2cd1328878f94d',
+379 silly install resolved     _from: 'ecstatic@>=1.4.0 <2.0.0',
+379 silly install resolved     _npmVersion: '3.5.2',
+379 silly install resolved     _nodeVersion: '4.2.1',
+379 silly install resolved     _npmUser: { name: 'jfhbrook', email: 'josh.holbrook@gmail.com' },
+379 silly install resolved     dist:
+379 silly install resolved      { shasum: '84a395ff80a919e68bc07a81fb2cd1328878f94d',
+379 silly install resolved        tarball: 'https://registry.npmjs.org/ecstatic/-/ecstatic-1.4.0.tgz' },
+379 silly install resolved     maintainers: [ [Object], [Object] ],
+379 silly install resolved     directories: {},
+379 silly install resolved     _resolved: 'https://registry.npmjs.org/ecstatic/-/ecstatic-1.4.0.tgz' },
+379 silly install resolved   { name: 'http-proxy',
+379 silly install resolved     version: '1.13.2',
+379 silly install resolved     repository:
+379 silly install resolved      { type: 'git',
+379 silly install resolved        url: 'git+https://github.com/nodejitsu/node-http-proxy.git' },
+379 silly install resolved     description: 'HTTP proxying for the masses',
+379 silly install resolved     author: { name: 'Nodejitsu Inc.', email: 'info@nodejitsu.com' },
+379 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+379 silly install resolved     main: 'index.js',
+379 silly install resolved     dependencies: { eventemitter3: '1.x.x', 'requires-port': '1.x.x' },
+379 silly install resolved     devDependencies:
+379 silly install resolved      { async: '*',
+379 silly install resolved        blanket: '*',
+379 silly install resolved        coveralls: '*',
+379 silly install resolved        dox: '*',
+379 silly install resolved        'expect.js': '*',
+379 silly install resolved        mocha: '*',
+379 silly install resolved        'mocha-lcov-reporter': '*',
+379 silly install resolved        semver: '^5.0.3',
+379 silly install resolved        'socket.io': '*',
+379 silly install resolved        'socket.io-client': '*',
+379 silly install resolved        sse: '0.0.6',
+379 silly install resolved        ws: '^0.8.0' },
+379 silly install resolved     scripts:
+379 silly install resolved      { coveralls: 'mocha --require blanket --reporter mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js',
+379 silly install resolved        test: 'mocha test/*-test.js',
+379 silly install resolved        'test-cov': 'mocha --require blanket -R html-cov > cov/coverage.html' },
+379 silly install resolved     engines: { node: '>=0.10.0' },
+379 silly install resolved     license: 'MIT',
+379 silly install resolved     gitHead: 'e1b2f4c31b34464431db251b3b6169689dadf518',
+379 silly install resolved     bugs: { url: 'https://github.com/nodejitsu/node-http-proxy/issues' },
+379 silly install resolved     homepage: 'https://github.com/nodejitsu/node-http-proxy#readme',
+379 silly install resolved     _id: 'http-proxy@1.13.2',
+379 silly install resolved     _shasum: '636bcd09f3e7045377a5e919e92d16d29fdbff09',
+379 silly install resolved     _from: 'http-proxy@>=1.8.1 <2.0.0',
+379 silly install resolved     _npmVersion: '2.14.18',
+379 silly install resolved     _nodeVersion: '4.2.3',
+379 silly install resolved     _npmUser: { name: 'jcrugzz', email: 'jcrugzz@gmail.com' },
+379 silly install resolved     dist:
+379 silly install resolved      { shasum: '636bcd09f3e7045377a5e919e92d16d29fdbff09',
+379 silly install resolved        tarball: 'https://registry.npmjs.org/http-proxy/-/http-proxy-1.13.2.tgz' },
+379 silly install resolved     _npmOperationalInternal:
+379 silly install resolved      { host: 'packages-6-west.internal.npmjs.com',
+379 silly install resolved        tmp: 'tmp/http-proxy-1.13.2.tgz_1455724809490_0.5310903904028237' },
+379 silly install resolved     directories: {},
+379 silly install resolved     _resolved: 'https://registry.npmjs.org/http-proxy/-/http-proxy-1.13.2.tgz' },
+379 silly install resolved   { name: 'corser',
+379 silly install resolved     version: '2.0.0',
+379 silly install resolved     description: 'A highly configurable, middleware compatible implementation of CORS.',
+379 silly install resolved     keywords:
+379 silly install resolved      [ 'cors',
+379 silly install resolved        'cross-origin resource sharing',
+379 silly install resolved        'connect',
+379 silly install resolved        'express',
+379 silly install resolved        'middleware' ],
+379 silly install resolved     bugs: { url: 'https://github.com/agrueneberg/Corser/issues' },
+379 silly install resolved     license: 'MIT',
+379 silly install resolved     author:
+379 silly install resolved      { name: 'Alexander Grüneberg',
+379 silly install resolved        email: 'alexander.grueneberg@googlemail.com' },
+379 silly install resolved     main: './lib/corser.js',
+379 silly install resolved     repository:
+379 silly install resolved      { type: 'git',
+379 silly install resolved        url: 'https://github.com/agrueneberg/Corser.git' },
+379 silly install resolved     scripts: { test: 'mocha' },
+379 silly install resolved     devDependencies: { mocha: '1.3.x', 'expect.js': '0.1.x' },
+379 silly install resolved     engines: { node: '>= 0.4.0' },
+379 silly install resolved     homepage: 'https://github.com/agrueneberg/Corser',
+379 silly install resolved     _id: 'corser@2.0.0',
+379 silly install resolved     dist:
+379 silly install resolved      { shasum: 'aea3c5186d0dbb99d23abab15d08514eb87e3840',
+379 silly install resolved        tarball: 'https://registry.npmjs.org/corser/-/corser-2.0.0.tgz' },
+379 silly install resolved     _from: 'corser@>=2.0.0 <2.1.0',
+379 silly install resolved     _npmVersion: '1.4.3',
+379 silly install resolved     _npmUser:
+379 silly install resolved      { name: 'agrueneberg',
+379 silly install resolved        email: 'alexander.grueneberg@googlemail.com' },
+379 silly install resolved     maintainers: [ [Object] ],
+379 silly install resolved     directories: {},
+379 silly install resolved     _shasum: 'aea3c5186d0dbb99d23abab15d08514eb87e3840',
+379 silly install resolved     _resolved: 'https://registry.npmjs.org/corser/-/corser-2.0.0.tgz' } ]
+380 info install optimist@0.6.1 into /usr/local/lib/node_modules/http-server
+381 info install opener@1.4.1 into /usr/local/lib/node_modules/http-server
+382 info install union@0.4.4 into /usr/local/lib/node_modules/http-server
+383 info install portfinder@0.4.0 into /usr/local/lib/node_modules/http-server
+384 info install colors@1.0.3 into /usr/local/lib/node_modules/http-server
+385 info install ecstatic@1.4.0 into /usr/local/lib/node_modules/http-server
+386 info install http-proxy@1.13.2 into /usr/local/lib/node_modules/http-server
+387 info install corser@2.0.0 into /usr/local/lib/node_modules/http-server
+388 info installOne optimist@0.6.1
+389 verbose installOne of optimist to /usr/local/lib/node_modules/http-server not in flight; installing
+390 info installOne opener@1.4.1
+391 verbose installOne of opener to /usr/local/lib/node_modules/http-server not in flight; installing
+392 info installOne union@0.4.4
+393 verbose installOne of union to /usr/local/lib/node_modules/http-server not in flight; installing
+394 info installOne portfinder@0.4.0
+395 verbose installOne of portfinder to /usr/local/lib/node_modules/http-server not in flight; installing
+396 info installOne colors@1.0.3
+397 verbose installOne of colors to /usr/local/lib/node_modules/http-server not in flight; installing
+398 info installOne ecstatic@1.4.0
+399 verbose installOne of ecstatic to /usr/local/lib/node_modules/http-server not in flight; installing
+400 info installOne http-proxy@1.13.2
+401 verbose installOne of http-proxy to /usr/local/lib/node_modules/http-server not in flight; installing
+402 info installOne corser@2.0.0
+403 verbose installOne of corser to /usr/local/lib/node_modules/http-server not in flight; installing
+404 verbose lock using /Users/we/.npm/_locks/optimist-f6649642e95119c3.lock for /usr/local/lib/node_modules/http-server/node_modules/optimist
+405 verbose lock using /Users/we/.npm/_locks/opener-755f0ad0a1ed8240.lock for /usr/local/lib/node_modules/http-server/node_modules/opener
+406 verbose lock using /Users/we/.npm/_locks/union-eeebf1e9bdec1ead.lock for /usr/local/lib/node_modules/http-server/node_modules/union
+407 verbose lock using /Users/we/.npm/_locks/colors-923a1b9c9a54b139.lock for /usr/local/lib/node_modules/http-server/node_modules/colors
+408 verbose lock using /Users/we/.npm/_locks/portfinder-e1d441e5c9c8b460.lock for /usr/local/lib/node_modules/http-server/node_modules/portfinder
+409 silly install write writing optimist 0.6.1 to /usr/local/lib/node_modules/http-server/node_modules/optimist
+410 silly cache addNamed cb optimist@0.6.1
+411 verbose unbuild lib/node_modules/http-server/node_modules/optimist
+412 silly install write writing opener 1.4.1 to /usr/local/lib/node_modules/http-server/node_modules/opener
+413 silly install write writing union 0.4.4 to /usr/local/lib/node_modules/http-server/node_modules/union
+414 silly install write writing colors 1.0.3 to /usr/local/lib/node_modules/http-server/node_modules/colors
+415 silly install write writing portfinder 0.4.0 to /usr/local/lib/node_modules/http-server/node_modules/portfinder
+416 verbose lock using /Users/we/.npm/_locks/ecstatic-abe6259e04dc9deb.lock for /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+417 verbose lock using /Users/we/.npm/_locks/corser-04a00f2b7f1d1527.lock for /usr/local/lib/node_modules/http-server/node_modules/corser
+418 verbose lock using /Users/we/.npm/_locks/http-proxy-a6e26d25ac770eff.lock for /usr/local/lib/node_modules/http-server/node_modules/http-proxy
+419 silly install write writing ecstatic 1.4.0 to /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+420 silly install write writing corser 2.0.0 to /usr/local/lib/node_modules/http-server/node_modules/corser
+421 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/optimist
+422 silly install write writing http-proxy 1.13.2 to /usr/local/lib/node_modules/http-server/node_modules/http-proxy
+423 verbose tar unpack /Users/we/.npm/optimist/0.6.1/package.tgz
+424 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/optimist
+425 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/optimist
+426 silly gunzTarPerm modes [ '755', '644' ]
+427 silly cache addNamed cb union@0.4.4
+428 verbose unbuild lib/node_modules/http-server/node_modules/union
+429 silly cache addNamed cb opener@1.4.1
+430 verbose unbuild lib/node_modules/http-server/node_modules/opener
+431 silly cache addNamed cb colors@1.0.3
+432 verbose unbuild lib/node_modules/http-server/node_modules/colors
+433 silly cache addNamed cb portfinder@0.4.0
+434 verbose unbuild lib/node_modules/http-server/node_modules/portfinder
+435 silly cache addNamed cb ecstatic@1.4.0
+436 verbose unbuild lib/node_modules/http-server/node_modules/ecstatic
+437 silly cache addNamed cb corser@2.0.0
+438 verbose unbuild lib/node_modules/http-server/node_modules/corser
+439 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/union
+440 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/opener
+441 silly cache addNamed cb http-proxy@1.13.2
+442 verbose unbuild lib/node_modules/http-server/node_modules/http-proxy
+443 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/colors
+444 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/portfinder
+445 verbose tar unpack /Users/we/.npm/union/0.4.4/package.tgz
+446 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/union
+447 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/union
+448 verbose tar unpack /Users/we/.npm/opener/1.4.1/package.tgz
+449 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/opener
+450 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/opener
+451 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+452 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/corser
+453 verbose tar unpack /Users/we/.npm/colors/1.0.3/package.tgz
+454 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/colors
+455 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/colors
+456 verbose tar unpack /Users/we/.npm/portfinder/0.4.0/package.tgz
+457 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/portfinder
+458 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/portfinder
+459 silly gunzTarPerm modes [ '755', '644' ]
+460 silly gunzTarPerm modes [ '755', '644' ]
+461 verbose tar unpack /Users/we/.npm/ecstatic/1.4.0/package.tgz
+462 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+463 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+464 verbose tar unpack /Users/we/.npm/corser/2.0.0/package.tgz
+465 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/corser
+466 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/corser
+467 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/http-proxy
+468 silly gunzTarPerm modes [ '755', '644' ]
+469 silly gunzTarPerm modes [ '755', '644' ]
+470 silly gunzTarPerm modes [ '755', '644' ]
+471 silly gunzTarPerm modes [ '755', '644' ]
+472 verbose tar unpack /Users/we/.npm/http-proxy/1.13.2/package.tgz
+473 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/http-proxy
+474 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/http-proxy
+475 silly gunzTarPerm extractEntry package.json
+476 silly gunzTarPerm modes [ '755', '644' ]
+477 silly gunzTarPerm extractEntry package.json
+478 silly gunzTarPerm extractEntry package.json
+479 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+480 silly gunzTarPerm extractEntry LICENSE
+481 silly gunzTarPerm extractEntry index.js
+482 silly gunzTarPerm extractEntry package.json
+483 silly gunzTarPerm extractEntry package.json
+484 silly gunzTarPerm extractEntry package.json
+485 silly gunzTarPerm extractEntry package.json
+486 silly gunzTarPerm extractEntry package.json
+487 silly gunzTarPerm extractEntry .npmignore
+488 silly gunzTarPerm extractEntry README.md
+489 silly gunzTarPerm extractEntry README.md
+490 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+491 silly gunzTarPerm extractEntry opener.js
+492 silly gunzTarPerm modified mode [ 'opener.js', 438, 420 ]
+493 silly gunzTarPerm extractEntry .npmignore
+494 silly gunzTarPerm extractEntry README.md
+495 silly gunzTarPerm extractEntry safe.js
+496 silly gunzTarPerm extractEntry .travis.yml
+497 silly gunzTarPerm extractEntry .npmignore
+498 silly gunzTarPerm extractEntry README.md
+499 silly gunzTarPerm extractEntry .npmignore
+500 silly gunzTarPerm extractEntry README.md
+501 silly gunzTarPerm extractEntry .npmignore
+502 silly gunzTarPerm extractEntry README.md
+503 silly gunzTarPerm extractEntry .travis.yml
+504 silly gunzTarPerm extractEntry example/bool.js
+505 silly gunzTarPerm extractEntry LICENSE.txt
+506 silly gunzTarPerm modified mode [ 'LICENSE.txt', 438, 420 ]
+507 silly gunzTarPerm extractEntry LICENSE
+508 silly gunzTarPerm extractEntry examples/after/index.js
+509 silly gunzTarPerm extractEntry LICENSE
+510 silly gunzTarPerm extractEntry .travis.yml
+511 silly gunzTarPerm extractEntry MIT-LICENSE.txt
+512 silly gunzTarPerm extractEntry ReadMe.md
+513 silly gunzTarPerm extractEntry LICENSE
+514 silly gunzTarPerm extractEntry .travis.yml
+515 silly gunzTarPerm extractEntry test.js
+516 silly gunzTarPerm extractEntry CONTRIBUTING.md
+517 silly gunzTarPerm extractEntry LICENSE
+518 silly gunzTarPerm extractEntry example/default_singles.js
+519 silly gunzTarPerm extractEntry example/divide.js
+520 silly gunzTarPerm extractEntry example/line_count.js
+521 silly gunzTarPerm extractEntry example/default_hash.js
+522 silly gunzTarPerm extractEntry example/line_count_wrap.js
+523 silly gunzTarPerm extractEntry example/nonopt.js
+524 silly gunzTarPerm extractEntry example/reflect.js
+525 silly gunzTarPerm extractEntry example/short.js
+526 silly gunzTarPerm extractEntry example/string.js
+527 silly gunzTarPerm extractEntry example/boolean_single.js
+528 silly gunzTarPerm extractEntry example/usage-options.js
+529 silly gunzTarPerm extractEntry example/boolean_double.js
+530 silly gunzTarPerm extractEntry example/xup.js
+531 silly gunzTarPerm extractEntry example/line_count_options.js
+532 silly gunzTarPerm extractEntry readme.markdown
+533 silly gunzTarPerm extractEntry test/_.js
+534 silly gunzTarPerm extractEntry test/dash.js
+535 silly gunzTarPerm extractEntry test/parse.js
+536 silly gunzTarPerm extractEntry test/parse_modified.js
+537 silly gunzTarPerm extractEntry test/short.js
+538 silly gunzTarPerm extractEntry test/usage.js
+539 silly gunzTarPerm extractEntry test/whitespace.js
+540 silly gunzTarPerm extractEntry test/_/argv.js
+541 silly gunzTarPerm extractEntry test/_/bin.js
+542 silly gunzTarPerm extractEntry examples/simple/simple.js
+543 silly gunzTarPerm extractEntry examples/simple/spdy.js
+544 silly gunzTarPerm extractEntry examples/simple/favicon.png
+545 silly gunzTarPerm extractEntry examples/simple/middleware/favicon.js
+546 silly gunzTarPerm extractEntry examples/simple/middleware/gzip-decode.js
+547 silly gunzTarPerm extractEntry examples/simple/middleware/gzip-encode.js
+548 silly gunzTarPerm extractEntry examples/socketio/README
+549 silly gunzTarPerm extractEntry examples/socketio/server.js
+550 silly gunzTarPerm extractEntry examples/socketio/index.html
+551 silly gunzTarPerm extractEntry .travis.yml
+552 silly gunzTarPerm extractEntry CHANGELOG.md
+553 silly gunzTarPerm extractEntry lib/buffered-stream.js
+554 silly gunzTarPerm extractEntry lib/core.js
+555 silly gunzTarPerm extractEntry lib/http-stream.js
+556 silly gunzTarPerm extractEntry lib/index.js
+557 silly gunzTarPerm extractEntry lib/request-stream.js
+558 silly gunzTarPerm extractEntry lib/response-stream.js
+559 silly gunzTarPerm extractEntry lib/routing-stream.js
+560 silly gunzTarPerm extractEntry test/after-test.js
+561 silly gunzTarPerm extractEntry test/double-write-test.js
+562 silly gunzTarPerm extractEntry test/ecstatic-test.js
+563 silly gunzTarPerm extractEntry test/status-code-test.js
+564 silly gunzTarPerm extractEntry test/body-parser-test.js
+565 silly gunzTarPerm extractEntry test/simple-test.js
+566 silly gunzTarPerm extractEntry test/prop-test.js
+567 silly gunzTarPerm extractEntry test/streaming-test.js
+568 silly gunzTarPerm extractEntry test/header-test.js
+569 silly gunzTarPerm extractEntry test/helpers/index.js
+570 silly gunzTarPerm extractEntry test/helpers/macros.js
+571 silly gunzTarPerm extractEntry test/fixtures/index.js
+572 silly gunzTarPerm extractEntry test/fixtures/static/some-file.txt
+573 silly gunzTarPerm extractEntry union.png
+574 silly gunzTarPerm extractEntry lib/portfinder.js
+575 silly gunzTarPerm extractEntry test/port-finder-multiple-test.js
+576 silly gunzTarPerm extractEntry examples/normal-usage.js
+577 silly gunzTarPerm extractEntry examples/safe-string.js
+578 silly gunzTarPerm extractEntry lib/corser.js
+579 silly gunzTarPerm extractEntry CONTRIBUTORS.md
+580 silly gunzTarPerm extractEntry index.js
+581 silly gunzTarPerm extractEntry lib/http-proxy.js
+582 silly gunzTarPerm extractEntry lib/colors.js
+583 silly gunzTarPerm extractEntry test/port-finder-socket-test.js
+584 silly gunzTarPerm extractEntry test/port-finder-test.js
+585 silly gunzTarPerm extractEntry test/fixtures/.gitkeep
+586 silly gunzTarPerm extractEntry lib/extendStringPrototype.js
+587 silly gunzTarPerm extractEntry lib/index.js
+588 silly gunzTarPerm extractEntry lib/styles.js
+589 info preinstall opener@1.4.1
+590 silly gunzTarPerm extractEntry LICENSE.txt
+591 silly gunzTarPerm extractEntry CHANGELOG.md
+592 silly install resolved []
+593 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/opener
+594 info build /usr/local/lib/node_modules/http-server/node_modules/opener
+595 verbose linkStuff [ true,
+595 verbose linkStuff   '/usr/local/lib/node_modules',
+595 verbose linkStuff   false,
+595 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules' ]
+596 info linkStuff opener@1.4.1
+597 silly gunzTarPerm extractEntry lib/custom/trap.js
+598 silly gunzTarPerm extractEntry lib/custom/zalgo.js
+599 verbose linkBins opener@1.4.1
+600 verbose link bins [ { opener: 'opener.js' },
+600 verbose link bins   '/usr/local/lib/node_modules/http-server/node_modules/.bin',
+600 verbose link bins   false ]
+601 verbose linkMans opener@1.4.1
+602 verbose rebuildBundles opener@1.4.1
+603 silly gunzTarPerm extractEntry example/core.js
+604 silly gunzTarPerm extractEntry example/express.js
+605 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/.bin/opener
+606 info install opener@1.4.1
+607 info postinstall opener@1.4.1
+608 verbose unlock done using /Users/we/.npm/_locks/opener-755f0ad0a1ed8240.lock for /usr/local/lib/node_modules/http-server/node_modules/opener
+609 silly gunzTarPerm extractEntry lib/http-proxy/common.js
+610 silly gunzTarPerm extractEntry lib/http-proxy/index.js
+611 silly gunzTarPerm extractEntry lib/maps/america.js
+612 silly gunzTarPerm extractEntry lib/maps/rainbow.js
+613 silly gunzTarPerm extractEntry example/union.js
+614 silly gunzTarPerm extractEntry example/public/beep/index.html
+615 silly gunzTarPerm extractEntry lib/http-proxy/passes/web-incoming.js
+616 silly gunzTarPerm extractEntry lib/http-proxy/passes/web-outgoing.js
+617 silly gunzTarPerm extractEntry example/public/hello.txt
+618 silly gunzTarPerm extractEntry example/public/subdir/world.txt
+619 silly gunzTarPerm extractEntry lib/maps/random.js
+620 silly gunzTarPerm extractEntry lib/maps/zebra.js
+621 silly gunzTarPerm extractEntry lib/http-proxy/passes/ws-incoming.js
+622 info preinstall corser@2.0.0
+623 silly gunzTarPerm extractEntry example/public/turtle.png
+624 silly install resolved []
+625 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/corser
+626 info build /usr/local/lib/node_modules/http-server/node_modules/corser
+627 verbose linkStuff [ true,
+627 verbose linkStuff   '/usr/local/lib/node_modules',
+627 verbose linkStuff   false,
+627 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules' ]
+628 info linkStuff corser@2.0.0
+629 verbose linkBins corser@2.0.0
+630 verbose linkMans corser@2.0.0
+631 verbose rebuildBundles corser@2.0.0
+632 info install corser@2.0.0
+633 info postinstall corser@2.0.0
+634 silly gunzTarPerm extractEntry lib/ecstatic.js
+635 verbose unlock done using /Users/we/.npm/_locks/corser-04a00f2b7f1d1527.lock for /usr/local/lib/node_modules/http-server/node_modules/corser
+636 silly gunzTarPerm extractEntry lib/ecstatic/etag.js
+637 silly gunzTarPerm extractEntry lib/ecstatic/opts.js
+638 silly gunzTarPerm extractEntry lib/system/supports-colors.js
+639 silly gunzTarPerm extractEntry screenshots/colors.png
+640 silly gunzTarPerm extractEntry lib/ecstatic/showdir.js
+641 silly gunzTarPerm extractEntry lib/ecstatic/status-handlers.js
+642 silly gunzTarPerm extractEntry tests/basic-test.js
+643 silly gunzTarPerm extractEntry tests/safe-test.js
+644 info preinstall portfinder@0.4.0
+645 silly gunzTarPerm extractEntry lib/ecstatic/aliases.json
+646 silly gunzTarPerm extractEntry lib/ecstatic/defaults.json
+647 silly prepareForInstallMany adding async@0.9.0 from portfinder dependencies
+648 silly prepareForInstallMany adding mkdirp@0.5.x from portfinder dependencies
+649 silly cache add args [ 'async@0.9.0', null ]
+650 verbose cache add spec async@0.9.0
+651 silly cache add args [ 'mkdirp@0.5.x', null ]
+652 verbose cache add spec mkdirp@0.5.x
+653 silly cache add parsed spec { raw: 'async@0.9.0',
+653 silly cache add   scope: null,
+653 silly cache add   name: 'async',
+653 silly cache add   rawSpec: '0.9.0',
+653 silly cache add   spec: '0.9.0',
+653 silly cache add   type: 'version' }
+654 verbose addNamed async@0.9.0
+655 silly addNamed semver.valid 0.9.0
+656 silly addNamed semver.validRange 0.9.0
+657 silly mapToRegistry name async
+658 silly mapToRegistry using default registry
+659 silly mapToRegistry registry https://registry.npmjs.org/
+660 silly mapToRegistry uri https://registry.npmjs.org/async
+661 verbose addNameVersion registry:https://registry.npmjs.org/async not in flight; fetching
+662 silly cache add parsed spec { raw: 'mkdirp@0.5.x',
+662 silly cache add   scope: null,
+662 silly cache add   name: 'mkdirp',
+662 silly cache add   rawSpec: '0.5.x',
+662 silly cache add   spec: '>=0.5.0 <0.6.0',
+662 silly cache add   type: 'range' }
+663 verbose addNamed mkdirp@>=0.5.0 <0.6.0
+664 silly addNamed semver.valid null
+665 silly addNamed semver.validRange >=0.5.0 <0.6.0
+666 silly addNameRange { name: 'mkdirp', range: '>=0.5.0 <0.6.0', hasData: false }
+667 silly mapToRegistry name mkdirp
+668 silly mapToRegistry using default registry
+669 silly mapToRegistry registry https://registry.npmjs.org/
+670 silly mapToRegistry uri https://registry.npmjs.org/mkdirp
+671 verbose addNameRange registry:https://registry.npmjs.org/mkdirp not in flight; fetching
+672 silly gunzTarPerm extractEntry themes/generic-logging.js
+673 silly gunzTarPerm extractEntry .travis.yml
+674 verbose request uri https://registry.npmjs.org/async
+675 verbose request no auth needed
+676 info attempt registry request try #1 at 21:58:07
+677 verbose etag "CU9L61RQGGUVKDLCWI6DSVKG"
+678 http request GET https://registry.npmjs.org/async
+679 info preinstall http-proxy@1.13.2
+680 silly prepareForInstallMany adding eventemitter3@1.x.x from http-proxy dependencies
+681 silly prepareForInstallMany adding requires-port@1.x.x from http-proxy dependencies
+682 silly cache add args [ 'eventemitter3@1.x.x', null ]
+683 verbose cache add spec eventemitter3@1.x.x
+684 silly cache add args [ 'requires-port@1.x.x', null ]
+685 verbose cache add spec requires-port@1.x.x
+686 silly cache add parsed spec { raw: 'eventemitter3@1.x.x',
+686 silly cache add   scope: null,
+686 silly cache add   name: 'eventemitter3',
+686 silly cache add   rawSpec: '1.x.x',
+686 silly cache add   spec: '>=1.0.0 <2.0.0',
+686 silly cache add   type: 'range' }
+687 verbose addNamed eventemitter3@>=1.0.0 <2.0.0
+688 silly addNamed semver.valid null
+689 silly addNamed semver.validRange >=1.0.0 <2.0.0
+690 silly addNameRange { name: 'eventemitter3',
+690 silly addNameRange   range: '>=1.0.0 <2.0.0',
+690 silly addNameRange   hasData: false }
+691 silly mapToRegistry name eventemitter3
+692 silly mapToRegistry using default registry
+693 silly mapToRegistry registry https://registry.npmjs.org/
+694 silly mapToRegistry uri https://registry.npmjs.org/eventemitter3
+695 verbose addNameRange registry:https://registry.npmjs.org/eventemitter3 not in flight; fetching
+696 silly cache add parsed spec { raw: 'requires-port@1.x.x',
+696 silly cache add   scope: null,
+696 silly cache add   name: 'requires-port',
+696 silly cache add   rawSpec: '1.x.x',
+696 silly cache add   spec: '>=1.0.0 <2.0.0',
+696 silly cache add   type: 'range' }
+697 verbose addNamed requires-port@>=1.0.0 <2.0.0
+698 silly addNamed semver.valid null
+699 silly addNamed semver.validRange >=1.0.0 <2.0.0
+700 silly addNameRange { name: 'requires-port',
+700 silly addNameRange   range: '>=1.0.0 <2.0.0',
+700 silly addNameRange   hasData: false }
+701 silly mapToRegistry name requires-port
+702 silly mapToRegistry using default registry
+703 silly mapToRegistry registry https://registry.npmjs.org/
+704 silly mapToRegistry uri https://registry.npmjs.org/requires-port
+705 verbose addNameRange registry:https://registry.npmjs.org/requires-port not in flight; fetching
+706 verbose request uri https://registry.npmjs.org/eventemitter3
+707 verbose request no auth needed
+708 info attempt registry request try #1 at 21:58:07
+709 http request GET https://registry.npmjs.org/eventemitter3
+710 verbose request uri https://registry.npmjs.org/requires-port
+711 verbose request no auth needed
+712 info attempt registry request try #1 at 21:58:07
+713 http request GET https://registry.npmjs.org/requires-port
+714 verbose request uri https://registry.npmjs.org/mkdirp
+715 verbose request no auth needed
+716 info attempt registry request try #1 at 21:58:07
+717 verbose etag "4PH72MHDKPUQ0CP0Y61GAYKS"
+718 http request GET https://registry.npmjs.org/mkdirp
+719 info preinstall colors@1.0.3
+720 silly install resolved []
+721 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/colors
+722 info build /usr/local/lib/node_modules/http-server/node_modules/colors
+723 verbose linkStuff [ true,
+723 verbose linkStuff   '/usr/local/lib/node_modules',
+723 verbose linkStuff   false,
+723 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules' ]
+724 info linkStuff colors@1.0.3
+725 verbose linkBins colors@1.0.3
+726 verbose linkMans colors@1.0.3
+727 verbose rebuildBundles colors@1.0.3
+728 info install colors@1.0.3
+729 info postinstall colors@1.0.3
+730 verbose unlock done using /Users/we/.npm/_locks/colors-923a1b9c9a54b139.lock for /usr/local/lib/node_modules/http-server/node_modules/colors
+731 info preinstall optimist@0.6.1
+732 silly prepareForInstallMany adding wordwrap@~0.0.2 from optimist dependencies
+733 silly prepareForInstallMany adding minimist@~0.0.1 from optimist dependencies
+734 silly cache add args [ 'wordwrap@~0.0.2', null ]
+735 verbose cache add spec wordwrap@~0.0.2
+736 silly cache add args [ 'minimist@~0.0.1', null ]
+737 verbose cache add spec minimist@~0.0.1
+738 silly cache add parsed spec { raw: 'wordwrap@~0.0.2',
+738 silly cache add   scope: null,
+738 silly cache add   name: 'wordwrap',
+738 silly cache add   rawSpec: '~0.0.2',
+738 silly cache add   spec: '>=0.0.2 <0.1.0',
+738 silly cache add   type: 'range' }
+739 verbose addNamed wordwrap@>=0.0.2 <0.1.0
+740 silly addNamed semver.valid null
+741 silly addNamed semver.validRange >=0.0.2 <0.1.0
+742 silly addNameRange { name: 'wordwrap', range: '>=0.0.2 <0.1.0', hasData: false }
+743 silly mapToRegistry name wordwrap
+744 silly mapToRegistry using default registry
+745 silly mapToRegistry registry https://registry.npmjs.org/
+746 silly mapToRegistry uri https://registry.npmjs.org/wordwrap
+747 verbose addNameRange registry:https://registry.npmjs.org/wordwrap not in flight; fetching
+748 silly cache add parsed spec { raw: 'minimist@~0.0.1',
+748 silly cache add   scope: null,
+748 silly cache add   name: 'minimist',
+748 silly cache add   rawSpec: '~0.0.1',
+748 silly cache add   spec: '>=0.0.1 <0.1.0',
+748 silly cache add   type: 'range' }
+749 verbose addNamed minimist@>=0.0.1 <0.1.0
+750 silly addNamed semver.valid null
+751 silly addNamed semver.validRange >=0.0.1 <0.1.0
+752 silly addNameRange { name: 'minimist', range: '>=0.0.1 <0.1.0', hasData: false }
+753 silly mapToRegistry name minimist
+754 silly mapToRegistry using default registry
+755 silly mapToRegistry registry https://registry.npmjs.org/
+756 silly mapToRegistry uri https://registry.npmjs.org/minimist
+757 verbose addNameRange registry:https://registry.npmjs.org/minimist not in flight; fetching
+758 info preinstall union@0.4.4
+759 silly prepareForInstallMany adding qs@~2.3.3 from union dependencies
+760 silly cache add args [ 'qs@~2.3.3', null ]
+761 verbose cache add spec qs@~2.3.3
+762 silly cache add parsed spec { raw: 'qs@~2.3.3',
+762 silly cache add   scope: null,
+762 silly cache add   name: 'qs',
+762 silly cache add   rawSpec: '~2.3.3',
+762 silly cache add   spec: '>=2.3.3 <2.4.0',
+762 silly cache add   type: 'range' }
+763 verbose addNamed qs@>=2.3.3 <2.4.0
+764 silly addNamed semver.valid null
+765 silly addNamed semver.validRange >=2.3.3 <2.4.0
+766 silly addNameRange { name: 'qs', range: '>=2.3.3 <2.4.0', hasData: false }
+767 silly mapToRegistry name qs
+768 silly mapToRegistry using default registry
+769 silly mapToRegistry registry https://registry.npmjs.org/
+770 silly mapToRegistry uri https://registry.npmjs.org/qs
+771 verbose addNameRange registry:https://registry.npmjs.org/qs not in flight; fetching
+772 info preinstall ecstatic@1.4.0
+773 silly prepareForInstallMany adding he@^0.5.0 from ecstatic dependencies
+774 silly prepareForInstallMany adding mime@^1.2.11 from ecstatic dependencies
+775 silly prepareForInstallMany adding minimist@^1.1.0 from ecstatic dependencies
+776 silly prepareForInstallMany adding url-join@0.0.1 from ecstatic dependencies
+777 silly cache add args [ 'he@^0.5.0', null ]
+778 verbose cache add spec he@^0.5.0
+779 silly cache add args [ 'mime@^1.2.11', null ]
+780 verbose cache add spec mime@^1.2.11
+781 silly cache add parsed spec { raw: 'he@^0.5.0',
+781 silly cache add   scope: null,
+781 silly cache add   name: 'he',
+781 silly cache add   rawSpec: '^0.5.0',
+781 silly cache add   spec: '>=0.5.0 <0.6.0',
+781 silly cache add   type: 'range' }
+782 verbose addNamed he@>=0.5.0 <0.6.0
+783 silly addNamed semver.valid null
+784 silly addNamed semver.validRange >=0.5.0 <0.6.0
+785 silly addNameRange { name: 'he', range: '>=0.5.0 <0.6.0', hasData: false }
+786 silly mapToRegistry name he
+787 silly mapToRegistry using default registry
+788 silly mapToRegistry registry https://registry.npmjs.org/
+789 silly mapToRegistry uri https://registry.npmjs.org/he
+790 verbose addNameRange registry:https://registry.npmjs.org/he not in flight; fetching
+791 silly cache add parsed spec { raw: 'mime@^1.2.11',
+791 silly cache add   scope: null,
+791 silly cache add   name: 'mime',
+791 silly cache add   rawSpec: '^1.2.11',
+791 silly cache add   spec: '>=1.2.11 <2.0.0',
+791 silly cache add   type: 'range' }
+792 verbose addNamed mime@>=1.2.11 <2.0.0
+793 silly addNamed semver.valid null
+794 silly addNamed semver.validRange >=1.2.11 <2.0.0
+795 silly addNameRange { name: 'mime', range: '>=1.2.11 <2.0.0', hasData: false }
+796 silly mapToRegistry name mime
+797 silly mapToRegistry using default registry
+798 silly mapToRegistry registry https://registry.npmjs.org/
+799 silly mapToRegistry uri https://registry.npmjs.org/mime
+800 verbose addNameRange registry:https://registry.npmjs.org/mime not in flight; fetching
+801 verbose request uri https://registry.npmjs.org/he
+802 verbose request no auth needed
+803 info attempt registry request try #1 at 21:58:07
+804 http request GET https://registry.npmjs.org/he
+805 silly cache add args [ 'minimist@^1.1.0', null ]
+806 verbose cache add spec minimist@^1.1.0
+807 silly cache add parsed spec { raw: 'minimist@^1.1.0',
+807 silly cache add   scope: null,
+807 silly cache add   name: 'minimist',
+807 silly cache add   rawSpec: '^1.1.0',
+807 silly cache add   spec: '>=1.1.0 <2.0.0',
+807 silly cache add   type: 'range' }
+808 verbose addNamed minimist@>=1.1.0 <2.0.0
+809 silly addNamed semver.valid null
+810 silly addNamed semver.validRange >=1.1.0 <2.0.0
+811 silly addNameRange { name: 'minimist', range: '>=1.1.0 <2.0.0', hasData: false }
+812 silly mapToRegistry name minimist
+813 silly mapToRegistry using default registry
+814 silly mapToRegistry registry https://registry.npmjs.org/
+815 silly mapToRegistry uri https://registry.npmjs.org/minimist
+816 verbose addNameRange registry:https://registry.npmjs.org/minimist already in flight; waiting
+817 silly cache add args [ 'url-join@0.0.1', null ]
+818 verbose cache add spec url-join@0.0.1
+819 silly cache add parsed spec { raw: 'url-join@0.0.1',
+819 silly cache add   scope: null,
+819 silly cache add   name: 'url-join',
+819 silly cache add   rawSpec: '0.0.1',
+819 silly cache add   spec: '0.0.1',
+819 silly cache add   type: 'version' }
+820 verbose addNamed url-join@0.0.1
+821 silly addNamed semver.valid 0.0.1
+822 silly addNamed semver.validRange 0.0.1
+823 silly mapToRegistry name url-join
+824 silly mapToRegistry using default registry
+825 silly mapToRegistry registry https://registry.npmjs.org/
+826 silly mapToRegistry uri https://registry.npmjs.org/url-join
+827 verbose addNameVersion registry:https://registry.npmjs.org/url-join not in flight; fetching
+828 verbose request uri https://registry.npmjs.org/url-join
+829 verbose request no auth needed
+830 info attempt registry request try #1 at 21:58:07
+831 http request GET https://registry.npmjs.org/url-join
+832 verbose request uri https://registry.npmjs.org/wordwrap
+833 verbose request no auth needed
+834 info attempt registry request try #1 at 21:58:07
+835 verbose etag "18ZMVFL4XQSNT8JYI76ECE9BV"
+836 http request GET https://registry.npmjs.org/wordwrap
+837 verbose request uri https://registry.npmjs.org/minimist
+838 verbose request no auth needed
+839 info attempt registry request try #1 at 21:58:07
+840 verbose etag "D9L7YVFI26J4ZIZVUBK8YZZ8F"
+841 http request GET https://registry.npmjs.org/minimist
+842 verbose request uri https://registry.npmjs.org/mime
+843 verbose request no auth needed
+844 info attempt registry request try #1 at 21:58:07
+845 verbose etag "8ZZNUXW9PW7JYTXB29WH9CM6E"
+846 http request GET https://registry.npmjs.org/mime
+847 verbose request uri https://registry.npmjs.org/qs
+848 verbose request no auth needed
+849 info attempt registry request try #1 at 21:58:07
+850 verbose etag "7RDJMGOR7BT1HG7SVYU0GG93X"
+851 http request GET https://registry.npmjs.org/qs
+852 http 200 https://registry.npmjs.org/requires-port
+853 silly get cb [ 200,
+853 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+853 silly get     etag: '"E0O0T58ME0HOXF1OX00AGM99O"',
+853 silly get     'content-type': 'application/json',
+853 silly get     'cache-control': 'max-age=300',
+853 silly get     'content-length': '7190',
+853 silly get     'accept-ranges': 'bytes',
+853 silly get     date: 'Wed, 06 Apr 2016 12:58:08 GMT',
+853 silly get     via: '1.1 varnish',
+853 silly get     age: '26',
+853 silly get     connection: 'keep-alive',
+853 silly get     'x-served-by': 'cache-itm7424-ITM',
+853 silly get     'x-cache': 'HIT',
+853 silly get     'x-cache-hits': '1',
+853 silly get     'x-timer': 'S1459947488.259400,VS0,VE0',
+853 silly get     vary: 'Accept-Encoding' } ]
+854 http 304 https://registry.npmjs.org/mkdirp
+855 silly get cb [ 304,
+855 silly get   { date: 'Wed, 06 Apr 2016 12:58:08 GMT',
+855 silly get     via: '1.1 varnish',
+855 silly get     'cache-control': 'max-age=300',
+855 silly get     etag: '"4PH72MHDKPUQ0CP0Y61GAYKS"',
+855 silly get     age: '145',
+855 silly get     connection: 'keep-alive',
+855 silly get     'x-served-by': 'cache-itm7421-ITM',
+855 silly get     'x-cache': 'HIT',
+855 silly get     'x-cache-hits': '7',
+855 silly get     'x-timer': 'S1459947488.251591,VS0,VE0',
+855 silly get     vary: 'Accept-Encoding' } ]
+856 verbose etag https://registry.npmjs.org/mkdirp from cache
+857 silly addNameRange number 2 { name: 'mkdirp', range: '>=0.5.0 <0.6.0', hasData: true }
+858 silly addNameRange versions [ 'mkdirp',
+858 silly addNameRange   [ '0.0.1',
+858 silly addNameRange     '0.0.2',
+858 silly addNameRange     '0.0.3',
+858 silly addNameRange     '0.0.4',
+858 silly addNameRange     '0.0.5',
+858 silly addNameRange     '0.0.6',
+858 silly addNameRange     '0.0.7',
+858 silly addNameRange     '0.1.0',
+858 silly addNameRange     '0.2.0',
+858 silly addNameRange     '0.2.1',
+858 silly addNameRange     '0.2.2',
+858 silly addNameRange     '0.3.0',
+858 silly addNameRange     '0.3.1',
+858 silly addNameRange     '0.3.2',
+858 silly addNameRange     '0.3.3',
+858 silly addNameRange     '0.3.4',
+858 silly addNameRange     '0.3.5',
+858 silly addNameRange     '0.4.0',
+858 silly addNameRange     '0.4.1',
+858 silly addNameRange     '0.4.2',
+858 silly addNameRange     '0.5.0',
+858 silly addNameRange     '0.5.1' ] ]
+859 verbose addNamed mkdirp@0.5.1
+860 silly addNamed semver.valid 0.5.1
+861 silly addNamed semver.validRange 0.5.1
+862 silly addNameRange number 2 { name: 'requires-port', range: '>=1.0.0 <2.0.0', hasData: true }
+863 silly addNameRange versions [ 'requires-port', [ '0.0.0', '0.0.1', '1.0.0' ] ]
+864 verbose addNamed requires-port@1.0.0
+865 silly addNamed semver.valid 1.0.0
+866 silly addNamed semver.validRange 1.0.0
+867 silly mapToRegistry name requires-port
+868 silly mapToRegistry using default registry
+869 silly mapToRegistry registry https://registry.npmjs.org/
+870 silly mapToRegistry uri https://registry.npmjs.org/requires-port
+871 verbose addRemoteTarball https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz not in flight; adding
+872 verbose addRemoteTarball [ 'https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz',
+872 verbose addRemoteTarball   '925d2601d39ac485e091cf0da5c6e694dc3dcaff' ]
+873 info retry fetch attempt 1 at 21:58:07
+874 info attempt registry request try #1 at 21:58:07
+875 http fetch GET https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz
+876 silly cache afterAdd mkdirp@0.5.1
+877 verbose afterAdd /Users/we/.npm/mkdirp/0.5.1/package/package.json not in flight; writing
+878 verbose afterAdd /Users/we/.npm/mkdirp/0.5.1/package/package.json written
+879 http 200 https://registry.npmjs.org/eventemitter3
+880 silly get cb [ 200,
+880 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+880 silly get     etag: '"6YUL0PQ9TH4DO1K08NM57AIKS"',
+880 silly get     'content-type': 'application/json',
+880 silly get     'cache-control': 'max-age=300',
+880 silly get     'content-length': '26525',
+880 silly get     'accept-ranges': 'bytes',
+880 silly get     date: 'Wed, 06 Apr 2016 12:58:08 GMT',
+880 silly get     via: '1.1 varnish',
+880 silly get     age: '1',
+880 silly get     connection: 'keep-alive',
+880 silly get     'x-served-by': 'cache-itm7425-ITM',
+880 silly get     'x-cache': 'HIT',
+880 silly get     'x-cache-hits': '1',
+880 silly get     'x-timer': 'S1459947488.255193,VS0,VE0',
+880 silly get     vary: 'Accept-Encoding' } ]
+881 http 200 https://registry.npmjs.org/async
+882 silly get cb [ 200,
+882 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+882 silly get     etag: '"4KOSZXH6V5AZWR5OHCL85O3SC"',
+882 silly get     'content-type': 'application/json',
+882 silly get     'content-encoding': 'gzip',
+882 silly get     'cache-control': 'max-age=300',
+882 silly get     'content-length': '35125',
+882 silly get     'accept-ranges': 'bytes',
+882 silly get     date: 'Wed, 06 Apr 2016 12:58:08 GMT',
+882 silly get     via: '1.1 varnish',
+882 silly get     age: '141',
+882 silly get     connection: 'keep-alive',
+882 silly get     'x-served-by': 'cache-itm7423-ITM',
+882 silly get     'x-cache': 'HIT',
+882 silly get     'x-cache-hits': '53',
+882 silly get     'x-timer': 'S1459947488.254029,VS0,VE0',
+882 silly get     vary: 'Accept-Encoding' } ]
+883 http 304 https://registry.npmjs.org/wordwrap
+884 silly get cb [ 304,
+884 silly get   { date: 'Wed, 06 Apr 2016 12:58:08 GMT',
+884 silly get     via: '1.1 varnish',
+884 silly get     'cache-control': 'max-age=300',
+884 silly get     etag: '"18ZMVFL4XQSNT8JYI76ECE9BV"',
+884 silly get     age: '77',
+884 silly get     connection: 'keep-alive',
+884 silly get     'x-served-by': 'cache-itm7421-ITM',
+884 silly get     'x-cache': 'HIT',
+884 silly get     'x-cache-hits': '1',
+884 silly get     'x-timer': 'S1459947488.325980,VS0,VE0',
+884 silly get     vary: 'Accept-Encoding' } ]
+885 verbose etag https://registry.npmjs.org/wordwrap from cache
+886 silly addNameRange number 2 { name: 'eventemitter3', range: '>=1.0.0 <2.0.0', hasData: true }
+887 silly addNameRange versions [ 'eventemitter3',
+887 silly addNameRange   [ '0.0.0',
+887 silly addNameRange     '0.0.1',
+887 silly addNameRange     '0.1.0',
+887 silly addNameRange     '0.1.1',
+887 silly addNameRange     '0.1.2',
+887 silly addNameRange     '0.1.3',
+887 silly addNameRange     '0.1.4',
+887 silly addNameRange     '0.1.5',
+887 silly addNameRange     '0.1.6',
+887 silly addNameRange     '1.0.0',
+887 silly addNameRange     '1.0.1',
+887 silly addNameRange     '1.0.2',
+887 silly addNameRange     '1.0.3',
+887 silly addNameRange     '1.1.0',
+887 silly addNameRange     '1.1.1',
+887 silly addNameRange     '1.2.0' ] ]
+888 verbose addNamed eventemitter3@1.2.0
+889 silly addNamed semver.valid 1.2.0
+890 silly addNamed semver.validRange 1.2.0
+891 http 200 https://registry.npmjs.org/url-join
+892 silly get cb [ 200,
+892 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+892 silly get     etag: '"857MW7ESVSO7VR05U7PUZLHS3"',
+892 silly get     'content-type': 'application/json',
+892 silly get     'content-encoding': 'gzip',
+892 silly get     'cache-control': 'max-age=300',
+892 silly get     'content-length': '1546',
+892 silly get     'accept-ranges': 'bytes',
+892 silly get     date: 'Wed, 06 Apr 2016 12:58:08 GMT',
+892 silly get     via: '1.1 varnish',
+892 silly get     age: '177',
+892 silly get     connection: 'keep-alive',
+892 silly get     'x-served-by': 'cache-itm7424-ITM',
+892 silly get     'x-cache': 'HIT',
+892 silly get     'x-cache-hits': '2',
+892 silly get     'x-timer': 'S1459947488.334262,VS0,VE0',
+892 silly get     vary: 'Accept-Encoding' } ]
+893 silly mapToRegistry name eventemitter3
+894 silly mapToRegistry using default registry
+895 silly mapToRegistry registry https://registry.npmjs.org/
+896 silly mapToRegistry uri https://registry.npmjs.org/eventemitter3
+897 verbose addRemoteTarball https://registry.npmjs.org/eventemitter3/-/eventemitter3-1.2.0.tgz not in flight; adding
+898 verbose addRemoteTarball [ 'https://registry.npmjs.org/eventemitter3/-/eventemitter3-1.2.0.tgz',
+898 verbose addRemoteTarball   '1c86991d816ad1e504750e73874224ecf3bec508' ]
+899 info retry fetch attempt 1 at 21:58:07
+900 info attempt registry request try #1 at 21:58:07
+901 http fetch GET https://registry.npmjs.org/eventemitter3/-/eventemitter3-1.2.0.tgz
+902 silly mapToRegistry name async
+903 silly mapToRegistry using default registry
+904 silly mapToRegistry registry https://registry.npmjs.org/
+905 silly mapToRegistry uri https://registry.npmjs.org/async
+906 verbose addRemoteTarball https://registry.npmjs.org/async/-/async-0.9.0.tgz not in flight; adding
+907 verbose addRemoteTarball [ 'https://registry.npmjs.org/async/-/async-0.9.0.tgz',
+907 verbose addRemoteTarball   'ac3613b1da9bed1b47510bb4651b8931e47146c7' ]
+908 silly mapToRegistry name url-join
+909 silly mapToRegistry using default registry
+910 silly mapToRegistry registry https://registry.npmjs.org/
+911 silly mapToRegistry uri https://registry.npmjs.org/url-join
+912 verbose addRemoteTarball https://registry.npmjs.org/url-join/-/url-join-0.0.1.tgz not in flight; adding
+913 verbose addRemoteTarball [ 'https://registry.npmjs.org/url-join/-/url-join-0.0.1.tgz',
+913 verbose addRemoteTarball   '1db48ad422d3402469a87f7d97bdebfe4fb1e3c8' ]
+914 info retry fetch attempt 1 at 21:58:07
+915 info attempt registry request try #1 at 21:58:07
+916 http fetch GET https://registry.npmjs.org/async/-/async-0.9.0.tgz
+917 silly addNameRange number 2 { name: 'wordwrap', range: '>=0.0.2 <0.1.0', hasData: true }
+918 silly addNameRange versions [ 'wordwrap', [ '0.0.1', '0.0.2', '0.0.3', '1.0.0' ] ]
+919 verbose addNamed wordwrap@0.0.3
+920 silly addNamed semver.valid 0.0.3
+921 silly addNamed semver.validRange 0.0.3
+922 info retry fetch attempt 1 at 21:58:07
+923 info attempt registry request try #1 at 21:58:07
+924 http fetch GET https://registry.npmjs.org/url-join/-/url-join-0.0.1.tgz
+925 silly cache afterAdd wordwrap@0.0.3
+926 verbose afterAdd /Users/we/.npm/wordwrap/0.0.3/package/package.json not in flight; writing
+927 verbose afterAdd /Users/we/.npm/wordwrap/0.0.3/package/package.json written
+928 http 200 https://registry.npmjs.org/mime
+929 silly get cb [ 200,
+929 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+929 silly get     etag: '"79WGFZO77X78CZ3GAPUWE424D"',
+929 silly get     'content-type': 'application/json',
+929 silly get     'content-encoding': 'gzip',
+929 silly get     'cache-control': 'max-age=300',
+929 silly get     'content-length': '4329',
+929 silly get     'accept-ranges': 'bytes',
+929 silly get     date: 'Wed, 06 Apr 2016 12:58:08 GMT',
+929 silly get     via: '1.1 varnish',
+929 silly get     age: '210',
+929 silly get     connection: 'keep-alive',
+929 silly get     'x-served-by': 'cache-itm7425-ITM',
+929 silly get     'x-cache': 'HIT',
+929 silly get     'x-cache-hits': '7',
+929 silly get     'x-timer': 'S1459947488.402840,VS0,VE0',
+929 silly get     vary: 'Accept-Encoding' } ]
+930 http 200 https://registry.npmjs.org/minimist
+931 silly get cb [ 200,
+931 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+931 silly get     etag: '"P3DDAJ3JIQ3ZTCF7PTXP2IN6"',
+931 silly get     'content-type': 'application/json',
+931 silly get     'content-encoding': 'gzip',
+931 silly get     'cache-control': 'max-age=300',
+931 silly get     'content-length': '5431',
+931 silly get     'accept-ranges': 'bytes',
+931 silly get     date: 'Wed, 06 Apr 2016 12:58:08 GMT',
+931 silly get     via: '1.1 varnish',
+931 silly get     age: '1',
+931 silly get     connection: 'keep-alive',
+931 silly get     'x-served-by': 'cache-itm7423-ITM',
+931 silly get     'x-cache': 'HIT',
+931 silly get     'x-cache-hits': '124',
+931 silly get     'x-timer': 'S1459947488.402350,VS0,VE0',
+931 silly get     vary: 'Accept-Encoding' } ]
+932 http 304 https://registry.npmjs.org/qs
+933 silly get cb [ 304,
+933 silly get   { date: 'Wed, 06 Apr 2016 12:58:08 GMT',
+933 silly get     via: '1.1 varnish',
+933 silly get     'cache-control': 'max-age=300',
+933 silly get     etag: '"7RDJMGOR7BT1HG7SVYU0GG93X"',
+933 silly get     age: '139',
+933 silly get     connection: 'keep-alive',
+933 silly get     'x-served-by': 'cache-itm7424-ITM',
+933 silly get     'x-cache': 'HIT',
+933 silly get     'x-cache-hits': '4',
+933 silly get     'x-timer': 'S1459947488.409675,VS0,VE0',
+933 silly get     vary: 'Accept-Encoding' } ]
+934 verbose etag https://registry.npmjs.org/qs from cache
+935 http fetch 200 https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz
+936 silly fetchAndShaCheck shasum 925d2601d39ac485e091cf0da5c6e694dc3dcaff
+937 silly addNameRange number 2 { name: 'minimist', range: '>=0.0.1 <0.1.0', hasData: true }
+938 silly addNameRange versions [ 'minimist',
+938 silly addNameRange   [ '0.0.0',
+938 silly addNameRange     '0.0.1',
+938 silly addNameRange     '0.0.2',
+938 silly addNameRange     '0.0.3',
+938 silly addNameRange     '0.0.4',
+938 silly addNameRange     '0.0.5',
+938 silly addNameRange     '0.0.6',
+938 silly addNameRange     '0.0.7',
+938 silly addNameRange     '0.0.8',
+938 silly addNameRange     '0.0.9',
+938 silly addNameRange     '0.0.10',
+938 silly addNameRange     '0.1.0',
+938 silly addNameRange     '0.2.0',
+938 silly addNameRange     '1.0.0',
+938 silly addNameRange     '1.1.0',
+938 silly addNameRange     '1.1.1',
+938 silly addNameRange     '1.1.2',
+938 silly addNameRange     '1.1.3',
+938 silly addNameRange     '1.2.0' ] ]
+939 verbose addNamed minimist@0.0.10
+940 silly addNamed semver.valid 0.0.10
+941 silly addNamed semver.validRange 0.0.10
+942 silly addNameRange number 2 { name: 'minimist', range: '>=1.1.0 <2.0.0', hasData: true }
+943 silly addNameRange versions [ 'minimist',
+943 silly addNameRange   [ '0.0.0',
+943 silly addNameRange     '0.0.1',
+943 silly addNameRange     '0.0.2',
+943 silly addNameRange     '0.0.3',
+943 silly addNameRange     '0.0.4',
+943 silly addNameRange     '0.0.5',
+943 silly addNameRange     '0.0.6',
+943 silly addNameRange     '0.0.7',
+943 silly addNameRange     '0.0.8',
+943 silly addNameRange     '0.0.9',
+943 silly addNameRange     '0.0.10',
+943 silly addNameRange     '0.1.0',
+943 silly addNameRange     '0.2.0',
+943 silly addNameRange     '1.0.0',
+943 silly addNameRange     '1.1.0',
+943 silly addNameRange     '1.1.1',
+943 silly addNameRange     '1.1.2',
+943 silly addNameRange     '1.1.3',
+943 silly addNameRange     '1.2.0' ] ]
+944 verbose addNamed minimist@1.2.0
+945 silly addNamed semver.valid 1.2.0
+946 silly addNamed semver.validRange 1.2.0
+947 silly addNameRange number 2 { name: 'mime', range: '>=1.2.11 <2.0.0', hasData: true }
+948 silly addNameRange versions [ 'mime',
+948 silly addNameRange   [ '1.0.0',
+948 silly addNameRange     '1.1.0',
+948 silly addNameRange     '1.2.1',
+948 silly addNameRange     '1.2.2',
+948 silly addNameRange     '1.2.3',
+948 silly addNameRange     '1.2.4',
+948 silly addNameRange     '1.2.5',
+948 silly addNameRange     '1.2.6',
+948 silly addNameRange     '1.2.7',
+948 silly addNameRange     '1.2.8',
+948 silly addNameRange     '1.2.9',
+948 silly addNameRange     '1.2.10',
+948 silly addNameRange     '1.2.11',
+948 silly addNameRange     '1.3.0',
+948 silly addNameRange     '1.3.2',
+948 silly addNameRange     '1.3.3',
+948 silly addNameRange     '1.3.4' ] ]
+949 verbose addNamed mime@1.3.4
+950 silly addNamed semver.valid 1.3.4
+951 silly addNamed semver.validRange 1.3.4
+952 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz not in flight; adding
+953 verbose addTmpTarball already have metadata; skipping unpack for requires-port@1.0.0
+954 silly addNameRange number 2 { name: 'qs', range: '>=2.3.3 <2.4.0', hasData: true }
+955 silly addNameRange versions [ 'qs',
+955 silly addNameRange   [ '0.0.1',
+955 silly addNameRange     '0.0.2',
+955 silly addNameRange     '0.0.3',
+955 silly addNameRange     '0.0.4',
+955 silly addNameRange     '0.0.5',
+955 silly addNameRange     '0.0.6',
+955 silly addNameRange     '0.0.7',
+955 silly addNameRange     '0.1.0',
+955 silly addNameRange     '0.2.0',
+955 silly addNameRange     '0.3.0',
+955 silly addNameRange     '0.3.1',
+955 silly addNameRange     '0.3.2',
+955 silly addNameRange     '0.4.0',
+955 silly addNameRange     '0.4.1',
+955 silly addNameRange     '0.4.2',
+955 silly addNameRange     '0.5.0',
+955 silly addNameRange     '0.5.1',
+955 silly addNameRange     '0.5.2',
+955 silly addNameRange     '0.5.3',
+955 silly addNameRange     '0.5.4',
+955 silly addNameRange     '0.5.5',
+955 silly addNameRange     '0.5.6',
+955 silly addNameRange     '0.6.0',
+955 silly addNameRange     '0.6.1',
+955 silly addNameRange     '0.6.2',
+955 silly addNameRange     '0.6.3',
+955 silly addNameRange     '0.6.4',
+955 silly addNameRange     '0.6.5',
+955 silly addNameRange     '0.6.6',
+955 silly addNameRange     '1.0.0',
+955 silly addNameRange     '1.0.1',
+955 silly addNameRange     '1.0.2',
+955 silly addNameRange     '1.1.0',
+955 silly addNameRange     '1.2.0',
+955 silly addNameRange     '1.2.1',
+955 silly addNameRange     '1.2.2',
+955 silly addNameRange     '2.0.0',
+955 silly addNameRange     '2.1.0',
+955 silly addNameRange     '2.2.0',
+955 silly addNameRange     '2.2.1',
+955 silly addNameRange     '2.2.2',
+955 silly addNameRange     '2.2.3',
+955 silly addNameRange     '2.2.4',
+955 silly addNameRange     '2.2.5',
+955 silly addNameRange     '2.3.0',
+955 silly addNameRange     '2.3.1',
+955 silly addNameRange     '2.3.2',
+955 silly addNameRange     '2.3.3',
+955 silly addNameRange     '2.4.0',
+955 silly addNameRange     '2.4.1',
+955 silly addNameRange     '2.4.2',
+955 silly addNameRange     '3.0.0',
+955 silly addNameRange     '3.1.0',
+955 silly addNameRange     '4.0.0',
+955 silly addNameRange     '5.0.0',
+955 silly addNameRange     '5.1.0',
+955 silly addNameRange     '5.2.0',
+955 silly addNameRange     '6.0.0',
+955 silly addNameRange     '6.0.1',
+955 silly addNameRange     '6.0.2',
+955 silly addNameRange     '6.1.0' ] ]
+956 verbose addNamed qs@2.3.3
+957 silly addNamed semver.valid 2.3.3
+958 silly addNamed semver.validRange 2.3.3
+959 silly cache afterAdd minimist@0.0.10
+960 verbose afterAdd /Users/we/.npm/minimist/0.0.10/package/package.json not in flight; writing
+961 verbose afterAdd /Users/we/.npm/minimist/0.0.10/package/package.json written
+962 silly install resolved [ { name: 'wordwrap',
+962 silly install resolved     description: 'Wrap those words. Show them at what columns to start and stop.',
+962 silly install resolved     version: '0.0.3',
+962 silly install resolved     repository:
+962 silly install resolved      { type: 'git',
+962 silly install resolved        url: 'git://github.com/substack/node-wordwrap.git' },
+962 silly install resolved     main: './index.js',
+962 silly install resolved     keywords: [ 'word', 'wrap', 'rule', 'format', 'column' ],
+962 silly install resolved     directories: { lib: '.', example: 'example', test: 'test' },
+962 silly install resolved     scripts: { test: 'expresso' },
+962 silly install resolved     devDependencies: { expresso: '=0.7.x' },
+962 silly install resolved     engines: { node: '>=0.4.0' },
+962 silly install resolved     license: 'MIT',
+962 silly install resolved     author:
+962 silly install resolved      { name: 'James Halliday',
+962 silly install resolved        email: 'mail@substack.net',
+962 silly install resolved        url: 'http://substack.net' },
+962 silly install resolved     gitHead: 'e59aa1bd338914019456bdfba034508c9c4cb29d',
+962 silly install resolved     bugs: { url: 'https://github.com/substack/node-wordwrap/issues' },
+962 silly install resolved     homepage: 'https://github.com/substack/node-wordwrap#readme',
+962 silly install resolved     _id: 'wordwrap@0.0.3',
+962 silly install resolved     _shasum: 'a3d5da6cd5c0bc0008d37234bbaf1bed63059107',
+962 silly install resolved     _from: 'wordwrap@>=0.0.2 <0.1.0',
+962 silly install resolved     _npmVersion: '2.9.0',
+962 silly install resolved     _nodeVersion: '2.0.0',
+962 silly install resolved     _npmUser: { name: 'substack', email: 'substack@gmail.com' },
+962 silly install resolved     dist:
+962 silly install resolved      { shasum: 'a3d5da6cd5c0bc0008d37234bbaf1bed63059107',
+962 silly install resolved        tarball: 'http://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz' },
+962 silly install resolved     maintainers: [ [Object] ],
+962 silly install resolved     _resolved: 'https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz',
+962 silly install resolved     readme: 'ERROR: No README data found!' },
+962 silly install resolved   { name: 'minimist',
+962 silly install resolved     version: '0.0.10',
+962 silly install resolved     description: 'parse argument options',
+962 silly install resolved     main: 'index.js',
+962 silly install resolved     devDependencies: { tape: '~1.0.4', tap: '~0.4.0' },
+962 silly install resolved     scripts: { test: 'tap test/*.js' },
+962 silly install resolved     testling: { files: 'test/*.js', browsers: [Object] },
+962 silly install resolved     repository: { type: 'git', url: 'git://github.com/substack/minimist.git' },
+962 silly install resolved     homepage: 'https://github.com/substack/minimist',
+962 silly install resolved     keywords: [ 'argv', 'getopt', 'parser', 'optimist' ],
+962 silly install resolved     author:
+962 silly install resolved      { name: 'James Halliday',
+962 silly install resolved        email: 'mail@substack.net',
+962 silly install resolved        url: 'http://substack.net' },
+962 silly install resolved     license: 'MIT',
+962 silly install resolved     bugs: { url: 'https://github.com/substack/minimist/issues' },
+962 silly install resolved     _id: 'minimist@0.0.10',
+962 silly install resolved     dist:
+962 silly install resolved      { shasum: 'de3f98543dbf96082be48ad1a0c7cda836301dcf',
+962 silly install resolved        tarball: 'http://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz' },
+962 silly install resolved     _from: 'minimist@>=0.0.1 <0.1.0',
+962 silly install resolved     _npmVersion: '1.4.3',
+962 silly install resolved     _npmUser: { name: 'substack', email: 'mail@substack.net' },
+962 silly install resolved     maintainers: [ [Object] ],
+962 silly install resolved     directories: {},
+962 silly install resolved     _shasum: 'de3f98543dbf96082be48ad1a0c7cda836301dcf',
+962 silly install resolved     _resolved: 'https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz',
+962 silly install resolved     readme: 'ERROR: No README data found!' } ]
+963 info install wordwrap@0.0.3 into /usr/local/lib/node_modules/http-server/node_modules/optimist
+964 info install minimist@0.0.10 into /usr/local/lib/node_modules/http-server/node_modules/optimist
+965 info installOne wordwrap@0.0.3
+966 verbose installOne of wordwrap to /usr/local/lib/node_modules/http-server/node_modules/optimist not in flight; installing
+967 info installOne minimist@0.0.10
+968 verbose installOne of minimist to /usr/local/lib/node_modules/http-server/node_modules/optimist not in flight; installing
+969 silly cache afterAdd requires-port@1.0.0
+970 verbose afterAdd /Users/we/.npm/requires-port/1.0.0/package/package.json not in flight; writing
+971 verbose lock using /Users/we/.npm/_locks/wordwrap-980c8642b434305f.lock for /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/wordwrap
+972 verbose lock using /Users/we/.npm/_locks/minimist-c7298a32c5f119d4.lock for /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/minimist
+973 silly install write writing wordwrap 0.0.3 to /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/wordwrap
+974 silly cache addNamed cb wordwrap@0.0.3
+975 verbose unbuild lib/node_modules/http-server/node_modules/optimist/node_modules/wordwrap
+976 silly install write writing minimist 0.0.10 to /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/minimist
+977 silly cache addNamed cb minimist@0.0.10
+978 verbose unbuild lib/node_modules/http-server/node_modules/optimist/node_modules/minimist
+979 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/wordwrap
+980 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/minimist
+981 verbose afterAdd /Users/we/.npm/requires-port/1.0.0/package/package.json written
+982 verbose tar unpack /Users/we/.npm/wordwrap/0.0.3/package.tgz
+983 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/wordwrap
+984 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/wordwrap
+985 verbose tar unpack /Users/we/.npm/minimist/0.0.10/package.tgz
+986 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/minimist
+987 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/minimist
+988 silly gunzTarPerm modes [ '755', '644' ]
+989 silly gunzTarPerm modes [ '755', '644' ]
+990 silly cache afterAdd mime@1.3.4
+991 verbose afterAdd /Users/we/.npm/mime/1.3.4/package/package.json not in flight; writing
+992 silly cache afterAdd minimist@1.2.0
+993 verbose afterAdd /Users/we/.npm/minimist/1.2.0/package/package.json not in flight; writing
+994 verbose afterAdd /Users/we/.npm/mime/1.3.4/package/package.json written
+995 verbose afterAdd /Users/we/.npm/minimist/1.2.0/package/package.json written
+996 silly cache afterAdd qs@2.3.3
+997 verbose afterAdd /Users/we/.npm/qs/2.3.3/package/package.json not in flight; writing
+998 verbose afterAdd /Users/we/.npm/qs/2.3.3/package/package.json written
+999 silly install resolved [ { name: 'qs',
+999 silly install resolved     version: '2.3.3',
+999 silly install resolved     description: 'A querystring parser that supports nesting and arrays, with a depth limit',
+999 silly install resolved     homepage: 'https://github.com/hapijs/qs',
+999 silly install resolved     main: 'index.js',
+999 silly install resolved     dependencies: {},
+999 silly install resolved     devDependencies: { code: '1.x.x', lab: '5.x.x' },
+999 silly install resolved     scripts: { test: 'make test-cov' },
+999 silly install resolved     repository: { type: 'git', url: 'https://github.com/hapijs/qs.git' },
+999 silly install resolved     keywords: [ 'querystring', 'qs' ],
+999 silly install resolved     licenses: [ [Object] ],
+999 silly install resolved     gitHead: '9250c4cda5102fcf72441445816e6d311fc6813d',
+999 silly install resolved     bugs: { url: 'https://github.com/hapijs/qs/issues' },
+999 silly install resolved     _id: 'qs@2.3.3',
+999 silly install resolved     _shasum: 'e9e85adbe75da0bbe4c8e0476a086290f863b404',
+999 silly install resolved     _from: 'qs@>=2.3.3 <2.4.0',
+999 silly install resolved     _npmVersion: '2.1.6',
+999 silly install resolved     _nodeVersion: '0.10.32',
+999 silly install resolved     _npmUser: { name: 'nlf', email: 'quitlahok@gmail.com' },
+999 silly install resolved     maintainers: [ [Object], [Object] ],
+999 silly install resolved     dist:
+999 silly install resolved      { shasum: 'e9e85adbe75da0bbe4c8e0476a086290f863b404',
+999 silly install resolved        tarball: 'http://registry.npmjs.org/qs/-/qs-2.3.3.tgz' },
+999 silly install resolved     directories: {},
+999 silly install resolved     _resolved: 'https://registry.npmjs.org/qs/-/qs-2.3.3.tgz',
+999 silly install resolved     readme: 'ERROR: No README data found!' } ]
+1000 info install qs@2.3.3 into /usr/local/lib/node_modules/http-server/node_modules/union
+1001 info installOne qs@2.3.3
+1002 verbose installOne of qs to /usr/local/lib/node_modules/http-server/node_modules/union not in flight; installing
+1003 verbose lock using /Users/we/.npm/_locks/qs-191d7f91524aa39d.lock for /usr/local/lib/node_modules/http-server/node_modules/union/node_modules/qs
+1004 silly install write writing qs 2.3.3 to /usr/local/lib/node_modules/http-server/node_modules/union/node_modules/qs
+1005 silly cache addNamed cb qs@2.3.3
+1006 verbose unbuild lib/node_modules/http-server/node_modules/union/node_modules/qs
+1007 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/union/node_modules/qs
+1008 verbose tar unpack /Users/we/.npm/qs/2.3.3/package.tgz
+1009 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/union/node_modules/qs
+1010 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/union/node_modules/qs
+1011 silly gunzTarPerm modes [ '755', '644' ]
+1012 http fetch 200 https://registry.npmjs.org/eventemitter3/-/eventemitter3-1.2.0.tgz
+1013 silly fetchAndShaCheck shasum 1c86991d816ad1e504750e73874224ecf3bec508
+1014 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/eventemitter3/-/eventemitter3-1.2.0.tgz not in flight; adding
+1015 verbose addTmpTarball already have metadata; skipping unpack for eventemitter3@1.2.0
+1016 http fetch 200 https://registry.npmjs.org/async/-/async-0.9.0.tgz
+1017 silly gunzTarPerm extractEntry package.json
+1018 silly fetchAndShaCheck shasum ac3613b1da9bed1b47510bb4651b8931e47146c7
+1019 http fetch 200 https://registry.npmjs.org/url-join/-/url-join-0.0.1.tgz
+1020 silly gunzTarPerm extractEntry LICENSE
+1021 silly gunzTarPerm extractEntry index.js
+1022 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/async/-/async-0.9.0.tgz not in flight; adding
+1023 verbose addTmpTarball already have metadata; skipping unpack for async@0.9.0
+1024 silly fetchAndShaCheck shasum 1db48ad422d3402469a87f7d97bdebfe4fb1e3c8
+1025 silly cache afterAdd eventemitter3@1.2.0
+1026 verbose afterAdd /Users/we/.npm/eventemitter3/1.2.0/package/package.json not in flight; writing
+1027 silly gunzTarPerm extractEntry package.json
+1028 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/url-join/-/url-join-0.0.1.tgz not in flight; adding
+1029 verbose addTmpTarball already have metadata; skipping unpack for url-join@0.0.1
+1030 silly gunzTarPerm extractEntry .travis.yml
+1031 silly gunzTarPerm extractEntry example/parse.js
+1032 silly gunzTarPerm extractEntry LICENSE
+1033 silly gunzTarPerm extractEntry index.js
+1034 verbose afterAdd /Users/we/.npm/eventemitter3/1.2.0/package/package.json written
+1035 silly install resolved [ { name: 'requires-port',
+1035 silly install resolved     version: '1.0.0',
+1035 silly install resolved     description: 'Check if a protocol requires a certain port number to be added to an URL.',
+1035 silly install resolved     main: 'index.js',
+1035 silly install resolved     scripts:
+1035 silly install resolved      { '100%': 'istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100',
+1035 silly install resolved        'test-travis': 'istanbul cover _mocha --report lcovonly -- test.js',
+1035 silly install resolved        coverage: 'istanbul cover _mocha -- test.js',
+1035 silly install resolved        watch: 'mocha --watch test.js',
+1035 silly install resolved        test: 'mocha test.js' },
+1035 silly install resolved     repository:
+1035 silly install resolved      { type: 'git',
+1035 silly install resolved        url: 'git+https://github.com/unshiftio/requires-port.git' },
+1035 silly install resolved     keywords:
+1035 silly install resolved      [ 'port',
+1035 silly install resolved        'require',
+1035 silly install resolved        'http',
+1035 silly install resolved        'https',
+1035 silly install resolved        'ws',
+1035 silly install resolved        'wss',
+1035 silly install resolved        'gopher',
+1035 silly install resolved        'file',
+1035 silly install resolved        'ftp',
+1035 silly install resolved        'requires',
+1035 silly install resolved        'requried',
+1035 silly install resolved        'portnumber',
+1035 silly install resolved        'url',
+1035 silly install resolved        'parsing',
+1035 silly install resolved        'validation',
+1035 silly install resolved        'cows' ],
+1035 silly install resolved     author: { name: 'Arnout Kazemier' },
+1035 silly install resolved     license: 'MIT',
+1035 silly install resolved     bugs: { url: 'https://github.com/unshiftio/requires-port/issues' },
+1035 silly install resolved     homepage: 'https://github.com/unshiftio/requires-port',
+1035 silly install resolved     devDependencies:
+1035 silly install resolved      { assume: '1.3.x',
+1035 silly install resolved        istanbul: '0.4.x',
+1035 silly install resolved        mocha: '2.3.x',
+1035 silly install resolved        'pre-commit': '1.1.x' },
+1035 silly install resolved     gitHead: '3a552b935dd2ddba8f2ddf9096932f0f2024edfd',
+1035 silly install resolved     _id: 'requires-port@1.0.0',
+1035 silly install resolved     _shasum: '925d2601d39ac485e091cf0da5c6e694dc3dcaff',
+1035 silly install resolved     _from: 'requires-port@>=1.0.0 <2.0.0',
+1035 silly install resolved     _npmVersion: '2.14.3',
+1035 silly install resolved     _nodeVersion: '0.12.3',
+1035 silly install resolved     _npmUser: { name: '3rdeden', email: 'npm@3rd-Eden.com' },
+1035 silly install resolved     maintainers: [ [Object], [Object] ],
+1035 silly install resolved     dist:
+1035 silly install resolved      { shasum: '925d2601d39ac485e091cf0da5c6e694dc3dcaff',
+1035 silly install resolved        tarball: 'https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz' },
+1035 silly install resolved     directories: {},
+1035 silly install resolved     _resolved: 'https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz' },
+1035 silly install resolved   { name: 'eventemitter3',
+1035 silly install resolved     version: '1.2.0',
+1035 silly install resolved     description: 'EventEmitter3 focuses on performance while maintaining a Node.js AND browser compatible interface.',
+1035 silly install resolved     main: 'index.js',
+1035 silly install resolved     scripts:
+1035 silly install resolved      { 'test-node': 'istanbul cover _mocha --report lcovonly -- test.js',
+1035 silly install resolved        coverage: 'istanbul cover _mocha -- test.js',
+1035 silly install resolved        'test-browser': 'zuul -- test.js',
+1035 silly install resolved        sync: 'node versions.js',
+1035 silly install resolved        test: 'mocha test.js' },
+1035 silly install resolved     repository:
+1035 silly install resolved      { type: 'git',
+1035 silly install resolved        url: 'git://github.com/primus/eventemitter3.git' },
+1035 silly install resolved     keywords:
+1035 silly install resolved      [ 'EventEmitter',
+1035 silly install resolved        'EventEmitter2',
+1035 silly install resolved        'EventEmitter3',
+1035 silly install resolved        'Events',
+1035 silly install resolved        'addEventListener',
+1035 silly install resolved        'addListener',
+1035 silly install resolved        'emit',
+1035 silly install resolved        'emits',
+1035 silly install resolved        'emitter',
+1035 silly install resolved        'event',
+1035 silly install resolved        'once',
+1035 silly install resolved        'pub/sub',
+1035 silly install resolved        'publish',
+1035 silly install resolved        'reactor',
+1035 silly install resolved        'subscribe' ],
+1035 silly install resolved     author: { name: 'Arnout Kazemier' },
+1035 silly install resolved     license: 'MIT',
+1035 silly install resolved     bugs: { url: 'https://github.com/primus/eventemitter3/issues' },
+1035 silly install resolved     'pre-commit': 'sync, test',
+1035 silly install resolved     devDependencies:
+1035 silly install resolved      { assume: '1.3.x',
+1035 silly install resolved        istanbul: '0.4.x',
+1035 silly install resolved        mocha: '2.4.x',
+1035 silly install resolved        'pre-commit': '1.1.x',
+1035 silly install resolved        zuul: '3.10.x' },
+1035 silly install resolved     gitHead: 'c78d597fed80952c259b916c0a1f4dca91d940e4',
+1035 silly install resolved     homepage: 'https://github.com/primus/eventemitter3#readme',
+1035 silly install resolved     _id: 'eventemitter3@1.2.0',
+1035 silly install resolved     _shasum: '1c86991d816ad1e504750e73874224ecf3bec508',
+1035 silly install resolved     _from: 'eventemitter3@>=1.0.0 <2.0.0',
+1035 silly install resolved     _npmVersion: '3.8.0',
+1035 silly install resolved     _nodeVersion: '4.3.1',
+1035 silly install resolved     _npmUser: { name: '3rdeden', email: 'npm@3rd-Eden.com' },
+1035 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+1035 silly install resolved     dist:
+1035 silly install resolved      { shasum: '1c86991d816ad1e504750e73874224ecf3bec508',
+1035 silly install resolved        tarball: 'https://registry.npmjs.org/eventemitter3/-/eventemitter3-1.2.0.tgz' },
+1035 silly install resolved     _npmOperationalInternal:
+1035 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+1035 silly install resolved        tmp: 'tmp/eventemitter3-1.2.0.tgz_1458148661717_0.1867425285745412' },
+1035 silly install resolved     directories: {},
+1035 silly install resolved     _resolved: 'https://registry.npmjs.org/eventemitter3/-/eventemitter3-1.2.0.tgz' } ]
+1036 info install requires-port@1.0.0 into /usr/local/lib/node_modules/http-server/node_modules/http-proxy
+1037 info install eventemitter3@1.2.0 into /usr/local/lib/node_modules/http-server/node_modules/http-proxy
+1038 info installOne requires-port@1.0.0
+1039 verbose installOne of requires-port to /usr/local/lib/node_modules/http-server/node_modules/http-proxy not in flight; installing
+1040 info installOne eventemitter3@1.2.0
+1041 verbose installOne of eventemitter3 to /usr/local/lib/node_modules/http-server/node_modules/http-proxy not in flight; installing
+1042 silly cache afterAdd async@0.9.0
+1043 verbose afterAdd /Users/we/.npm/async/0.9.0/package/package.json not in flight; writing
+1044 verbose lock using /Users/we/.npm/_locks/requires-port-1ec12d296395d137.lock for /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/requires-port
+1045 verbose lock using /Users/we/.npm/_locks/eventemitter3-09f5fc33720b3fc9.lock for /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/eventemitter3
+1046 silly install write writing requires-port 1.0.0 to /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/requires-port
+1047 silly install write writing eventemitter3 1.2.0 to /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/eventemitter3
+1048 silly gunzTarPerm extractEntry package.json
+1049 silly cache afterAdd url-join@0.0.1
+1050 verbose afterAdd /Users/we/.npm/url-join/0.0.1/package/package.json not in flight; writing
+1051 silly gunzTarPerm extractEntry .npmignore
+1052 silly gunzTarPerm extractEntry README.md
+1053 silly gunzTarPerm extractEntry readme.markdown
+1054 silly gunzTarPerm extractEntry test/bool.js
+1055 silly gunzTarPerm extractEntry README.markdown
+1056 silly gunzTarPerm extractEntry example/center.js
+1057 verbose afterAdd /Users/we/.npm/async/0.9.0/package/package.json written
+1058 silly install resolved [ { name: 'mkdirp',
+1058 silly install resolved     description: 'Recursively mkdir, like `mkdir -p`',
+1058 silly install resolved     version: '0.5.1',
+1058 silly install resolved     author:
+1058 silly install resolved      { name: 'James Halliday',
+1058 silly install resolved        email: 'mail@substack.net',
+1058 silly install resolved        url: 'http://substack.net' },
+1058 silly install resolved     main: 'index.js',
+1058 silly install resolved     keywords: [ 'mkdir', 'directory' ],
+1058 silly install resolved     repository:
+1058 silly install resolved      { type: 'git',
+1058 silly install resolved        url: 'git+https://github.com/substack/node-mkdirp.git' },
+1058 silly install resolved     scripts: { test: 'tap test/*.js' },
+1058 silly install resolved     dependencies: { minimist: '0.0.8' },
+1058 silly install resolved     devDependencies: { tap: '1', 'mock-fs': '2 >=2.7.0' },
+1058 silly install resolved     bin: { mkdirp: 'bin/cmd.js' },
+1058 silly install resolved     license: 'MIT',
+1058 silly install resolved     gitHead: 'd4eff0f06093aed4f387e88e9fc301cb76beedc7',
+1058 silly install resolved     bugs: { url: 'https://github.com/substack/node-mkdirp/issues' },
+1058 silly install resolved     homepage: 'https://github.com/substack/node-mkdirp#readme',
+1058 silly install resolved     _id: 'mkdirp@0.5.1',
+1058 silly install resolved     _shasum: '30057438eac6cf7f8c4767f38648d6697d75c903',
+1058 silly install resolved     _from: 'mkdirp@>=0.5.0 <0.6.0',
+1058 silly install resolved     _npmVersion: '2.9.0',
+1058 silly install resolved     _nodeVersion: '2.0.0',
+1058 silly install resolved     _npmUser: { name: 'substack', email: 'substack@gmail.com' },
+1058 silly install resolved     dist:
+1058 silly install resolved      { shasum: '30057438eac6cf7f8c4767f38648d6697d75c903',
+1058 silly install resolved        tarball: 'http://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz' },
+1058 silly install resolved     maintainers: [ [Object] ],
+1058 silly install resolved     directories: {},
+1058 silly install resolved     _resolved: 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz',
+1058 silly install resolved     readme: 'ERROR: No README data found!' },
+1058 silly install resolved   { name: 'async',
+1058 silly install resolved     description: 'Higher-order functions and common patterns for asynchronous code',
+1058 silly install resolved     main: './lib/async',
+1058 silly install resolved     author: { name: 'Caolan McMahon' },
+1058 silly install resolved     version: '0.9.0',
+1058 silly install resolved     repository: { type: 'git', url: 'https://github.com/caolan/async.git' },
+1058 silly install resolved     bugs: { url: 'https://github.com/caolan/async/issues' },
+1058 silly install resolved     licenses: [ [Object] ],
+1058 silly install resolved     devDependencies: { nodeunit: '>0.0.0', 'uglify-js': '1.2.x', nodelint: '>0.0.0' },
+1058 silly install resolved     jam: { main: 'lib/async.js', include: [Object] },
+1058 silly install resolved     scripts: { test: 'nodeunit test/test-async.js' },
+1058 silly install resolved     homepage: 'https://github.com/caolan/async',
+1058 silly install resolved     _id: 'async@0.9.0',
+1058 silly install resolved     dist:
+1058 silly install resolved      { shasum: 'ac3613b1da9bed1b47510bb4651b8931e47146c7',
+1058 silly install resolved        tarball: 'https://registry.npmjs.org/async/-/async-0.9.0.tgz' },
+1058 silly install resolved     _from: 'async@0.9.0',
+1058 silly install resolved     _npmVersion: '1.4.3',
+1058 silly install resolved     _npmUser: { name: 'caolan', email: 'caolan.mcmahon@gmail.com' },
+1058 silly install resolved     maintainers: [ [Object] ],
+1058 silly install resolved     directories: {},
+1058 silly install resolved     _shasum: 'ac3613b1da9bed1b47510bb4651b8931e47146c7',
+1058 silly install resolved     _resolved: 'https://registry.npmjs.org/async/-/async-0.9.0.tgz' } ]
+1059 info install mkdirp@0.5.1 into /usr/local/lib/node_modules/http-server/node_modules/portfinder
+1060 info install async@0.9.0 into /usr/local/lib/node_modules/http-server/node_modules/portfinder
+1061 info installOne mkdirp@0.5.1
+1062 verbose installOne of mkdirp to /usr/local/lib/node_modules/http-server/node_modules/portfinder not in flight; installing
+1063 info installOne async@0.9.0
+1064 verbose installOne of async to /usr/local/lib/node_modules/http-server/node_modules/portfinder not in flight; installing
+1065 silly cache addNamed cb requires-port@1.0.0
+1066 verbose unbuild lib/node_modules/http-server/node_modules/http-proxy/node_modules/requires-port
+1067 silly cache addNamed cb eventemitter3@1.2.0
+1068 verbose unbuild lib/node_modules/http-server/node_modules/http-proxy/node_modules/eventemitter3
+1069 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/requires-port
+1070 verbose tar unpack /Users/we/.npm/requires-port/1.0.0/package.tgz
+1071 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/requires-port
+1072 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/requires-port
+1073 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/eventemitter3
+1074 verbose lock using /Users/we/.npm/_locks/mkdirp-73c17c61fc3ed78c.lock for /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp
+1075 silly gunzTarPerm modes [ '755', '644' ]
+1076 verbose tar unpack /Users/we/.npm/eventemitter3/1.2.0/package.tgz
+1077 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/eventemitter3
+1078 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/eventemitter3
+1079 verbose lock using /Users/we/.npm/_locks/async-d3ec4f5301facf3b.lock for /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/async
+1080 silly install write writing mkdirp 0.5.1 to /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp
+1081 silly cache addNamed cb mkdirp@0.5.1
+1082 verbose unbuild lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp
+1083 silly gunzTarPerm modes [ '755', '644' ]
+1084 silly install write writing async 0.9.0 to /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/async
+1085 verbose afterAdd /Users/we/.npm/url-join/0.0.1/package/package.json written
+1086 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp
+1087 verbose tar unpack /Users/we/.npm/mkdirp/0.5.1/package.tgz
+1088 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp
+1089 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp
+1090 silly gunzTarPerm modes [ '755', '644' ]
+1091 silly gunzTarPerm extractEntry package.json
+1092 silly gunzTarPerm extractEntry example/meat.js
+1093 silly gunzTarPerm extractEntry test/break.js
+1094 silly gunzTarPerm extractEntry LICENSE
+1095 silly gunzTarPerm extractEntry index.js
+1096 silly cache addNamed cb async@0.9.0
+1097 verbose unbuild lib/node_modules/http-server/node_modules/portfinder/node_modules/async
+1098 silly gunzTarPerm extractEntry package.json
+1099 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/async
+1100 silly gunzTarPerm extractEntry .npmignore
+1101 silly gunzTarPerm extractEntry README.md
+1102 verbose tar unpack /Users/we/.npm/async/0.9.0/package.tgz
+1103 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/async
+1104 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/async
+1105 silly gunzTarPerm modes [ '755', '644' ]
+1106 silly gunzTarPerm extractEntry README.md
+1107 silly gunzTarPerm extractEntry LICENSE
+1108 silly gunzTarPerm extractEntry package.json
+1109 silly gunzTarPerm extractEntry CHANGELOG.md
+1110 silly gunzTarPerm extractEntry CONTRIBUTING.md
+1111 silly gunzTarPerm extractEntry Makefile
+1112 silly gunzTarPerm extractEntry .jshintignore
+1113 silly gunzTarPerm extractEntry .jshintrc
+1114 silly gunzTarPerm extractEntry lib/index.js
+1115 silly gunzTarPerm extractEntry lib/parse.js
+1116 silly gunzTarPerm extractEntry lib/stringify.js
+1117 silly gunzTarPerm extractEntry lib/utils.js
+1118 silly gunzTarPerm extractEntry .travis.yml
+1119 silly gunzTarPerm extractEntry test/parse.js
+1120 silly gunzTarPerm extractEntry test/stringify.js
+1121 silly gunzTarPerm extractEntry test/dash.js
+1122 silly gunzTarPerm extractEntry README.md
+1123 silly gunzTarPerm extractEntry LICENSE
+1124 silly gunzTarPerm extractEntry .travis.yml
+1125 silly gunzTarPerm extractEntry component.json
+1126 silly gunzTarPerm extractEntry lib/async.js
+1127 silly gunzTarPerm extractEntry LICENSE
+1128 silly gunzTarPerm extractEntry index.js
+1129 silly gunzTarPerm extractEntry test/wrap.js
+1130 silly gunzTarPerm extractEntry test/idleness.txt
+1131 silly gunzTarPerm extractEntry index.js
+1132 silly gunzTarPerm extractEntry package.json
+1133 silly gunzTarPerm extractEntry test/default_bool.js
+1134 silly gunzTarPerm extractEntry test/dotted.js
+1135 silly gunzTarPerm extractEntry LICENSE
+1136 silly gunzTarPerm extractEntry index.js
+1137 silly gunzTarPerm extractEntry test.js
+1138 silly gunzTarPerm extractEntry .travis.yml
+1139 silly gunzTarPerm extractEntry .travis.yml
+1140 silly gunzTarPerm extractEntry bin/cmd.js
+1141 silly gunzTarPerm extractEntry test/long.js
+1142 silly gunzTarPerm extractEntry test/num.js
+1143 silly gunzTarPerm extractEntry bin/usage.txt
+1144 silly gunzTarPerm extractEntry examples/pow.js
+1145 silly gunzTarPerm extractEntry test/parse.js
+1146 silly gunzTarPerm extractEntry test/parse_modified.js
+1147 silly gunzTarPerm extractEntry readme.markdown
+1148 silly gunzTarPerm extractEntry test/chmod.js
+1149 silly gunzTarPerm extractEntry test/opts_fs_sync.js
+1150 silly gunzTarPerm extractEntry test/short.js
+1151 silly gunzTarPerm extractEntry test/whitespace.js
+1152 silly gunzTarPerm extractEntry test/perm.js
+1153 silly gunzTarPerm extractEntry test/perm_sync.js
+1154 silly gunzTarPerm extractEntry test/opts_fs.js
+1155 silly gunzTarPerm extractEntry test/rel.js
+1156 silly gunzTarPerm extractEntry test/return.js
+1157 silly gunzTarPerm extractEntry test/return_sync.js
+1158 silly gunzTarPerm extractEntry test/root.js
+1159 silly gunzTarPerm extractEntry test/sync.js
+1160 info preinstall eventemitter3@1.2.0
+1161 silly install resolved []
+1162 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/eventemitter3
+1163 info build /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/eventemitter3
+1164 verbose linkStuff [ true,
+1164 verbose linkStuff   '/usr/local/lib/node_modules',
+1164 verbose linkStuff   false,
+1164 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules' ]
+1165 info linkStuff eventemitter3@1.2.0
+1166 verbose linkBins eventemitter3@1.2.0
+1167 verbose linkMans eventemitter3@1.2.0
+1168 verbose rebuildBundles eventemitter3@1.2.0
+1169 info install eventemitter3@1.2.0
+1170 info postinstall eventemitter3@1.2.0
+1171 info preinstall requires-port@1.0.0
+1172 verbose unlock done using /Users/we/.npm/_locks/eventemitter3-09f5fc33720b3fc9.lock for /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/eventemitter3
+1173 silly install resolved []
+1174 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/requires-port
+1175 info build /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/requires-port
+1176 verbose linkStuff [ true,
+1176 verbose linkStuff   '/usr/local/lib/node_modules',
+1176 verbose linkStuff   false,
+1176 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules' ]
+1177 info linkStuff requires-port@1.0.0
+1178 verbose linkBins requires-port@1.0.0
+1179 verbose linkMans requires-port@1.0.0
+1180 verbose rebuildBundles requires-port@1.0.0
+1181 silly gunzTarPerm extractEntry test/mkdirp.js
+1182 silly gunzTarPerm extractEntry test/umask.js
+1183 info install requires-port@1.0.0
+1184 info postinstall requires-port@1.0.0
+1185 verbose unlock done using /Users/we/.npm/_locks/requires-port-1ec12d296395d137.lock for /usr/local/lib/node_modules/http-server/node_modules/http-proxy/node_modules/requires-port
+1186 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/http-proxy
+1187 info build /usr/local/lib/node_modules/http-server/node_modules/http-proxy
+1188 verbose linkStuff [ true,
+1188 verbose linkStuff   '/usr/local/lib/node_modules',
+1188 verbose linkStuff   false,
+1188 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules' ]
+1189 info linkStuff http-proxy@1.13.2
+1190 verbose linkBins http-proxy@1.13.2
+1191 verbose linkMans http-proxy@1.13.2
+1192 verbose rebuildBundles http-proxy@1.13.2
+1193 verbose rebuildBundles [ 'eventemitter3', 'requires-port' ]
+1194 info install http-proxy@1.13.2
+1195 info postinstall http-proxy@1.13.2
+1196 silly gunzTarPerm extractEntry test/clobber.js
+1197 silly gunzTarPerm extractEntry test/umask_sync.js
+1198 verbose unlock done using /Users/we/.npm/_locks/http-proxy-a6e26d25ac770eff.lock for /usr/local/lib/node_modules/http-server/node_modules/http-proxy
+1199 silly gunzTarPerm extractEntry test/race.js
+1200 info preinstall wordwrap@0.0.3
+1201 silly install resolved []
+1202 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/wordwrap
+1203 info build /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/wordwrap
+1204 verbose linkStuff [ true,
+1204 verbose linkStuff   '/usr/local/lib/node_modules',
+1204 verbose linkStuff   false,
+1204 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules' ]
+1205 info linkStuff wordwrap@0.0.3
+1206 verbose linkBins wordwrap@0.0.3
+1207 verbose linkMans wordwrap@0.0.3
+1208 verbose rebuildBundles wordwrap@0.0.3
+1209 info install wordwrap@0.0.3
+1210 info postinstall wordwrap@0.0.3
+1211 verbose unlock done using /Users/we/.npm/_locks/wordwrap-980c8642b434305f.lock for /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/wordwrap
+1212 info preinstall minimist@0.0.10
+1213 silly install resolved []
+1214 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/minimist
+1215 info build /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/minimist
+1216 verbose linkStuff [ true,
+1216 verbose linkStuff   '/usr/local/lib/node_modules',
+1216 verbose linkStuff   false,
+1216 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules' ]
+1217 info linkStuff minimist@0.0.10
+1218 verbose linkBins minimist@0.0.10
+1219 verbose linkMans minimist@0.0.10
+1220 verbose rebuildBundles minimist@0.0.10
+1221 info install minimist@0.0.10
+1222 info postinstall minimist@0.0.10
+1223 verbose unlock done using /Users/we/.npm/_locks/minimist-c7298a32c5f119d4.lock for /usr/local/lib/node_modules/http-server/node_modules/optimist/node_modules/minimist
+1224 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/optimist
+1225 info build /usr/local/lib/node_modules/http-server/node_modules/optimist
+1226 verbose linkStuff [ true,
+1226 verbose linkStuff   '/usr/local/lib/node_modules',
+1226 verbose linkStuff   false,
+1226 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules' ]
+1227 info linkStuff optimist@0.6.1
+1228 verbose linkBins optimist@0.6.1
+1229 verbose linkMans optimist@0.6.1
+1230 verbose rebuildBundles optimist@0.6.1
+1231 verbose rebuildBundles [ 'minimist', 'wordwrap' ]
+1232 info install optimist@0.6.1
+1233 info postinstall optimist@0.6.1
+1234 verbose unlock done using /Users/we/.npm/_locks/optimist-f6649642e95119c3.lock for /usr/local/lib/node_modules/http-server/node_modules/optimist
+1235 info preinstall async@0.9.0
+1236 silly install resolved []
+1237 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/async
+1238 info build /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/async
+1239 verbose linkStuff [ true,
+1239 verbose linkStuff   '/usr/local/lib/node_modules',
+1239 verbose linkStuff   false,
+1239 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules' ]
+1240 info linkStuff async@0.9.0
+1241 verbose linkBins async@0.9.0
+1242 verbose linkMans async@0.9.0
+1243 verbose rebuildBundles async@0.9.0
+1244 info install async@0.9.0
+1245 info postinstall async@0.9.0
+1246 verbose unlock done using /Users/we/.npm/_locks/async-d3ec4f5301facf3b.lock for /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/async
+1247 info preinstall qs@2.3.3
+1248 silly install resolved []
+1249 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/union/node_modules/qs
+1250 info build /usr/local/lib/node_modules/http-server/node_modules/union/node_modules/qs
+1251 verbose linkStuff [ true,
+1251 verbose linkStuff   '/usr/local/lib/node_modules',
+1251 verbose linkStuff   false,
+1251 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/union/node_modules' ]
+1252 info linkStuff qs@2.3.3
+1253 verbose linkBins qs@2.3.3
+1254 verbose linkMans qs@2.3.3
+1255 verbose rebuildBundles qs@2.3.3
+1256 info install qs@2.3.3
+1257 info postinstall qs@2.3.3
+1258 verbose unlock done using /Users/we/.npm/_locks/qs-191d7f91524aa39d.lock for /usr/local/lib/node_modules/http-server/node_modules/union/node_modules/qs
+1259 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/union
+1260 info build /usr/local/lib/node_modules/http-server/node_modules/union
+1261 verbose linkStuff [ true,
+1261 verbose linkStuff   '/usr/local/lib/node_modules',
+1261 verbose linkStuff   false,
+1261 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules' ]
+1262 info linkStuff union@0.4.4
+1263 verbose linkBins union@0.4.4
+1264 verbose linkMans union@0.4.4
+1265 verbose rebuildBundles union@0.4.4
+1266 verbose rebuildBundles [ 'qs' ]
+1267 info install union@0.4.4
+1268 info postinstall union@0.4.4
+1269 verbose unlock done using /Users/we/.npm/_locks/union-eeebf1e9bdec1ead.lock for /usr/local/lib/node_modules/http-server/node_modules/union
+1270 info preinstall mkdirp@0.5.1
+1271 silly prepareForInstallMany adding minimist@0.0.8 from mkdirp dependencies
+1272 silly cache add args [ 'minimist@0.0.8', null ]
+1273 verbose cache add spec minimist@0.0.8
+1274 silly cache add parsed spec { raw: 'minimist@0.0.8',
+1274 silly cache add   scope: null,
+1274 silly cache add   name: 'minimist',
+1274 silly cache add   rawSpec: '0.0.8',
+1274 silly cache add   spec: '0.0.8',
+1274 silly cache add   type: 'version' }
+1275 verbose addNamed minimist@0.0.8
+1276 silly addNamed semver.valid 0.0.8
+1277 silly addNamed semver.validRange 0.0.8
+1278 silly mapToRegistry name minimist
+1279 silly mapToRegistry using default registry
+1280 silly mapToRegistry registry https://registry.npmjs.org/
+1281 silly mapToRegistry uri https://registry.npmjs.org/minimist
+1282 verbose addNameVersion registry:https://registry.npmjs.org/minimist not in flight; fetching
+1283 verbose get https://registry.npmjs.org/minimist not expired, no request
+1284 silly cache afterAdd minimist@0.0.8
+1285 verbose afterAdd /Users/we/.npm/minimist/0.0.8/package/package.json not in flight; writing
+1286 verbose afterAdd /Users/we/.npm/minimist/0.0.8/package/package.json written
+1287 silly install resolved [ { name: 'minimist',
+1287 silly install resolved     version: '0.0.8',
+1287 silly install resolved     description: 'parse argument options',
+1287 silly install resolved     main: 'index.js',
+1287 silly install resolved     devDependencies: { tape: '~1.0.4', tap: '~0.4.0' },
+1287 silly install resolved     scripts: { test: 'tap test/*.js' },
+1287 silly install resolved     testling: { files: 'test/*.js', browsers: [Object] },
+1287 silly install resolved     repository: { type: 'git', url: 'git://github.com/substack/minimist.git' },
+1287 silly install resolved     homepage: 'https://github.com/substack/minimist',
+1287 silly install resolved     keywords: [ 'argv', 'getopt', 'parser', 'optimist' ],
+1287 silly install resolved     author:
+1287 silly install resolved      { name: 'James Halliday',
+1287 silly install resolved        email: 'mail@substack.net',
+1287 silly install resolved        url: 'http://substack.net' },
+1287 silly install resolved     license: 'MIT',
+1287 silly install resolved     bugs: { url: 'https://github.com/substack/minimist/issues' },
+1287 silly install resolved     _id: 'minimist@0.0.8',
+1287 silly install resolved     dist:
+1287 silly install resolved      { shasum: '857fcabfc3397d2625b8228262e86aa7a011b05d',
+1287 silly install resolved        tarball: 'http://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz' },
+1287 silly install resolved     _from: 'minimist@0.0.8',
+1287 silly install resolved     _npmVersion: '1.4.3',
+1287 silly install resolved     _npmUser: { name: 'substack', email: 'mail@substack.net' },
+1287 silly install resolved     maintainers: [ [Object] ],
+1287 silly install resolved     directories: {},
+1287 silly install resolved     _shasum: '857fcabfc3397d2625b8228262e86aa7a011b05d',
+1287 silly install resolved     _resolved: 'https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz',
+1287 silly install resolved     readme: 'ERROR: No README data found!' } ]
+1288 info install minimist@0.0.8 into /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp
+1289 info installOne minimist@0.0.8
+1290 verbose installOne of minimist to /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp not in flight; installing
+1291 verbose lock using /Users/we/.npm/_locks/minimist-29b8ee6d52a1c91b.lock for /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp/node_modules/minimist
+1292 silly install write writing minimist 0.0.8 to /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp/node_modules/minimist
+1293 silly cache addNamed cb minimist@0.0.8
+1294 verbose unbuild lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp/node_modules/minimist
+1295 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp/node_modules/minimist
+1296 verbose tar unpack /Users/we/.npm/minimist/0.0.8/package.tgz
+1297 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp/node_modules/minimist
+1298 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp/node_modules/minimist
+1299 silly gunzTarPerm modes [ '755', '644' ]
+1300 silly gunzTarPerm extractEntry package.json
+1301 silly gunzTarPerm extractEntry LICENSE
+1302 silly gunzTarPerm extractEntry index.js
+1303 silly gunzTarPerm extractEntry .travis.yml
+1304 silly gunzTarPerm extractEntry example/parse.js
+1305 silly gunzTarPerm extractEntry readme.markdown
+1306 silly gunzTarPerm extractEntry test/dash.js
+1307 silly gunzTarPerm extractEntry test/default_bool.js
+1308 silly gunzTarPerm extractEntry test/dotted.js
+1309 silly gunzTarPerm extractEntry test/long.js
+1310 silly gunzTarPerm extractEntry test/parse.js
+1311 silly gunzTarPerm extractEntry test/parse_modified.js
+1312 silly gunzTarPerm extractEntry test/short.js
+1313 silly gunzTarPerm extractEntry test/whitespace.js
+1314 info preinstall minimist@0.0.8
+1315 silly install resolved []
+1316 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp/node_modules/minimist
+1317 info build /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp/node_modules/minimist
+1318 verbose linkStuff [ true,
+1318 verbose linkStuff   '/usr/local/lib/node_modules',
+1318 verbose linkStuff   false,
+1318 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp/node_modules' ]
+1319 info linkStuff minimist@0.0.8
+1320 verbose linkBins minimist@0.0.8
+1321 verbose linkMans minimist@0.0.8
+1322 verbose rebuildBundles minimist@0.0.8
+1323 info install minimist@0.0.8
+1324 info postinstall minimist@0.0.8
+1325 verbose unlock done using /Users/we/.npm/_locks/minimist-29b8ee6d52a1c91b.lock for /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp/node_modules/minimist
+1326 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp
+1327 info build /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp
+1328 verbose linkStuff [ true,
+1328 verbose linkStuff   '/usr/local/lib/node_modules',
+1328 verbose linkStuff   false,
+1328 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules' ]
+1329 info linkStuff mkdirp@0.5.1
+1330 verbose linkBins mkdirp@0.5.1
+1331 verbose link bins [ { mkdirp: 'bin/cmd.js' },
+1331 verbose link bins   '/usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/.bin',
+1331 verbose link bins   false ]
+1332 verbose linkMans mkdirp@0.5.1
+1333 verbose rebuildBundles mkdirp@0.5.1
+1334 verbose rebuildBundles [ 'minimist' ]
+1335 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/.bin/mkdirp
+1336 info install mkdirp@0.5.1
+1337 info postinstall mkdirp@0.5.1
+1338 verbose unlock done using /Users/we/.npm/_locks/mkdirp-73c17c61fc3ed78c.lock for /usr/local/lib/node_modules/http-server/node_modules/portfinder/node_modules/mkdirp
+1339 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/portfinder
+1340 info build /usr/local/lib/node_modules/http-server/node_modules/portfinder
+1341 verbose linkStuff [ true,
+1341 verbose linkStuff   '/usr/local/lib/node_modules',
+1341 verbose linkStuff   false,
+1341 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules' ]
+1342 info linkStuff portfinder@0.4.0
+1343 verbose linkBins portfinder@0.4.0
+1344 verbose linkMans portfinder@0.4.0
+1345 verbose rebuildBundles portfinder@0.4.0
+1346 verbose rebuildBundles [ '.bin', 'async', 'mkdirp' ]
+1347 info install portfinder@0.4.0
+1348 info postinstall portfinder@0.4.0
+1349 verbose unlock done using /Users/we/.npm/_locks/portfinder-e1d441e5c9c8b460.lock for /usr/local/lib/node_modules/http-server/node_modules/portfinder
+1350 http 200 https://registry.npmjs.org/he
+1351 silly get cb [ 200,
+1351 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+1351 silly get     etag: '"1ZL76SWBJDGTLRC9TFI6MX7XG"',
+1351 silly get     'content-type': 'application/json',
+1351 silly get     'content-encoding': 'gzip',
+1351 silly get     'cache-control': 'max-age=300',
+1351 silly get     'content-length': '7822',
+1351 silly get     'accept-ranges': 'bytes',
+1351 silly get     date: 'Wed, 06 Apr 2016 12:58:08 GMT',
+1351 silly get     via: '1.1 varnish',
+1351 silly get     age: '0',
+1351 silly get     connection: 'keep-alive',
+1351 silly get     'x-served-by': 'cache-itm7424-ITM',
+1351 silly get     'x-cache': 'HIT',
+1351 silly get     'x-cache-hits': '1',
+1351 silly get     'x-timer': 'S1459947488.341067,VS0,VE583',
+1351 silly get     vary: 'Accept-Encoding' } ]
+1352 silly addNameRange number 2 { name: 'he', range: '>=0.5.0 <0.6.0', hasData: true }
+1353 silly addNameRange versions [ 'he',
+1353 silly addNameRange   [ '0.1.0',
+1353 silly addNameRange     '0.1.1',
+1353 silly addNameRange     '0.1.2',
+1353 silly addNameRange     '0.1.3',
+1353 silly addNameRange     '0.1.4',
+1353 silly addNameRange     '0.1.5',
+1353 silly addNameRange     '0.1.6',
+1353 silly addNameRange     '0.1.7',
+1353 silly addNameRange     '0.1.8',
+1353 silly addNameRange     '0.1.9',
+1353 silly addNameRange     '0.1.10',
+1353 silly addNameRange     '0.2.0',
+1353 silly addNameRange     '0.2.1',
+1353 silly addNameRange     '0.3.0',
+1353 silly addNameRange     '0.3.1',
+1353 silly addNameRange     '0.3.2',
+1353 silly addNameRange     '0.3.3',
+1353 silly addNameRange     '0.3.4',
+1353 silly addNameRange     '0.3.5',
+1353 silly addNameRange     '0.3.6',
+1353 silly addNameRange     '0.4.0',
+1353 silly addNameRange     '0.4.1',
+1353 silly addNameRange     '0.5.0',
+1353 silly addNameRange     '1.0.0' ] ]
+1354 verbose addNamed he@0.5.0
+1355 silly addNamed semver.valid 0.5.0
+1356 silly addNamed semver.validRange 0.5.0
+1357 silly mapToRegistry name he
+1358 silly mapToRegistry using default registry
+1359 silly mapToRegistry registry https://registry.npmjs.org/
+1360 silly mapToRegistry uri https://registry.npmjs.org/he
+1361 verbose addRemoteTarball https://registry.npmjs.org/he/-/he-0.5.0.tgz not in flight; adding
+1362 verbose addRemoteTarball [ 'https://registry.npmjs.org/he/-/he-0.5.0.tgz',
+1362 verbose addRemoteTarball   '2c05ffaef90b68e860f3fd2b54ef580989277ee2' ]
+1363 info retry fetch attempt 1 at 21:58:08
+1364 info attempt registry request try #1 at 21:58:08
+1365 http fetch GET https://registry.npmjs.org/he/-/he-0.5.0.tgz
+1366 http fetch 200 https://registry.npmjs.org/he/-/he-0.5.0.tgz
+1367 silly fetchAndShaCheck shasum 2c05ffaef90b68e860f3fd2b54ef580989277ee2
+1368 verbose addTmpTarball /tmp/npm-44999-58a27099/registry.npmjs.org/he/-/he-0.5.0.tgz not in flight; adding
+1369 verbose addTmpTarball already have metadata; skipping unpack for he@0.5.0
+1370 silly cache afterAdd he@0.5.0
+1371 verbose afterAdd /Users/we/.npm/he/0.5.0/package/package.json not in flight; writing
+1372 verbose afterAdd /Users/we/.npm/he/0.5.0/package/package.json written
+1373 silly install resolved [ { author:
+1373 silly install resolved      { name: 'Robert Kieffer',
+1373 silly install resolved        email: 'robert@broofa.com',
+1373 silly install resolved        url: 'http://github.com/broofa' },
+1373 silly install resolved     scripts:
+1373 silly install resolved      { prepublish: 'node build/build.js > types.json',
+1373 silly install resolved        test: 'node build/test.js' },
+1373 silly install resolved     bin: { mime: 'cli.js' },
+1373 silly install resolved     contributors: [ [Object] ],
+1373 silly install resolved     description: 'A comprehensive library for mime-type mapping',
+1373 silly install resolved     licenses: [ [Object] ],
+1373 silly install resolved     dependencies: {},
+1373 silly install resolved     devDependencies: { 'mime-db': '^1.2.0' },
+1373 silly install resolved     keywords: [ 'util', 'mime' ],
+1373 silly install resolved     main: 'mime.js',
+1373 silly install resolved     name: 'mime',
+1373 silly install resolved     repository: { url: 'https://github.com/broofa/node-mime', type: 'git' },
+1373 silly install resolved     version: '1.3.4',
+1373 silly install resolved     gitHead: '1628f6e0187095009dcef4805c3a49706f137974',
+1373 silly install resolved     bugs: { url: 'https://github.com/broofa/node-mime/issues' },
+1373 silly install resolved     homepage: 'https://github.com/broofa/node-mime',
+1373 silly install resolved     _id: 'mime@1.3.4',
+1373 silly install resolved     _shasum: '115f9e3b6b3daf2959983cb38f149a2d40eb5d53',
+1373 silly install resolved     _from: 'mime@>=1.2.11 <2.0.0',
+1373 silly install resolved     _npmVersion: '1.4.28',
+1373 silly install resolved     _npmUser: { name: 'broofa', email: 'robert@broofa.com' },
+1373 silly install resolved     maintainers: [ [Object], [Object] ],
+1373 silly install resolved     dist:
+1373 silly install resolved      { shasum: '115f9e3b6b3daf2959983cb38f149a2d40eb5d53',
+1373 silly install resolved        tarball: 'http://registry.npmjs.org/mime/-/mime-1.3.4.tgz' },
+1373 silly install resolved     directories: {},
+1373 silly install resolved     _resolved: 'https://registry.npmjs.org/mime/-/mime-1.3.4.tgz',
+1373 silly install resolved     readme: 'ERROR: No README data found!' },
+1373 silly install resolved   { name: 'minimist',
+1373 silly install resolved     version: '1.2.0',
+1373 silly install resolved     description: 'parse argument options',
+1373 silly install resolved     main: 'index.js',
+1373 silly install resolved     devDependencies: { covert: '^1.0.0', tap: '~0.4.0', tape: '^3.5.0' },
+1373 silly install resolved     scripts: { test: 'tap test/*.js', coverage: 'covert test/*.js' },
+1373 silly install resolved     testling: { files: 'test/*.js', browsers: [Object] },
+1373 silly install resolved     repository: { type: 'git', url: 'git://github.com/substack/minimist.git' },
+1373 silly install resolved     homepage: 'https://github.com/substack/minimist',
+1373 silly install resolved     keywords: [ 'argv', 'getopt', 'parser', 'optimist' ],
+1373 silly install resolved     author:
+1373 silly install resolved      { name: 'James Halliday',
+1373 silly install resolved        email: 'mail@substack.net',
+1373 silly install resolved        url: 'http://substack.net' },
+1373 silly install resolved     license: 'MIT',
+1373 silly install resolved     gitHead: 'dc624482fcfec5bc669c68cdb861f00573ed4e64',
+1373 silly install resolved     bugs: { url: 'https://github.com/substack/minimist/issues' },
+1373 silly install resolved     _id: 'minimist@1.2.0',
+1373 silly install resolved     _shasum: 'a35008b20f41383eec1fb914f4cd5df79a264284',
+1373 silly install resolved     _from: 'minimist@>=1.1.0 <2.0.0',
+1373 silly install resolved     _npmVersion: '3.2.2',
+1373 silly install resolved     _nodeVersion: '2.4.0',
+1373 silly install resolved     _npmUser: { name: 'substack', email: 'substack@gmail.com' },
+1373 silly install resolved     dist:
+1373 silly install resolved      { shasum: 'a35008b20f41383eec1fb914f4cd5df79a264284',
+1373 silly install resolved        tarball: 'http://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz' },
+1373 silly install resolved     maintainers: [ [Object] ],
+1373 silly install resolved     directories: {},
+1373 silly install resolved     _resolved: 'https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz',
+1373 silly install resolved     readme: 'ERROR: No README data found!' },
+1373 silly install resolved   { name: 'url-join',
+1373 silly install resolved     version: '0.0.1',
+1373 silly install resolved     description: 'Join urls and normalize as in path.join.',
+1373 silly install resolved     main: 'lib/url-join.js',
+1373 silly install resolved     scripts: { test: 'mocha --require should' },
+1373 silly install resolved     repository:
+1373 silly install resolved      { type: 'git',
+1373 silly install resolved        url: 'git://github.com/jfromaniello/url-join.git' },
+1373 silly install resolved     keywords: [ 'url', 'join' ],
+1373 silly install resolved     author:
+1373 silly install resolved      { name: 'José F. Romaniello',
+1373 silly install resolved        email: 'jfromaniello@gmail.com',
+1373 silly install resolved        url: 'http://joseoncode.com' },
+1373 silly install resolved     license: 'MIT',
+1373 silly install resolved     devDependencies: { should: '~1.2.1', mocha: '~1.8.1' },
+1373 silly install resolved     _id: 'url-join@0.0.1',
+1373 silly install resolved     dist:
+1373 silly install resolved      { shasum: '1db48ad422d3402469a87f7d97bdebfe4fb1e3c8',
+1373 silly install resolved        tarball: 'https://registry.npmjs.org/url-join/-/url-join-0.0.1.tgz' },
+1373 silly install resolved     _npmVersion: '1.1.69',
+1373 silly install resolved     _npmUser: { name: 'jfromaniello', email: 'jfromaniello@gmail.com' },
+1373 silly install resolved     maintainers: [ [Object] ],
+1373 silly install resolved     directories: {},
+1373 silly install resolved     _shasum: '1db48ad422d3402469a87f7d97bdebfe4fb1e3c8',
+1373 silly install resolved     _resolved: 'https://registry.npmjs.org/url-join/-/url-join-0.0.1.tgz',
+1373 silly install resolved     _from: 'url-join@0.0.1' },
+1373 silly install resolved   { name: 'he',
+1373 silly install resolved     version: '0.5.0',
+1373 silly install resolved     description: 'A robust HTML entities encoder/decoder with full Unicode support.',
+1373 silly install resolved     homepage: 'http://mths.be/he',
+1373 silly install resolved     main: 'he.js',
+1373 silly install resolved     bin: { he: 'bin/he' },
+1373 silly install resolved     keywords:
+1373 silly install resolved      [ 'string',
+1373 silly install resolved        'entities',
+1373 silly install resolved        'entity',
+1373 silly install resolved        'html',
+1373 silly install resolved        'encode',
+1373 silly install resolved        'decode',
+1373 silly install resolved        'unicode' ],
+1373 silly install resolved     license: 'MIT',
+1373 silly install resolved     author: { name: 'Mathias Bynens', url: 'https://mathiasbynens.be/' },
+1373 silly install resolved     repository: { type: 'git', url: 'https://github.com/mathiasbynens/he.git' },
+1373 silly install resolved     bugs: { url: 'https://github.com/mathiasbynens/he/issues' },
+1373 silly install resolved     files: [ 'LICENSE-MIT.txt', 'he.js', 'bin/', 'man/' ],
+1373 silly install resolved     directories: { bin: 'bin', man: 'man', test: 'tests' },
+1373 silly install resolved     scripts: { test: 'node tests/tests.js' },
+1373 silly install resolved     devDependencies:
+1373 silly install resolved      { coveralls: '^2.11.1',
+1373 silly install resolved        grunt: '^0.4.5',
+1373 silly install resolved        'grunt-shell': '^1.0.1',
+1373 silly install resolved        'grunt-template': '^0.2.3',
+1373 silly install resolved        istanbul: '^0.3.0',
+1373 silly install resolved        jsesc: '^0.5.0',
+1373 silly install resolved        lodash: '^2.4.1',
+1373 silly install resolved        'qunit-extras': '^1.1.0',
+1373 silly install resolved        qunitjs: '~1.11.0',
+1373 silly install resolved        regenerate: '^0.6.2',
+1373 silly install resolved        requirejs: '^2.1.14',
+1373 silly install resolved        'string.fromcodepoint': '^0.2.1' },
+1373 silly install resolved     man: [ '/Users/mathias/.npm/he/0.5.0/package/man/he.1' ],
+1373 silly install resolved     _id: 'he@0.5.0',
+1373 silly install resolved     _shasum: '2c05ffaef90b68e860f3fd2b54ef580989277ee2',
+1373 silly install resolved     _from: 'he@>=0.5.0 <0.6.0',
+1373 silly install resolved     _npmVersion: '1.4.9',
+1373 silly install resolved     _npmUser: { name: 'mathias', email: 'mathias@qiwi.be' },
+1373 silly install resolved     maintainers: [ [Object] ],
+1373 silly install resolved     dist:
+1373 silly install resolved      { shasum: '2c05ffaef90b68e860f3fd2b54ef580989277ee2',
+1373 silly install resolved        tarball: 'https://registry.npmjs.org/he/-/he-0.5.0.tgz' },
+1373 silly install resolved     _resolved: 'https://registry.npmjs.org/he/-/he-0.5.0.tgz' } ]
+1374 info install mime@1.3.4 into /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+1375 info install minimist@1.2.0 into /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+1376 info install url-join@0.0.1 into /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+1377 info install he@0.5.0 into /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+1378 info installOne mime@1.3.4
+1379 verbose installOne of mime to /usr/local/lib/node_modules/http-server/node_modules/ecstatic not in flight; installing
+1380 info installOne minimist@1.2.0
+1381 verbose installOne of minimist to /usr/local/lib/node_modules/http-server/node_modules/ecstatic not in flight; installing
+1382 info installOne url-join@0.0.1
+1383 verbose installOne of url-join to /usr/local/lib/node_modules/http-server/node_modules/ecstatic not in flight; installing
+1384 info installOne he@0.5.0
+1385 verbose installOne of he to /usr/local/lib/node_modules/http-server/node_modules/ecstatic not in flight; installing
+1386 verbose lock using /Users/we/.npm/_locks/mime-8efbc3cd00b521cc.lock for /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/mime
+1387 silly install write writing mime 1.3.4 to /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/mime
+1388 silly cache addNamed cb mime@1.3.4
+1389 verbose unbuild lib/node_modules/http-server/node_modules/ecstatic/node_modules/mime
+1390 verbose lock using /Users/we/.npm/_locks/minimist-d92e258a3d6afcb4.lock for /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/minimist
+1391 silly install write writing minimist 1.2.0 to /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/minimist
+1392 silly cache addNamed cb minimist@1.2.0
+1393 verbose unbuild lib/node_modules/http-server/node_modules/ecstatic/node_modules/minimist
+1394 verbose lock using /Users/we/.npm/_locks/url-join-56f756264f9db145.lock for /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/url-join
+1395 verbose lock using /Users/we/.npm/_locks/he-9a7a073e2a61c2ae.lock for /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/he
+1396 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/mime
+1397 silly install write writing url-join 0.0.1 to /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/url-join
+1398 silly install write writing he 0.5.0 to /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/he
+1399 verbose tar unpack /Users/we/.npm/mime/1.3.4/package.tgz
+1400 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/mime
+1401 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/mime
+1402 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/minimist
+1403 silly gunzTarPerm modes [ '755', '644' ]
+1404 verbose tar unpack /Users/we/.npm/minimist/1.2.0/package.tgz
+1405 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/minimist
+1406 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/minimist
+1407 silly gunzTarPerm modes [ '755', '644' ]
+1408 silly cache addNamed cb url-join@0.0.1
+1409 verbose unbuild lib/node_modules/http-server/node_modules/ecstatic/node_modules/url-join
+1410 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/url-join
+1411 silly cache addNamed cb he@0.5.0
+1412 verbose unbuild lib/node_modules/http-server/node_modules/ecstatic/node_modules/he
+1413 verbose tar unpack /Users/we/.npm/url-join/0.0.1/package.tgz
+1414 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/url-join
+1415 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/url-join
+1416 silly gunzTarPerm modes [ '755', '644' ]
+1417 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/he
+1418 verbose tar unpack /Users/we/.npm/he/0.5.0/package.tgz
+1419 verbose tar unpacking to /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/he
+1420 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/he
+1421 silly gunzTarPerm modes [ '755', '644' ]
+1422 silly gunzTarPerm extractEntry package.json
+1423 silly gunzTarPerm extractEntry package.json
+1424 silly gunzTarPerm extractEntry .npmignore
+1425 silly gunzTarPerm extractEntry README.md
+1426 silly gunzTarPerm extractEntry README.md
+1427 silly gunzTarPerm extractEntry he.js
+1428 silly gunzTarPerm extractEntry lib/url-join.js
+1429 silly gunzTarPerm extractEntry test/tests.js
+1430 silly gunzTarPerm extractEntry LICENSE-MIT.txt
+1431 silly gunzTarPerm extractEntry bin/he
+1432 silly gunzTarPerm extractEntry man/he.1
+1433 silly gunzTarPerm extractEntry package.json
+1434 info preinstall url-join@0.0.1
+1435 silly gunzTarPerm extractEntry .npmignore
+1436 silly gunzTarPerm extractEntry README.md
+1437 silly install resolved []
+1438 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/url-join
+1439 info build /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/url-join
+1440 verbose linkStuff [ true,
+1440 verbose linkStuff   '/usr/local/lib/node_modules',
+1440 verbose linkStuff   false,
+1440 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules' ]
+1441 info linkStuff url-join@0.0.1
+1442 verbose linkBins url-join@0.0.1
+1443 verbose linkMans url-join@0.0.1
+1444 verbose rebuildBundles url-join@0.0.1
+1445 info install url-join@0.0.1
+1446 info postinstall url-join@0.0.1
+1447 verbose unlock done using /Users/we/.npm/_locks/url-join-56f756264f9db145.lock for /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/url-join
+1448 silly gunzTarPerm extractEntry LICENSE
+1449 silly gunzTarPerm extractEntry cli.js
+1450 silly gunzTarPerm extractEntry package.json
+1451 silly gunzTarPerm extractEntry mime.js
+1452 silly gunzTarPerm extractEntry build/build.js
+1453 silly gunzTarPerm extractEntry LICENSE
+1454 silly gunzTarPerm extractEntry index.js
+1455 silly gunzTarPerm extractEntry .travis.yml
+1456 silly gunzTarPerm extractEntry example/parse.js
+1457 silly gunzTarPerm extractEntry build/test.js
+1458 silly gunzTarPerm extractEntry types.json
+1459 silly gunzTarPerm extractEntry readme.markdown
+1460 silly gunzTarPerm extractEntry test/all_bool.js
+1461 silly gunzTarPerm extractEntry test/default_bool.js
+1462 silly gunzTarPerm extractEntry test/dotted.js
+1463 silly gunzTarPerm extractEntry test/kv_short.js
+1464 silly gunzTarPerm extractEntry test/long.js
+1465 silly gunzTarPerm extractEntry test/dash.js
+1466 silly gunzTarPerm extractEntry test/parse.js
+1467 silly gunzTarPerm extractEntry test/parse_modified.js
+1468 silly gunzTarPerm extractEntry test/short.js
+1469 silly gunzTarPerm extractEntry test/stop_early.js
+1470 silly gunzTarPerm extractEntry test/unknown.js
+1471 silly gunzTarPerm extractEntry test/bool.js
+1472 silly gunzTarPerm extractEntry test/whitespace.js
+1473 silly gunzTarPerm extractEntry test/num.js
+1474 info preinstall mime@1.3.4
+1475 silly install resolved []
+1476 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/mime
+1477 info build /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/mime
+1478 verbose linkStuff [ true,
+1478 verbose linkStuff   '/usr/local/lib/node_modules',
+1478 verbose linkStuff   false,
+1478 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules' ]
+1479 info linkStuff mime@1.3.4
+1480 verbose linkBins mime@1.3.4
+1481 verbose link bins [ { mime: 'cli.js' },
+1481 verbose link bins   '/usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/.bin',
+1481 verbose link bins   false ]
+1482 verbose linkMans mime@1.3.4
+1483 verbose rebuildBundles mime@1.3.4
+1484 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/.bin/mime
+1485 info install mime@1.3.4
+1486 info postinstall mime@1.3.4
+1487 verbose unlock done using /Users/we/.npm/_locks/mime-8efbc3cd00b521cc.lock for /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/mime
+1488 info preinstall he@0.5.0
+1489 silly install resolved []
+1490 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/he
+1491 info build /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/he
+1492 verbose linkStuff [ true,
+1492 verbose linkStuff   '/usr/local/lib/node_modules',
+1492 verbose linkStuff   false,
+1492 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules' ]
+1493 info linkStuff he@0.5.0
+1494 verbose linkBins he@0.5.0
+1495 verbose link bins [ { he: 'bin/he' },
+1495 verbose link bins   '/usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/.bin',
+1495 verbose link bins   false ]
+1496 verbose linkMans he@0.5.0
+1497 verbose rebuildBundles he@0.5.0
+1498 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/.bin/he
+1499 info install he@0.5.0
+1500 info postinstall he@0.5.0
+1501 verbose unlock done using /Users/we/.npm/_locks/he-9a7a073e2a61c2ae.lock for /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/he
+1502 info preinstall minimist@1.2.0
+1503 silly install resolved []
+1504 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/minimist
+1505 info build /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/minimist
+1506 verbose linkStuff [ true,
+1506 verbose linkStuff   '/usr/local/lib/node_modules',
+1506 verbose linkStuff   false,
+1506 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules' ]
+1507 info linkStuff minimist@1.2.0
+1508 verbose linkBins minimist@1.2.0
+1509 verbose linkMans minimist@1.2.0
+1510 verbose rebuildBundles minimist@1.2.0
+1511 info install minimist@1.2.0
+1512 info postinstall minimist@1.2.0
+1513 verbose unlock done using /Users/we/.npm/_locks/minimist-d92e258a3d6afcb4.lock for /usr/local/lib/node_modules/http-server/node_modules/ecstatic/node_modules/minimist
+1514 verbose about to build /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+1515 info build /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+1516 verbose linkStuff [ true,
+1516 verbose linkStuff   '/usr/local/lib/node_modules',
+1516 verbose linkStuff   false,
+1516 verbose linkStuff   '/usr/local/lib/node_modules/http-server/node_modules' ]
+1517 info linkStuff ecstatic@1.4.0
+1518 verbose linkBins ecstatic@1.4.0
+1519 verbose link bins [ { ecstatic: './lib/ecstatic.js' },
+1519 verbose link bins   '/usr/local/lib/node_modules/http-server/node_modules/.bin',
+1519 verbose link bins   false ]
+1520 verbose linkMans ecstatic@1.4.0
+1521 verbose rebuildBundles ecstatic@1.4.0
+1522 verbose rebuildBundles [ '.bin', 'he', 'mime', 'minimist', 'url-join' ]
+1523 verbose gentlyRm vacuuming /usr/local/lib/node_modules/http-server/node_modules/.bin/ecstatic
+1524 info install ecstatic@1.4.0
+1525 info postinstall ecstatic@1.4.0
+1526 verbose unlock done using /Users/we/.npm/_locks/ecstatic-abe6259e04dc9deb.lock for /usr/local/lib/node_modules/http-server/node_modules/ecstatic
+1527 verbose about to build /usr/local/lib/node_modules/http-server
+1528 info build /usr/local/lib/node_modules/http-server
+1529 verbose linkStuff [ true,
+1529 verbose linkStuff   '/usr/local/lib/node_modules',
+1529 verbose linkStuff   true,
+1529 verbose linkStuff   '/usr/local/lib/node_modules' ]
+1530 info linkStuff http-server@0.9.0
+1531 verbose linkBins http-server@0.9.0
+1532 verbose link bins [ { 'http-server': './bin/http-server', hs: './bin/http-server' },
+1532 verbose link bins   '/usr/local/bin',
+1532 verbose link bins   true ]
+1533 verbose linkMans http-server@0.9.0
+1534 verbose rebuildBundles http-server@0.9.0
+1535 verbose rebuildBundles [ '.bin',
+1535 verbose rebuildBundles   'colors',
+1535 verbose rebuildBundles   'corser',
+1535 verbose rebuildBundles   'ecstatic',
+1535 verbose rebuildBundles   'http-proxy',
+1535 verbose rebuildBundles   'opener',
+1535 verbose rebuildBundles   'optimist',
+1535 verbose rebuildBundles   'portfinder',
+1535 verbose rebuildBundles   'union' ]
+1536 verbose gentlyRm verifying that /usr/local is managed by npm
+1537 verbose gentlyRm verifying that /usr/local is managed by npm
+1538 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+1539 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+1540 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+1541 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+1542 silly isManaged /usr/local/bin is inside /usr/local
+1543 silly gentlyRm /usr/local is managed by npm
+1544 silly gentlyRm /usr/local/bin/http-server is under /usr/local
+1545 verbose gentlyRm vacuuming /usr/local/bin/http-server up to /usr/local
+1546 silly isManaged /usr/local/bin is inside /usr/local
+1547 silly gentlyRm /usr/local is managed by npm
+1548 silly gentlyRm /usr/local/bin/hs is under /usr/local
+1549 verbose gentlyRm vacuuming /usr/local/bin/hs up to /usr/local
+1550 info install http-server@0.9.0
+1551 info postinstall http-server@0.9.0
+1552 verbose unlock done using /Users/we/.npm/_locks/http-server-ae30c9ae1f4c5eaa.lock for /usr/local/lib/node_modules/http-server
+1553 warn unmet dependency /usr/local/lib/node_modules/yuidocjs requires express@'^4.10.1' but will load
+1553 warn unmet dependency /usr/local/lib/node_modules/express,
+1553 warn unmet dependency which is version 5.0.0-alpha.1
+1554 warn unmet dependency /usr/local/lib/node_modules/bower-installer/node_modules/bower/node_modules/p-throttler requires q@'~0.9.2' but will load
+1554 warn unmet dependency /usr/local/lib/node_modules/bower-installer/node_modules/bower/node_modules/q,
+1554 warn unmet dependency which is version 1.0.1
+1555 warn unmet dependency /usr/local/lib/node_modules/cornerstone-cli/node_modules/grunt/node_modules/js-yaml/node_modules/argparse requires underscore.string@'~2.4.0' but will load
+1555 warn unmet dependency /usr/local/lib/node_modules/cornerstone-cli/node_modules/grunt/node_modules/underscore.string,
+1555 warn unmet dependency which is version 2.2.1
+1556 warn unmet dependency /usr/local/lib/node_modules/forever/node_modules/nconf requires optimist@'0.6.0' but will load
+1556 warn unmet dependency /usr/local/lib/node_modules/forever/node_modules/optimist,
+1556 warn unmet dependency which is version 0.6.1
+1557 warn unmet dependency /usr/local/lib/node_modules/gulp-umd/node_modules/gulp-util requires lodash.template@'^3.0.0' but will load
+1557 warn unmet dependency /usr/local/lib/node_modules/gulp-umd/node_modules/lodash.template,
+1557 warn unmet dependency which is version 2.4.1
+1558 warn unmet dependency /usr/local/lib/node_modules/yeoman/node_modules/yeoman-generators requires cheerio@'~0.10.0' but will load
+1558 warn unmet dependency /usr/local/lib/node_modules/yeoman/node_modules/cheerio,
+1558 warn unmet dependency which is version 0.9.2
+1559 warn unmet dependency /usr/local/lib/node_modules/yeoman/node_modules/bower requires request@'~2.11.4' but will load
+1559 warn unmet dependency /usr/local/lib/node_modules/yeoman/node_modules/request,
+1559 warn unmet dependency which is version 2.9.203
+1560 warn unmet dependency /usr/local/lib/node_modules/yeoman/node_modules/fstream requires mkdirp@'0.5' but will load
+1560 warn unmet dependency /usr/local/lib/node_modules/yeoman/node_modules/mkdirp,
+1560 warn unmet dependency which is version 0.3.5
+1561 verbose stack Error: The package grunt-contrib-clean does not satisfy its siblings' peerDependencies requirements!
+1561 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:103:32
+1561 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:225:5
+1561 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+1561 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+1561 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1561 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+1561 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1561 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+1561 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1561 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+1562 verbose cwd /Applications/MAMP/htdocs/react_proto/udemy_basic/4_app_bootstrap
+1563 error Darwin 13.4.0
+1564 error argv "node" "/usr/local/bin/npm" "install" "-g" "http-server"
+1565 error node v0.10.29
+1566 error npm  v2.1.12
+1567 error code EPEERINVALID
+1568 error peerinvalid The package grunt-contrib-clean does not satisfy its siblings' peerDependencies requirements!
+1568 error peerinvalid Peer grunt-contrib@0.11.0 wants grunt-contrib-clean@~0.5.0
+1569 verbose exit [ 1, true ]
