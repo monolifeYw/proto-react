@@ -1,0 +1,1 @@
+console.error("Error: Cannot find module '/Applications/MAMP/htdocs/react_proto/udemy_basic/6_route/node_modules/babelify/index.js' from '/Applications/MAMP/htdocs/react_proto/udemy_basic/6_route'");

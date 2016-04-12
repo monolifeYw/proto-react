@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://fb.me/react-0.14.7.js"></script>
+    <script src="https://fb.me/react-dom-0.14.7.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+    <title>React Bulletin Board</title>
+</head>
+<body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+    /*
+        #Event
+        http://reactkr.github.io/react/docs/events-ko-KR.html
+        https://facebook.github.io/react/docs/events.html
+     */
+        var App = React.createClass({
+            onClickFunc: function(evt) {
+                console.log('onClickFunc evt : ', evt);
+            },
+
+            onAnchorClick: function(evt) {
+                console.log('onAnchorClick evt : ', evt);
+
+                evt.preventDefault();
+                evt.stopPropagation();
+            },
+
+            render: function() {
+                return (
+                    <div>
+                        <button onClick={this.onClickFunc}>Click</button>
+                        <a href='#' onClick={this.onAnchorClick}>Anchor</a>
+                    </div>
+
+                );
+            }
+
+        });
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById('react-container')
+        )
+    </script>
+</body>
+</html>
