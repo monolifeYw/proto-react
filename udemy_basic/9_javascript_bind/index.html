@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>javascript bind</title>
+        <script>
+            this.car = 'honda';
+
+            var lee = {
+                car: 'koup',
+                getCar: function() {
+                    return this.car;
+                }
+            }
+
+            console.log('lee.getCar', lee.getCar());
+
+            var marks = lee.getCar;
+
+            console.log('marks', marks());
+
+            var realGetCarFunction = marks.bind(lee);
+            console.log('realGetCarFunction', realGetCarFunction());
+
+        </script>
+    </head>
+    <body>
+        <div id="container">
+        </div>
+    </body>
+</html>
