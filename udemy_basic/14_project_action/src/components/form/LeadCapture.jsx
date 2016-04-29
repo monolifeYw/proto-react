@@ -1,8 +1,12 @@
 var React = require('react');
 var NameField = require('./NameField.jsx');
 var EmailField = require('./EmailField.jsx');
+var Reflux = require('reflux');
+var Actions = require('../../reflux/Actions.jsx');
+var EmailStore = require('../../reflux/EmailStore.jsx');
 
 var LeadCapture = React.createClass({
+  mixins:[Reflux.listenTo(EmailStore, 'onEmailChange')],
   getInitialState: function() {
     return {
       submitted: false
@@ -26,9 +30,16 @@ var LeadCapture = React.createClass({
       this.refs.fieldEmail.clear();
       this.refs.fieldName.clear();
 
-      this.setState({submitted: true});
+      Actions.submitEmail(httpRequestBody);
+      // this.setState({submitted: true});  -> move to onEmailChange
     }
   },
+
+  onEmailChange: function(msg) {
+    console.log('onEmailChange', msg);
+    this.setState({submitted: true});
+  },
+
   render: function() {
 
     var successStyle = {
