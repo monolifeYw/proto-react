@@ -1,0 +1,26 @@
+{
+  "name": "redux-simple-starter",
+  "version": "1.0.0",
+  "description": "Simple starter package for Redux with React and Babel support",
+  "main": "index.js",
+  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "scripts": {
+    "start": "watchify src/index.jsx -v -t [ babelify --presets [ react ] ] -o ./bundle.js",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test:watch": "npm run test -- --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "lodash": "^4.11.2",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.0",
+    "redux": "^3.5.2",
+    "watchify": "^3.7.0",
+    "youtube-api-search": "0.0.5"
+  }
+}
