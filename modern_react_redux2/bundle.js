@@ -20950,8 +20950,23 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],190:[function(require,module,exports){
+module.exports = function (book) {
+  // ActionCreator
+  // return an action
+  console.log('a book has been selected : ', book.title);
+  return {
+    type: 'BOOK_SELECTED',
+    payload: book
+  };
+};
+
+},{}],191:[function(require,module,exports){
 var React = require('react');
 var BookList = require('../containers/book-list.jsx');
+var BookDetail = require('../containers/book-detail.jsx');
+
+var Provider = require('react-redux').Provider;
+var Store = require('../reducers/index.jsx');
 
 var App = React.createClass({
   displayName: 'App',
@@ -20959,9 +20974,14 @@ var App = React.createClass({
 
   render: function () {
     return React.createElement(
-      'div',
-      null,
-      React.createElement(BookList, null)
+      Provider,
+      { store: Store, key: 'provider' },
+      React.createElement(
+        'div',
+        null,
+        React.createElement(BookList, null),
+        React.createElement(BookDetail, null)
+      )
     );
   }
 
@@ -20969,22 +20989,69 @@ var App = React.createClass({
 
 module.exports = App;
 
-},{"../containers/book-list.jsx":191,"react":179}],191:[function(require,module,exports){
+},{"../containers/book-detail.jsx":192,"../containers/book-list.jsx":193,"../reducers/index.jsx":195,"react":179,"react-redux":8}],192:[function(require,module,exports){
 var React = require('react');
 var ReactRedux = require('react-redux');
+var connect = ReactRedux.connect;
+
+var BookDetail = React.createClass({
+  displayName: 'BookDetail',
+
+
+  render: function () {
+    console.log('[BookDetail]', this.props.activeBook);
+    var title = this.props.activeBook && this.props.activeBook.title ? this.props.activeBook.title : '[Choose Books]';
+    var pages = this.props.activeBook && this.props.activeBook.pages ? this.props.activeBook.pages + 'pages' : '';
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'h3',
+        null,
+        'Details for : ',
+        title
+      ),
+      React.createElement(
+        'div',
+        null,
+        pages
+      )
+    );
+  }
+
+});
+
+function mapStateToProps(state) {
+  console.log('[BookDetail mapStateToProps]', state);
+  return {
+    activeBook: state.activeBook
+  };
+}
+
+module.exports = connect(mapStateToProps)(BookDetail);
+
+},{"react":179,"react-redux":8}],193:[function(require,module,exports){
+var React = require('react');
+
+var Redux = require('redux');
+var bindActionCreators = Redux.bindActionCreators;
+
+var ReactRedux = require('react-redux');
+var connect = ReactRedux.connect;
+
+var action = require('../actions/index.jsx');
 
 var BookList = React.createClass({
   displayName: 'BookList',
 
   renderList: function () {
-    console.log(this.props);
     return this.props.books.map(function (book) {
       return React.createElement(
         'li',
-        { key: book.title, className: 'list-group-item' },
+        { key: book.title, className: 'list-group-item', onClick: this.props.selectBook.bind(null, book) },
         book.title
       );
-    });
+    }.bind(this));
   },
   render: function () {
     console.log('render', this.props);
@@ -20997,17 +21064,8 @@ var BookList = React.createClass({
 
 });
 
-// var AAA = React.createClass({
-//
-//   render: function() {
-//     return (
-//       <div />
-//     );
-//   }
-//
-// });
-
 function mapStateToProps(state) {
+  console.log('[mapStateToProps]', state);
   return {
     books: state.books
   };
@@ -21015,13 +21073,87 @@ function mapStateToProps(state) {
 // console.log('connect',connect.connect);
 // module.exports = connect(mapStateToProps)(BookList);
 
-module.exports = ReactRedux.connect(mapStateToProps)(BookList);
+function mapDispatchToProps(dispatch) {
+  console.log('[mapDispatchToProps]', dispatch);
+  // whenever(~할때마다) selectBook is called, the result should be passed
+  return bindActionCreators({
+    selectBook: action
+  }, dispatch);
+}
 
-},{"react":179,"react-redux":8}],192:[function(require,module,exports){
+module.exports = connect(mapStateToProps, mapDispatchToProps)(BookList);
+
+},{"../actions/index.jsx":190,"react":179,"react-redux":8,"redux":185}],194:[function(require,module,exports){
 var React = require('react');
 var ReactDOM = require('react-dom');
 var App = require('./components/app.jsx');
 
 ReactDOM.render(React.createElement(App, null), document.querySelector('.container'));
 
-},{"./components/app.jsx":190,"react":179,"react-dom":5}]},{},[192]);
+},{"./components/app.jsx":191,"react":179,"react-dom":5}],195:[function(require,module,exports){
+var Redux = require('redux');
+var booksReducer = require('./reducer_books.jsx');
+var activeBookReducer = require('./reducer_active_book.jsx');
+
+var rootReducer = Redux.combineReducers({
+  books: booksReducer,
+  activeBook: activeBookReducer
+});
+
+var store = Redux.createStore(rootReducer);
+
+// http://stackoverflow.com/questions/33749759/read-stores-initial-state-in-redux-reducer
+// 기본 Store 구성
+function counter(state, action) {
+  console.log('[counter]', state, action);
+  state = state || 0;
+  return state;
+}
+var test_store;
+test_store = Redux.createStore(counter);
+console.log('[Test_Store].1', test_store.getState()); // 0
+
+test_store = Redux.createStore(counter, 10);
+console.log('[Test_Store].2', test_store.getState()); // 10
+
+function a(state, action) {
+  state = state || 'lol';
+  return state;
+}
+
+function b(state, action) {
+  state = state || 'wat';
+  return state;
+}
+
+var combined;
+combined = Redux.combineReducers({ a: a, b: b, c: counter });
+console.log('[combined]', combined); // function
+
+test_store = Redux.createStore(combined);
+console.log('[Test_Store].3', test_store.getState()); // Object {a: "lol", b: "wat", c: 0}
+
+module.exports = store;
+
+},{"./reducer_active_book.jsx":196,"./reducer_books.jsx":197,"redux":185}],196:[function(require,module,exports){
+module.exports = function (state, action) {
+  state = state || null;
+
+  console.log('===========reducer_active_book===========');
+  console.log('state', state);
+  console.log('action', action);
+  console.log('===========reducer_active_book end===========');
+  switch (action.type) {
+    case 'BOOK_SELECTED':
+      return action.payload;
+  }
+  return state;
+};
+
+},{}],197:[function(require,module,exports){
+module.exports = function (state, action) {
+  console.log('state books', state, action);
+  return [{ title: 'ComicBook', pages: 101 }, { title: 'Javascript:Good Parts', pages: 39 }, { title: 'HarryPotter', pages: 85 }, { title: 'GQ', pages: 79 }];
+};
+
+},{}]},{},[194]);
