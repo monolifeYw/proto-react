@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <title>React Components</title>
+    </head>
+    <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+        var Checkbox = React.createClass({
+            getInitialState: function () {
+                // initial로 시작하는 메소드는 내부에서 받은 어떠한 값을 초기화 할 목적이 있다는 것을 나타냅니다.
+                // return {count: this.props.initialCount};
+                return {
+                    checked: true,
+                    messages: [
+                        'React Study',
+                        'getInitialState Study'
+                    ]
+                }
+            },
+            handleAdd: function () {
+                var value = this.refs.newMessage.value;
+                if (value !== '') {
+                    this.setState({
+                        messages: this.state.messages.concat(value)
+                    });
+                    this.refs.newMessage.value = '';
+                }
+            },
+            handleCheck: function () {
+                console.log('this',this);
+                console.log('state',this.state);
+
+                // setState(function|object nextState[, function callback])
+                // setState({mykey: '새로운 값'});
+                // function(state, props)처럼 인자를 포함한 함수를 넘겨주는 것도 가능
+                /*
+                setState(function(previousState, currentProps) {
+                  return {myInteger: previousState.myInteger + 1};
+                });
+                */
+
+                this.setState({checked: !this.state.checked});
+            },
+            render: function () {
+                var msg = '';
+                console.log('[render]state', this.state.checked);
+                if (this.state.checked) {
+                    msg = 'checked';
+                } else {
+                    msg = 'unchecked';
+                }
+
+                var message = this.state.messages.map(function (msg, idx) {
+                    console.log('aaa', msg, idx);
+                    return (
+                        <p key = {idx}>
+                            {idx} : {msg}
+                        </p>
+                    );
+                })
+
+                return (
+                    <div>
+                        <input type="checkbox" onChange={this.handleCheck} defaultChecked={this.state.checked} />
+                        <p>this is {msg} .</p>
+                        <hr />
+                        <input type="text" ref="newMessage" />
+                        <button onClick={this.handleAdd}>text Msg List ADD</button>
+                        {message}
+                    </div>
+                );
+            }
+        });
+
+        ReactDOM.render(
+            <Checkbox />,
+            document.getElementById('react-container')
+        );
+    </script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <title>React Components</title>
+    </head>
+    <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+        var MyComponent = React.createClass({
+            getDefaultProps: function () {
+                return {
+                    age: -1
+                    // count: 0
+                }
+            },
+            propTypes: {
+                age: function (props, propName) {
+                    console.log('React.PropTypes', React.PropTypes);
+                    console.log('[propTypes]', props, propName, typeof props[propName]);
+
+                    if (typeof props[propName] !== 'number') {
+                        return new Error('The age Property must be a number');
+                    }
+                    // console.log('[propTypes2]', props, propName, typeof props[propName]);
+                    if (props[propName] < 20) {
+                        return new Error('Age limit : ' + props[propName]);
+                    }
+                },
+
+                // isRequired : 필수 첨부
+                count: React.PropTypes.number.isRequired
+                // count: React.PropTypes.number
+            },
+            render: function () {
+                return (
+                    <div>
+                        <h1>{this.props.age}</h1>
+                        <h2>{this.props.count}</h2>
+                        <hr />
+                    </div>
+                )
+            }
+        });
+
+        ReactDOM.render(
+        <div id="sub-container">
+            <MyComponent age={15} count="1">Young</MyComponent>
+            <MyComponent age="25" count={10}>Good</MyComponent>
+            <MyComponent age={35}>Old</MyComponent>
+        </div>
+        , document.getElementById('react-container'));
+    </script>
+    </body>
+</html>
