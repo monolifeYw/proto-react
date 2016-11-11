@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <title>React</title>
+    </head>
+    <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+
+
+        var Component = React.createClass({
+
+            getInitialState: function () {
+                return {
+                    title: 'FRONTEND Develop Team',
+                    members: [
+                        '이윤우',
+                        '전승훈',
+                        '양반석',
+                        '한정석',
+                        '신광수',
+                        '박한필',
+                        '고예슬',
+                        '장하련',
+                        '이성아'
+                    ]
+                };
+            },
+
+            elementCheck: function() {
+                return true;
+            },
+
+            render: function () {
+                return (
+                    <div>
+                        {/*
+                            내부 function 안의 scope 는 undefined
+                            유사 ) setTimeout, setInterval (native js)
+                        */}
+                        {function(){console.log('this value : ', this)}()}
+
+                        {/* 내부 function 을 사용할 경우 call, apply를 이용하여 scope를 잡아주어야 함 */}
+                        {
+                            function () {
+                                if (this.elementCheck()) {
+                                    return (
+                                        <ul>
+                                        {this.state.members.map(function(member, idx) {
+                                            return <li key={idx}>{member}</li>
+                                        })}
+                                        </ul>
+                                    );
+                                }
+                            }.call(this)
+                        }
+                    </div>
+                );
+            }
+        });
+
+        ReactDOM.render(
+            <Component />,
+            document.getElementById('react-container')
+        )
+    </script>
+    </body>
+</html>

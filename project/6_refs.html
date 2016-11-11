@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <title>React refs</title>
+    </head>
+    <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+        /*
+        컴포넌트 내에서 ref 프로퍼티를 사용하여 자식 컴포넌트를 참조
+        - 부모에서 자식의 메서드를 호출 ( this.refs )
+        - 계속 사용하면 컴포넌트간의 관계를 알기가 어려움. (div, button같은 내장 컴포넌트를 참조할때만 사용하는 게 좋음)
+        - refs는 VD가 아닌 실제 DOM 객체를 참조
+         */
+        var RefsComponent = React.createClass({
+
+            handler: function () {
+                console.log('this.refs list : ', this.refs);
+                console.log('Object :: this.refs.box - ', typeof this.refs.box);
+                console.log('Object :: ReactDOM.findDOMNode(this.refs.newText) - ', typeof ReactDOM.findDOMNode(this.refs.newText));
+                console.log('Object :: this.refs.box :: value - ', this.refs.newText.value);
+                console.log('Object :: ReactDOM.findDOMNode(this.refs.newText) :: value - ', ReactDOM.findDOMNode(this.refs.newText).value);
+            },
+
+            render: function () {
+                var styleBox = {
+                    width: '200px',
+                    height:'200px',
+                    background:'skyblue',
+                    marginTop: '10px'
+                };
+
+                return (
+                    <div>
+                        <button onClick={this.handler}>{this.props.buttonTitle}</button>
+                        <div ref="box" style={styleBox}></div>
+                        <textarea ref="newText" defaultValue = {this.props.buttonTitle}></textarea>
+                    </div>
+                );
+            }
+        });
+
+        ReactDOM.render(
+            <RefsComponent buttonTitle="Do-you-know-this-box-?" />,
+            document.getElementById('react-container')
+        )
+    </script>
+    </body>
+</html>

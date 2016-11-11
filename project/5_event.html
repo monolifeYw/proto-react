@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <title>React Event</title>
+    </head>
+    <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+        /*
+        컴포넌트 내에서 ref 프로퍼티를 사용하여 자식 컴포넌트를 참조
+        - 부모에서 자식의 메서드를 호출 ( this.refs )
+        - 계속 사용하면 컴포넌트간의 관계를 알기가 어려움. (div, button같은 내장 컴포넌트를 참조할때만 사용하는 게 좋음)
+        - refs는 VD가 아닌 실제 DOM 객체를 참조
+         */
+        var RefsComponent = React.createClass({
+
+            testVariable: 'test',
+
+            // SyntheticMouseEvent
+            handler: function (evt) {
+                console.log(evt);
+
+                // native event 객체에 접근
+                console.log(evt.nativeEvent);
+            },
+
+            handlerAddParam: function (param1, param2, evt) {
+                console.log(this);
+                console.log(this.testVariable);
+                console.log(param1);
+                console.log(param2);
+                console.log(evt);
+            },
+
+            render: function () {
+                return (
+                    <div>
+                        <button onClick={this.handler}>Button Ex1</button>
+                        {/*this.handlerAddParam(1) --> event가 아닌 미리 실행이 되어 버림*/}
+                        {/*<button onClick={this.handlerAddParam(1)}>Button Ex2</button>*/}
+                        <button onClick={this.handlerAddParam.bind(null, 1, 'param')}>Button Ex2</button>
+                    </div>
+                );
+            }
+        });
+
+        ReactDOM.render(
+            <RefsComponent buttonTitle="BUTTON" />,
+            document.getElementById('react-container')
+        )
+    </script>
+    </body>
+</html>

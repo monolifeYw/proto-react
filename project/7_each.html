@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <title>React</title>
+    </head>
+    <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+        var RenderType2 = React.createClass({
+            eachNode: function (member, idx) {
+                return (
+                    <li key={idx} style={{color: '#00f'}}>
+                        {member}
+                    </li>
+                );
+            },
+
+            renderDisplay: function () {
+                return (
+                    <ul>
+                        {this.props.members.map(this.eachNode)}
+                    </ul>
+                )
+            },
+
+            render: function () {
+                // render 하지 않으려면 false, null
+                return (this.props.members.length) ? this.renderDisplay() : null;
+            }
+        });
+
+        var RenderType3 = React.createClass({
+            render: function () {
+                return (
+                    <p>
+                        {this.props.member}
+                    </p>
+                )
+            }
+        });
+
+
+        var Component = React.createClass({
+
+            getInitialState: function () {
+                return {
+                    title: 'FRONTEND Develop Team',
+                    members: [
+                        '이윤우',
+                        '전승훈',
+                        '양반석',
+                        '한정석',
+                        '신광수',
+                        '박한필',
+                        '고예슬',
+                        '장하련',
+                        '이성아'
+                    ]
+                };
+            },
+
+            renderType1: function (member, idx) {
+                return (
+                    <p key={idx}>{member}</p>
+                );
+            },
+
+            renderType3: function (member, idx) {
+                return (
+                    <RenderType3 key={idx} member={this.state.members[idx]} />
+                );
+            },
+
+            render: function () {
+                var tag = (<span>1234</span>);
+                return (
+                    <div>
+                        <h1>{this.state.title}</h1>
+                        {this.state.members.map(this.renderType1)}
+                        <hr />
+                        <RenderType2 members={this.state.members} />
+                        <hr />
+                        {this.state.members.map(this.renderType3)}
+                    </div>
+                );
+            }
+        });
+
+        ReactDOM.render(
+            <Component />,
+            document.getElementById('react-container')
+        )
+    </script>
+    </body>
+</html>
