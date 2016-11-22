@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <title>React</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+    var Component = React.createClass({
+          getProps: function () {
+            // 모든 prop
+            var {...props} = this.props;
+            console.log('{...props} ::: ', props);
+
+            // count = props 내의 count prop,
+            // ...props = count 를 제외한 모든 prop
+            // Destructuring Assignment
+            // > 의도한 프로퍼티도 같이 props(미상)에 포함되지 않게 구조를 해체해야 한다. 
+            var {count, ...props} = this.props;
+            console.log('{count, ...props} ::: ', count, props);
+          },
+
+          render: function () {
+
+            this.getProps();
+
+            // console.log({...this.props.domAttr})
+            return (
+              <div>
+                {/* error : <div {this.props.domAttr}></div>*/}
+                <div {...this.props.domAttr}></div>
+              </div>
+            );
+          }
+      });
+
+      ReactDOM.render(
+          <Component count={1} name="Wmp" opts={
+            {
+              spd: 1000,
+              easing: 'swing'
+            }
+          }
+          domAttr={
+            {
+              'data-custom': 'custom attribute',
+              'data-value': 'value'
+            }
+          }
+           />,
+          document.getElementById('react-container')
+      );
+    </script>
+  </body>
+</html>

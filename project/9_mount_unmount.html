@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <title>React</title>
+    </head>
+    <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+
+
+        var Component = React.createClass({
+            getInitialState: function () {
+                return {
+                    isState: false
+                }
+            },
+
+            componentWillMount: function() {
+                alert('componentWillMount');
+            },
+
+            componentDidMount: function () {
+                alert('componentDidMount');
+            },
+
+            componentWillUnmount: function() {
+                alert('componentWillUnmount');
+            },
+
+            renderUpdate: function () {
+                var isState = !this.state.isState;
+                this.setState({
+                    isState: isState
+                });
+            },
+
+            unmount: function () {
+                ReactDOM.unmountComponentAtNode(document.getElementById('react-container'));
+            },
+
+            renderType1: function () {
+                return (
+                    <div>
+                        <button onClick={this.unmount}>unMount</button>
+                        <button onClick={this.renderUpdate}>renderUpdate</button>
+                    </div>
+                )
+            },
+
+            renderType2: function () {
+                return (
+                    <div>
+                        <button onClick={this.renderUpdate}>renderUpdate</button>
+                    </div>
+                )
+            },
+
+            render: function () {
+                alert('render');
+                return (this.state.isState) ? this.renderType1() : this.renderType2();
+            }
+        });
+
+        ReactDOM.render(
+            <Component />,
+            document.getElementById('react-container')
+        );
+    </script>
+    </body>
+</html>

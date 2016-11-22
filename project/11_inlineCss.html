@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <title>React</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+    /*
+    inline style은 맵핑된 style sheet를 넣어준다.
+    - bad Case : <tbody style="background:#fff;">
+    - Good Case : <tbody style={{background: '#ffeea2'}}>
+     */
+    var Component = React.createClass({
+          getInitialState: function () {
+            return {
+              isBorder: false
+            };
+          },
+
+          borderToggle: function () {
+            this.setState({
+              isBorder: !this.state.isBorder
+            });
+          },
+
+          render: function () {
+            var styleBox = {
+              width: '200px',
+              height: '200px',
+              background: 'skyblue',
+              marginBottom: '10px',
+              border: (this.state.isBorder) ? '3px solid #f00' : 'none'
+            };
+            return (
+              <div>
+                <div style={styleBox}>box1</div>
+                <button onClick={this.borderToggle}>Border Toggle</button>
+                <hr />
+                <div style={{width: '100px', height: '100px', background: 'orange'}}>box2</div>
+              </div>
+            );
+          }
+      });
+
+      ReactDOM.render(
+          <Component />,
+          document.getElementById('react-container')
+      );
+    </script>
+  </body>
+</html>

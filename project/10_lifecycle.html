@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <title>React</title>
+  </head>
+  <body>
+    <button id="btn_render" type="button" name="button">Render</button>
+    <button id="btn_unmount" type="button" name="button">unmount</button>
+    <hr />
+    <div id="react-container"></div>
+    <script type="text/babel">
+      var Component = React.createClass({
+            getInitialState: function () {
+                return {
+                    increasing: false
+                }
+            },
+
+            // ===== mount life-cycle ===================================
+            componentWillMount: function () {
+                alert('[LifeCycle] componentWillMount');
+            },
+
+            componentDidMount: function () {
+                alert('[LifeCycle] componentDidMount');
+            },
+
+            componentWillUnmount: function () {
+                alert('[LifeCycle] componentWillUnmount');
+            },
+            // ==========================================================
+
+            // ===== update life-cycle ==================================
+            // componentWillReceiveProps : prop이 변경되었을 때. (object)
+            // prop에 따라 state를 업데이트 해야 할때 사용하면 유용
+            componentWillReceiveProps: function (nextProps) {
+              alert('[LifeCycle] componentWillReceiveProps');
+              console.log('[componentWillReceiveProps] nextProps',nextProps);
+              console.log('[componentWillReceiveProps] this.props',this.props);
+
+              // 이 안에서 setState를 해도 render 메서드를 실행하지 않음
+              this.setState({
+                increasing: nextProps.val > this.props.val
+              });
+            },
+
+            // 화면 렌더링 여부 체크 (false 라면 render 안함)
+            // prop, state 가 변경되었을 시 호출 됨
+            // Make sure to return true or false ( 무조건 return은 Boolean )
+            // Param type은 object
+            shouldComponentUpdate: function (nextProps, nextState) {
+              alert('[LifeCycle] shouldComponentUpdate');
+              console.log('[shouldComponentUpdate]', nextProps, nextState);
+
+              return nextProps.val % 2 === 0;
+            },
+
+            // 업데이트가 이루어진 후 화면 렌더링 직전 (shouldComponentUpdate 이 true일 경우)
+            componentWillUpdate: function(nextProps, nextState) {
+              alert('[LifeCycle] componentWillUpdate');
+              console.log('[componentWillUpdate]', nextProps, nextState);
+            },
+
+            // 리랜더링 이후에 업데이트 상황알려줌(기존의 변경되기 전 설정값 - prevProps, prevState)
+            componentDidUpdate: function(prevProps, prevState) {
+                alert('[LifeCycle] componentDidUpdate');
+                console.log('[componentDidUpdate]', prevProps, prevState);
+            },
+            // ==========================================================
+
+            updateProp: function() {
+                var newVal = this.props.val + 1;
+                //this.setProps({val: newVal}); deprecated
+                renderComponent(newVal);
+            },
+
+            updateState: function () {
+              var increasing = !this.state.increasing;
+              this.setState({
+                increasing: increasing
+              });
+            },
+
+            render: function () {
+                alert('[Method] render');
+                console.log('========================');
+                console.log('[render] App createClass Render');
+                console.log('[render] increasing : ', this.state.increasing);
+                return (
+                  <div>
+                    <button onClick={this.updateProp}>Increasing Props {this.props.val}</button>
+                    <button onClick={this.updateState}>Increasing State</button>
+                  </div>
+                )
+            }
+        });
+
+
+        // not component
+        function renderComponent(appValue) {
+          ReactDOM.render(
+              <Component val={appValue} />,
+              document.getElementById('react-container')
+          );
+        };
+
+        function unmount() {
+            ReactDOM.unmountComponentAtNode(document.getElementById('react-container'));
+        };
+
+        document.getElementById('btn_render').addEventListener('click', function(e) {
+            renderComponent(0);
+        });
+        document.getElementById('btn_unmount').addEventListener('click', function(e) {
+            unmount();
+        });
+    </script>
+  </body>
+</html>
