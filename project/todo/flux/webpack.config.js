@@ -10,7 +10,7 @@ module.exports = {
 
   // bundling 되는 파일의 위치 및 파일 이름 설정
   output: {
-    path: __dirname + '/public',
+    path: path.join(__dirname,'/dist'),
     filename: 'bundle.js'
   },
 
@@ -61,9 +61,6 @@ module.exports = {
     port: '8080',
 
     // 작은 클라이언트 엔트리를 Bundle에 삽입해 페이지 변경시(수정) 자동 새로 고침 된다.
-    inline: true,
-
-    // true 설정 시, 프론트엔드에서 라우팅 구현시 실제로 존재하지 않는 페이지를 호출할 경우 루트페이지를 보내주는 것.
-    historyApiFallback: false
+    inline: true
   }
 };

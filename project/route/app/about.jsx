@@ -3,8 +3,7 @@ var AboutOffice = require('./aboutOffice.jsx');
 var AboutFamily = require('./aboutFamily.jsx');
 
 var ReactRouter = require('react-router');
-var browserHistory = require('react-router').browserHistory;
-console.log('[ReactRouter]', ReactRouter.Router);
+
 var About = React.createClass({
 
   render: function() {
